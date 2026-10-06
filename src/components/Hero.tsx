@@ -10,7 +10,7 @@ import { AnimatedCounter } from "./ui/AnimatedCounter";
 
 export function Hero() {
   const whatsappUrl = `https://wa.me/${CLINIC_CONFIG.whatsappNumber}?text=${encodeURIComponent(
-    `Hello ${CLINIC_CONFIG.doctorName}, I would like to inquire about a consultation at ${CLINIC_CONFIG.clinicName}.`
+    `Hello ${CLINIC_CONFIG.doctorName}, I would like to inquire about an online video consultation at ${CLINIC_CONFIG.clinicName}.`
   )}`;
 
   return (
@@ -42,7 +42,7 @@ export function Hero() {
 
             {/* Subheadline */}
             <p className="text-[#5C6659] text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl font-normal">
-              Personalised, natural treatment for hair, skin, allergies and chronic conditions — from a doctor who takes the unhurried time to understand your complete constitutional health history.
+              Personalised, natural treatment for hair, skin, allergies and chronic conditions — from the comfort of your home via video consultations with a doctor who takes the unhurried time to understand your complete constitutional health history.
             </p>
 
             {/* CTA Buttons */}
@@ -52,7 +52,7 @@ export function Hero() {
                 className="inline-flex items-center justify-center gap-2.5 bg-[#D9663B] hover:bg-[#c2552b] text-white font-semibold text-base px-7 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
               >
                 <Calendar className="w-5 h-5" />
-                <span>Book a Consultation</span>
+                <span>Book Video Consultation</span>
               </a>
 
               <a
@@ -118,7 +118,7 @@ export function Hero() {
               <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image
                   src="/images/hero-consultation.jpg"
-                  alt={`Doctor consultation at ${CLINIC_CONFIG.clinicName}`}
+                  alt={`Online video consultation at ${CLINIC_CONFIG.clinicName}`}
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"

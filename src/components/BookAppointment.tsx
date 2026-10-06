@@ -26,7 +26,7 @@ export function BookAppointment({ selectedCondition }: BookAppointmentProps) {
     phone: "",
     date: "",
     concern: selectedCondition || TREATMENTS[0].title,
-    consultationType: "In-Clinic",
+    consultationType: "Online Video",
     message: "",
   });
 
@@ -88,11 +88,11 @@ _Sent via ${CLINIC_CONFIG.clinicName} website_`;
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-4xl font-serif font-bold text-[#1F4B3F] tracking-tight">
-            Schedule Your Consultation
+            Schedule Your Online Video Consultation
           </h2>
 
           <p className="text-[#5C6659] text-base sm:text-lg leading-relaxed">
-            Begin your journey towards constitutional balance. Fill in your details to connect directly with our clinic.
+            Begin your journey towards constitutional balance from the comfort of your home. Fill in your details to connect directly with our clinic.
           </p>
 
           <SectionDivider variant="botanical" className="my-2" />
@@ -150,15 +150,15 @@ _Sent via ${CLINIC_CONFIG.clinicName} website_`;
                   <div className="grid grid-cols-2 gap-3">
                     <button
                       type="button"
-                      onClick={() => setFormData({ ...formData, consultationType: "In-Clinic" })}
+                      onClick={() => setFormData({ ...formData, consultationType: "Phone Call" })}
                       className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl border text-xs font-semibold transition-all ${
-                        formData.consultationType === "In-Clinic"
+                        formData.consultationType === "Phone Call"
                           ? "bg-[#1F4B3F] text-white border-[#1F4B3F] shadow-sm"
                           : "bg-[#FAF7F0] text-[#23291F] border-[#1F4B3F]/15 hover:bg-[#E8F0EB]"
                       }`}
                     >
-                      <Building2 className="w-4 h-4" />
-                      <span>In-Clinic Visit ({CLINIC_CONFIG.city})</span>
+                      <Phone className="w-4 h-4" />
+                      <span>Phone Consultation</span>
                     </button>
                     <button
                       type="button"

@@ -21,7 +21,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aurahomeopathy.com"),
+  metadataBase: new URL("https://allensha.com"),
   title: `${CLINIC_CONFIG.doctorName} | ${CLINIC_CONFIG.shortName} — Classical Homeopathy in ${CLINIC_CONFIG.city}`,
   description: `${CLINIC_CONFIG.tagline}. Evidence-informed constitutional homeopathy for hair & skin, allergies, PCOS, pediatric health and chronic pain in ${CLINIC_CONFIG.city}.`,
   keywords: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${CLINIC_CONFIG.doctorName} | ${CLINIC_CONFIG.clinicName}`,
     description: CLINIC_CONFIG.tagline,
-    url: "https://aurahomeopathy.com",
+    url: "https://allensha.com",
     siteName: CLINIC_CONFIG.clinicName,
     locale: "en_IN",
     type: "website",
@@ -76,10 +76,10 @@ export default function RootLayout({
     name: CLINIC_CONFIG.clinicName,
     alternateName: CLINIC_CONFIG.shortName,
     description: CLINIC_CONFIG.tagline,
-    url: "https://aurahomeopathy.com",
+    url: "https://allensha.com",
     telephone: CLINIC_CONFIG.phoneClean,
     medicalSpecialty: "Homeopathic",
-    image: "https://aurahomeopathy.com/images/hero-consultation.jpg",
+    image: "https://allensha.com/images/hero-consultation.jpg",
     priceRange: "₹₹",
     address: {
       "@type": "PostalAddress",

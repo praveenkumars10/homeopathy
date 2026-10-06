@@ -132,7 +132,7 @@ export function DoctorProfile() {
                 </a>
                 <span className="text-xs text-[#5C6659] flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#1F4B3F]" />
-                  In-clinic & Video slots available
+                  Online video consultation slots available
                 </span>
               </div>
 

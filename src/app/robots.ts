@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://aurahomeopathy.com/sitemap.xml",
+    sitemap: "https://allensha.com/sitemap.xml",
   };
 }

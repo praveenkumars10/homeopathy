@@ -8,10 +8,10 @@
 
 export const CLINIC_CONFIG = {
   // Brand & Identity
-  clinicName: "Aura Homeopathy & Holistic Health Clinic", // [CLINIC_NAME]
-  shortName: "Aura Homeopathy",
-  tagline: "Homeopathy That Treats the Cause, Not Just the Symptom",
-  shortTagline: "Gentle, deep-acting classical homeopathy tailored to your unique constitutional profile.",
+  clinicName: "Allensha Homeopathy", // [CLINIC_NAME]
+  shortName: "Allensha",
+  tagline: "Online Homeopathy Consultations from the Comfort of Your Home",
+  shortTagline: "Gentle, deep-acting classical homeopathy tailored to your unique constitutional profile via convenient video calls.",
   
   // Doctor Profile
   doctorName: "Dr. Aradhana Sharma", // [DOCTOR_NAME]
@@ -28,7 +28,7 @@ export const CLINIC_CONFIG = {
   phone: "+91 98765 43210", // [PHONE]
   phoneClean: "+919876543210",
   whatsappNumber: "919876543210", // [WHATSAPP_NUMBER] (Country code + number without + or spaces)
-  email: "care@aurahomeopathy.com",
+  email: "care@allensha.com",
   
   // Location
   addressLine1: "Suite 302, Green Lotus Wellness Arcade", // [ADDRESS]
@@ -42,7 +42,7 @@ export const CLINIC_CONFIG = {
 
   // Timings
   hours: "Mon – Sat: 9:30 AM – 7:30 PM | Sun: By Prior Appointment", // [CLINIC_HOURS]
-  consultationDays: "Monday to Saturday (In-clinic & Video Consultations)",
+  consultationDays: "Monday to Saturday (Online Video Consultations)",
 
   // Trust Statistics (Counters)
   stats: {

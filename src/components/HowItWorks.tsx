@@ -97,7 +97,7 @@ export function HowItWorks() {
                   <span className="w-1.5 h-1.5 rounded-full bg-[#D9663B]" />
                   <span>
                     {idx === 0
-                      ? "In-person or private video session"
+                      ? "Secure online video consultation"
                       : idx === 1
                       ? "Constitutional single-remedy selection"
                       : "Refining potency as vitality improves"}
