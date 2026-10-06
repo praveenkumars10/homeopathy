@@ -201,6 +201,7 @@ export interface ClinicalCase {
   duration: string;
   summary: string;
   beforeImage: string;
+  beforeImages?: string[];
   afterImage: string;
   beforeLabel?: string;
   afterLabel?: string;
@@ -267,6 +268,40 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     beforeLabel: "Before Treatment (Severe Lichenoid Plaque)",
     afterLabel: "After Homeopathy (Normal Skin Tone)",
     resultBadge: "Full Texture & Tone Restored",
+  },
+  {
+    id: "case-thumb-infection",
+    title: "Thumb Pulp Ulceration & Severe Paronychia Healing",
+    patientProfile: "Adult Patient, Pulp Infection",
+    condition: "Deep Thumb Pulp Necrosis, Nail-Fold Infection & Tissue Loss",
+    category: "Infection & Wound Care",
+    duration: "3 Weeks of Constitutional Homeopathy",
+    summary:
+      "Patient suffered from an excruciatingly tender, ulcerated thumb pulp with localized tissue necrosis and chronic nail-fold inflammation. Constitutional homeopathic remedies halted suppuration, stimulated healthy tissue granulation, and restored the natural thumb contour and nail-bed integrity without surgical incision or scarring.",
+    beforeImage: "/images/testimonials/case5-thumb-before.jpg",
+    afterImage: "/images/testimonials/case5-thumb-after.jpg",
+    beforeLabel: "Before Treatment (Ulcerated Thumb Pulp)",
+    afterLabel: "After Homeopathy (Full Tissue Recovery)",
+    resultBadge: "100% Granulation & Healing",
+  },
+  {
+    id: "case-knee-arthritis",
+    title: "Severe Knee Arthritis, Joint Effusion & Mobility Restored",
+    patientProfile: "Senior Patient, Mobility Impairment",
+    condition: "Severe Knee Joint Swelling, Chronic Effusion & Walking Difficulty",
+    category: "Joint & Pain Management",
+    duration: "7 Weeks of Constitutional Homeopathy",
+    summary:
+      "Patient presented with severe right knee swelling, fluid effusion, and crippling pain necessitating continuous compression bandage support to ambulate. Individualized constitutional remedies resolved the chronic synovial inflammation, facilitating natural fluid absorption and pain relief. The patient regained erect weight-bearing posture and independent mobility without requiring knee wraps or pain injections.",
+    beforeImage: "/images/testimonials/case6-knee-before-1.jpg",
+    beforeImages: [
+      "/images/testimonials/case6-knee-before-1.jpg",
+      "/images/testimonials/case6-knee-before-2.jpg",
+    ],
+    afterImage: "/images/testimonials/case6-knee-after.jpg",
+    beforeLabel: "Before Treatment (Severe Effusion with Bandage)",
+    afterLabel: "After Homeopathy (Erect Posture, Swelling Gone)",
+    resultBadge: "Full Mobility & Swelling Resolved",
   },
 ];
 
