@@ -188,6 +188,57 @@ export const TREATMENT_STEPS = [
       "Structured follow-up reviews evaluate constitutional progress, adjusting potency and remedies as your vitality strengthens and core symptoms resolve permanently.",
   },
 ];
+/**
+ * Clinical Before & After Cases
+ * Real patient photographic outcomes treated at Allensha Homeopathy
+ */
+export interface ClinicalCase {
+  id: string;
+  title: string;
+  patientProfile: string;
+  condition: string;
+  category: string;
+  duration: string;
+  summary: string;
+  beforeImage: string;
+  afterImage: string;
+  beforeLabel?: string;
+  afterLabel?: string;
+  resultBadge?: string;
+}
+
+export const CLINICAL_CASES: ClinicalCase[] = [
+  {
+    id: "case-finger-ulcer",
+    title: "Chronic Non-Healing Finger Ulcer & Tissue Recovery",
+    patientProfile: "Adult Patient, Severe Lesion",
+    condition: "Deep Finger Ulceration & Tissue Inflammation",
+    category: "Skin & Wound Care",
+    duration: "4 Weeks of Constitutional Homeopathy",
+    summary:
+      "Patient presented with a painful, deep non-healing ulcerated lesion at the fingertip with yellow tissue inflammation. Following individualised constitutional homeopathic treatment, natural cellular regeneration was initiated, inflammation completely subsided, and the finger healed cleanly without scar tissue.",
+    beforeImage: "/images/testimonials/case1-finger-before.jpg",
+    afterImage: "/images/testimonials/case1-finger-after.jpg",
+    beforeLabel: "Before Treatment",
+    afterLabel: "After Homeopathy",
+    resultBadge: "Complete Tissue Healing",
+  },
+  {
+    id: "case-hand-warts",
+    title: "Extensive Hand Warts (Verruca Vulgaris) Clearance",
+    patientProfile: "Adult Patient, Multiple Lesions",
+    condition: "Multiple Recurrent Hand Warts & Papillomas",
+    category: "Dermatological Homeopathy",
+    duration: "6 Weeks of Constitutional Homeopathy",
+    summary:
+      "Extensive clusters of stubborn, rough verruca warts covering the dorsum of the hand and wrist. While external cautery or burning often leaves scars and recurrent outbreaks, constitutional homeopathy stimulated internal immunity, causing all warts to naturally fall off and leaving completely clear, smooth skin.",
+    beforeImage: "/images/testimonials/case2-warts-before.jpg",
+    afterImage: "/images/testimonials/case2-warts-after.jpg",
+    beforeLabel: "Before Treatment",
+    afterLabel: "After Homeopathy",
+    resultBadge: "100% Wart Clearance",
+  },
+];
 
 /**
  * Patient Testimonials (Section 7)
