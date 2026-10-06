@@ -238,6 +238,36 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     afterLabel: "After Homeopathy",
     resultBadge: "100% Wart Clearance",
   },
+  {
+    id: "case-foot-ulcer",
+    title: "Severe Chronic Foot Ulcer & Tissue Re-Epithelialization",
+    patientProfile: "Adult Patient, Chronic Non-Healing Wound",
+    condition: "Deep Foot Ulcer with Peripheral Necrosis & Slough",
+    category: "Diabetic & Wound Care",
+    duration: "8 Weeks of Constitutional Homeopathy",
+    summary:
+      "Patient presented with a critical, long-standing ulcerated wound on the foot exhibiting tissue breakdown, peripheral redness, and non-healing slough. When conventional dressings showed slow response, constitutional homeopathic prescribing stimulated cellular microcirculation and innate vitality, resulting in complete wound closure and healthy epithelial regeneration.",
+    beforeImage: "/images/testimonials/case3-foot-ulcer-before.jpg",
+    afterImage: "/images/testimonials/case3-foot-ulcer-after.jpg",
+    beforeLabel: "Before Treatment (Open Deep Ulcer)",
+    afterLabel: "After Homeopathy (Complete Healing)",
+    resultBadge: "100% Wound Closure",
+  },
+  {
+    id: "case-arm-dermatitis",
+    title: "Extensive Hyperpigmented Eczema & Lichenoid Plaque",
+    patientProfile: "Adult Patient, Recurrent Skin Lesion",
+    condition: "Severe Violaceous Hyperpigmented Patch on Arm",
+    category: "Skin & Allergy Care",
+    duration: "5 Weeks of Constitutional Homeopathy",
+    summary:
+      "Patient presented with a large, thickened, severely darkened lichenoid eczema patch over the arm causing persistent irritation. Rather than temporary symptomatic suppression with topical cortisone, deep constitutional homeopathy addressed internal immune dysregulation, resulting in complete clearance of the patch and full restoration of normal skin complexion.",
+    beforeImage: "/images/testimonials/case4-arm-eczema-before.jpg",
+    afterImage: "/images/testimonials/case4-arm-eczema-after.jpg",
+    beforeLabel: "Before Treatment (Severe Lichenoid Plaque)",
+    afterLabel: "After Homeopathy (Normal Skin Tone)",
+    resultBadge: "Full Texture & Tone Restored",
+  },
 ];
 
 /**
