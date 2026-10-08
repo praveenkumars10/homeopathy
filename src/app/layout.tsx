@@ -22,22 +22,25 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://allensha.com"),
-  title: `${CLINIC_CONFIG.doctorName} | ${CLINIC_CONFIG.shortName} — Classical Homeopathy in ${CLINIC_CONFIG.city}`,
-  description: `${CLINIC_CONFIG.tagline}. Evidence-informed constitutional homeopathy for hair & skin, allergies, PCOS, pediatric health and chronic pain in ${CLINIC_CONFIG.city}.`,
+  title: `${CLINIC_CONFIG.doctorName} | 100% Online Homeopathy Consultation Only (Base: Salem, Tamil Nadu)`,
+  description: `${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom) — Gold Medalist & Government Registered Medical Practitioner (Reg. No: 3459, Tamil Nadu Homeopathy Medical Council). 16+ years experience (Since 2010). 100% Online Consultations Only (No Offline Visits). Timings: 3:00 PM – 9:00 PM.`,
   keywords: [
-    "Homeopathy clinic Bengaluru",
-    "Best homeopath in Indiranagar",
-    "Classical homeopathy doctor",
-    "Homeopathy for eczema and psoriasis",
+    "Online Homeopathy Consultation Only",
+    "Dr M Mohamed Shahid",
+    "BHMS MD Hom Gold Medalist",
+    "Government Registered Medical Practitioner 3459",
+    "Tamil Nadu Homeopathy Medical Council",
+    "Homeopathy doctor Salem online consultation",
+    "Classical homeopathy video consultation",
+    "Homeopathy for eczema and skin diseases",
     "Homeopathic hair loss treatment",
-    "PCOS homeopathic treatment",
-    "Pediatric homeopathy Bengaluru",
-    "Allergy homeopathic remedies",
+    "PCOS homeopathic treatment online",
+    "Pediatric homeopathy online consultation",
   ],
   authors: [{ name: CLINIC_CONFIG.doctorName }],
   creator: CLINIC_CONFIG.clinicName,
   openGraph: {
-    title: `${CLINIC_CONFIG.doctorName} | ${CLINIC_CONFIG.clinicName}`,
+    title: `${CLINIC_CONFIG.doctorName} | ${CLINIC_CONFIG.clinicName} Online Homeopathy`,
     description: CLINIC_CONFIG.tagline,
     url: "https://allensha.com",
     siteName: CLINIC_CONFIG.clinicName,
@@ -48,7 +51,7 @@ export const metadata: Metadata = {
         url: "/images/hero-consultation.jpg",
         width: 1200,
         height: 800,
-        alt: `${CLINIC_CONFIG.clinicName} Consultation`,
+        alt: `${CLINIC_CONFIG.clinicName} Online Consultation`,
       },
     ],
   },
@@ -69,10 +72,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // MedicalClinic JSON-LD Structured Data Schema for Local SEO
+  // MedicalBusiness JSON-LD Structured Data Schema for Online Consultation Practice
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalClinic",
+    "@type": "MedicalBusiness",
     name: CLINIC_CONFIG.clinicName,
     alternateName: CLINIC_CONFIG.shortName,
     description: CLINIC_CONFIG.tagline,
@@ -83,23 +86,16 @@ export default function RootLayout({
     priceRange: "₹₹",
     address: {
       "@type": "PostalAddress",
-      streetAddress: `${CLINIC_CONFIG.addressLine1}, ${CLINIC_CONFIG.addressLine2}`,
       addressLocality: CLINIC_CONFIG.city,
       addressRegion: CLINIC_CONFIG.state,
-      postalCode: CLINIC_CONFIG.postalCode,
       addressCountry: "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: "12.9726884",
-      longitude: "77.6384457",
     },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        opens: "09:30",
-        closes: "19:30",
+        opens: "15:00",
+        closes: "21:00",
       },
     ],
     physician: {
@@ -107,7 +103,7 @@ export default function RootLayout({
       name: CLINIC_CONFIG.doctorName,
       medicalSpecialty: "Homeopathy",
       jobTitle: CLINIC_CONFIG.doctorTitle,
-      description: CLINIC_CONFIG.qualifications,
+      description: `${CLINIC_CONFIG.qualifications}, ${CLINIC_CONFIG.medicalCouncilReg}`,
     },
     aggregateRating: {
       "@type": "AggregateRating",

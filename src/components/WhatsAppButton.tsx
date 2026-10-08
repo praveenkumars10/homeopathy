@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(true);
 
-  const defaultMessage = `Hello Dr. ${CLINIC_CONFIG.doctorName}, I'm visiting the ${CLINIC_CONFIG.shortName} website and would like to ask about consultation availability.`;
+  const defaultMessage = `Hello ${CLINIC_CONFIG.doctorName}, I'm visiting the ${CLINIC_CONFIG.shortName} website and would like to inquire about an online consultation (3:00 PM – 9:00 PM).`;
   const whatsappUrl = `https://wa.me/${CLINIC_CONFIG.whatsappNumber}?text=${encodeURIComponent(
     defaultMessage
   )}`;

@@ -10,12 +10,62 @@ import {
   Clock,
   ArrowUp,
   ShieldCheck,
+  MessageCircle,
 } from "lucide-react";
+
+function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </svg>
+  );
+}
+
+function InstagramIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
+function YouTubeIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+      <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" />
+    </svg>
+  );
+}
+
+function FacebookIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
 
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const whatsappUrl = `https://wa.me/${CLINIC_CONFIG.whatsappNumber}?text=${encodeURIComponent(
+    `Hello ${CLINIC_CONFIG.doctorName}, I would like to inquire about an online consultation.`
+  )}`;
 
   return (
     <footer className="bg-[#17382F] text-[#FAF7F0] pt-16 pb-24 md:pb-16 border-t border-[#1F4B3F]">
@@ -43,56 +93,75 @@ export function Footer() {
             </p>
 
             {/* Doctor seal */}
-            <div className="pt-2 flex items-center gap-2 text-xs text-[#E8F0EB]/90">
-              <ShieldCheck className="w-4 h-4 text-[#C98B3E]" />
-              <span>
-                Led by {CLINIC_CONFIG.doctorName}, {CLINIC_CONFIG.qualifications}
+            <div className="pt-2 flex flex-col gap-1 text-xs text-[#E8F0EB]/90">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#C98B3E] shrink-0" />
+                <span>
+                  Led by {CLINIC_CONFIG.doctorName}, {CLINIC_CONFIG.qualifications}
+                </span>
+              </div>
+              <span className="text-[11px] text-[#C98B3E] pl-6">
+                {CLINIC_CONFIG.medicalCouncilReg}
               </span>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex items-center gap-3 pt-2">
-              <a
-                href="/contact"
-                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-[#FAF7F0] hover:bg-[#D9663B] transition-colors"
-                aria-label="Instagram"
-              >
-                <svg className="w-4 h-4 fill-none stroke-currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                </svg>
-              </a>
-              <a
-                href="/contact"
-                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-[#FAF7F0] hover:bg-[#D9663B] transition-colors"
-                aria-label="Facebook"
-              >
-                <svg className="w-4 h-4 fill-none stroke-currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-              </a>
-              <a
-                href="/contact"
-                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-[#FAF7F0] hover:bg-[#D9663B] transition-colors"
-                aria-label="LinkedIn"
-              >
-                <svg className="w-4 h-4 fill-none stroke-currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect width="4" height="12" x="2" y="9" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </a>
-              <a
-                href="/contact"
-                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-[#FAF7F0] hover:bg-[#D9663B] transition-colors"
-                aria-label="YouTube"
-              >
-                <svg className="w-4 h-4 fill-none stroke-currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                  <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-                  <path d="m10 15 5-3-5-3z" />
-                </svg>
-              </a>
+            {/* Social Media & Direct Chat Icons */}
+            <div className="pt-3">
+              <span className="text-[11px] uppercase tracking-wider text-[#C98B3E] font-semibold block mb-2">
+                Connect With Us
+              </span>
+              <div className="flex items-center gap-3">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/15 hover:bg-[#25D366] text-white flex items-center justify-center transition-all duration-200 transform hover:scale-110 shadow-md border border-white/10"
+                  aria-label="WhatsApp"
+                  title="Connect on WhatsApp"
+                >
+                  <WhatsAppIcon className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/15 hover:bg-[#E4405F] text-white flex items-center justify-center transition-all duration-200 transform hover:scale-110 shadow-md border border-white/10"
+                  aria-label="Instagram"
+                  title="Follow on Instagram"
+                >
+                  <InstagramIcon className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/15 hover:bg-[#FF0000] text-white flex items-center justify-center transition-all duration-200 transform hover:scale-110 shadow-md border border-white/10"
+                  aria-label="YouTube"
+                  title="Subscribe on YouTube"
+                >
+                  <YouTubeIcon className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/15 hover:bg-[#1877F2] text-white flex items-center justify-center transition-all duration-200 transform hover:scale-110 shadow-md border border-white/10"
+                  aria-label="Facebook"
+                  title="Follow on Facebook"
+                >
+                  <FacebookIcon className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/15 hover:bg-[#0A66C2] text-white flex items-center justify-center transition-all duration-200 transform hover:scale-110 shadow-md border border-white/10"
+                  aria-label="LinkedIn"
+                  title="Connect on LinkedIn"
+                >
+                  <LinkedInIcon className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -155,16 +224,16 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Clinic Info */}
+          {/* Col 4: Online Practice Info */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-serif font-semibold text-base text-[#C98B3E] tracking-wide">
-              Clinic Location
+              Online Practice Base
             </h4>
             <div className="space-y-2.5 text-xs text-[#E8F0EB]/80">
               <p className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#C98B3E] shrink-0 mt-0.5" />
                 <span>
-                  {CLINIC_CONFIG.addressLine1}, {CLINIC_CONFIG.addressLine2}, {CLINIC_CONFIG.city}
+                  {CLINIC_CONFIG.locationDisplay}
                 </span>
               </p>
               <p className="flex items-center gap-2">
@@ -177,6 +246,9 @@ export function Footer() {
                 <Clock className="w-4 h-4 text-[#C98B3E] shrink-0" />
                 <span>{CLINIC_CONFIG.hours}</span>
               </p>
+              <p className="text-[11px] font-semibold text-[#C98B3E]">
+                * 100% Online Consultations Only (No Offline Visits)
+              </p>
             </div>
 
             <div className="pt-2">
@@ -184,7 +256,7 @@ export function Footer() {
                 href="/contact"
                 className="inline-block text-xs font-semibold text-[#17382F] bg-[#FAF7F0] hover:bg-white px-4 py-2 rounded-full transition-colors"
               >
-                Schedule Appointment
+                Schedule Online Consultation
               </a>
             </div>
           </div>

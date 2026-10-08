@@ -32,7 +32,7 @@ export function Hero() {
             {/* Top Credibility Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8F0EB] border border-[#1F4B3F]/15 text-[#1F4B3F] text-xs font-semibold tracking-wide">
               <Sparkles className="w-3.5 h-3.5 text-[#C98B3E]" />
-              <span>Evidence-Informed Classical Constitutional Care</span>
+              <span>100% Online Consultations • Est. Since 2010 • Located in Salem, TN</span>
             </div>
 
             {/* Main Headline */}
@@ -42,7 +42,7 @@ export function Hero() {
 
             {/* Subheadline */}
             <p className="text-[#5C6659] text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl font-normal">
-              Personalised, natural treatment for hair, skin, allergies and chronic conditions — from the comfort of your home via video consultations with a doctor who takes the unhurried time to understand your complete constitutional health history.
+              Personalised, natural classical homeopathy for hair, skin, allergies and chronic conditions by <strong className="font-semibold text-[#1F4B3F]">Dr. M. Mohamed Shahid, BHMS, MD(Hom)</strong> (Gold Medalist &amp; Govt Registered Medical Practitioner, Reg. No: 3459). <span className="text-[#D9663B] font-semibold">100% Online Consultations Only</span> via video/phone from 3:00 PM to 9:00 PM, with doorstep medicine delivery across India.
             </p>
 
             {/* CTA Buttons */}
@@ -75,7 +75,7 @@ export function Hero() {
                     <AnimatedCounter value={CLINIC_CONFIG.stats.yearsOfPractice} suffix="+" />
                   </span>
                   <span className="text-xs sm:text-sm text-[#5C6659] font-medium leading-snug">
-                    Years of Practice
+                    Years Experience (Since 2010)
                   </span>
                 </div>
 
@@ -85,7 +85,7 @@ export function Hero() {
                     <AnimatedCounter value={CLINIC_CONFIG.stats.patientsTreated} suffix="+" />
                   </span>
                   <span className="text-xs sm:text-sm text-[#5C6659] font-medium leading-snug">
-                    Patients Treated
+                    Online Consultations
                   </span>
                 </div>
 
@@ -118,7 +118,7 @@ export function Hero() {
               <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image
                   src="/images/hero-consultation.jpg"
-                  alt={`Online video consultation at ${CLINIC_CONFIG.clinicName}`}
+                  alt={`Online video consultation by ${CLINIC_CONFIG.doctorName}`}
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
@@ -140,6 +140,9 @@ export function Hero() {
                     <p className="text-[#5C6659] text-[11px]">
                       {CLINIC_CONFIG.qualifications}
                     </p>
+                    <p className="text-[#C98B3E] text-[10px] font-semibold">
+                      Govt Registered Medical Practitioner • Reg. 3459
+                    </p>
                   </div>
                 </div>
               </div>
@@ -148,7 +151,7 @@ export function Hero() {
             {/* Floating Top-Right Mini Badge */}
             <div className="absolute -top-3 -right-3 hidden sm:flex items-center gap-1.5 bg-[#FAF7F0] border border-[#C98B3E]/30 rounded-full py-1.5 px-3.5 shadow-lg text-[11px] font-semibold text-[#1F4B3F]">
               <ShieldCheck className="w-4 h-4 text-[#1F4B3F]" />
-              <span>100% Non-Invasive & Gentle</span>
+              <span>3 PM – 9 PM Consultations</span>
             </div>
 
           </motion.div>

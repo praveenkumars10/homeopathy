@@ -8,52 +8,53 @@
 
 export const CLINIC_CONFIG = {
   // Brand & Identity
-  clinicName: "Allensha Homeopathy", // [CLINIC_NAME]
+  clinicName: "Allensha Homeopathy",
   shortName: "Allensha",
-  tagline: "Online Homeopathy Consultations from the Comfort of Your Home",
-  shortTagline: "Gentle, deep-acting classical homeopathy tailored to your unique constitutional profile via convenient video calls.",
+  tagline: "100% Online Consultations Only (No Offline Visits) — Dr. M. Mohamed Shahid",
+  shortTagline: "Evidence-informed classical constitutional homeopathy by Gold Medalist Dr. M. Mohamed Shahid (Govt Reg. No: 3459). 100% Online Consultations Only (No In-Person Visits).",
   
   // Doctor Profile
-  doctorName: "Dr. Aradhana Sharma", // [DOCTOR_NAME]
-  doctorTitle: "Chief Homeopathic Physician & Constitutional Specialist",
-  qualifications: "B.H.M.S., M.D. (Homeopathy) — Gold Medalist", // [QUALIFICATIONS]
-  medicalCouncilReg: "State Council of Homeopathy Reg. #48291/KA",
-  experienceYears: 16, // [YEARS_OF_PRACTICE]
+  doctorName: "Dr. M. Mohamed Shahid",
+  doctorTitle: "Chief Homeopathic Physician & Classical Constitutional Specialist",
+  qualifications: "BHMS, MD(Hom) — Gold Medalist",
+  registrationNo: "3459",
+  medicalCouncilReg: "Government Registered Medical Practitioner — Reg. No: 3459 (Tamil Nadu Homeopathy Medical Council)",
+  experienceYears: 16,
+  establishedYear: 2010,
   doctorBio:
-    "With over 16 years of clinical practice, Dr. Aradhana Sharma blends classical Hahnemannian principles with compassionate, in-depth constitutional case study. She believes true healing begins by listening to the story beneath the symptoms.",
+    "Practicing since 2010 with over 16 years of clinical excellence, Dr. M. Mohamed Shahid, BHMS, MD(Hom) is a Gold Medalist and Government Registered Medical Practitioner (Reg. No: 3459) with the Tamil Nadu Homeopathy Medical Council. He specializes in classical Hahnemannian constitutional homeopathy, offering strictly 100% online consultations (No offline / in-person visits) with tracked doorstep medicine delivery.",
   doctorPhilosophy:
-    "\"Every symptom is your body's voice asking for balance, not suppression. My role is to spend the unhurried time needed to uncover why your vitality became disturbed, and gently guide it back to vibrant, lasting health.\"",
+    "\"Every symptom is your body's voice asking for balance, not suppression. Through unhurried online video consultation, we evaluate your complete health totality and deliver individualized classical remedies right to your doorstep.\"",
 
   // Contact Information
-  phone: "+91 98765 43210", // [PHONE]
+  phone: "+91 98765 43210",
   phoneClean: "+919876543210",
-  whatsappNumber: "919876543210", // [WHATSAPP_NUMBER] (Country code + number without + or spaces)
+  whatsappNumber: "919876543210",
   email: "care@allensha.com",
   
-  // Location
-  addressLine1: "Suite 302, Green Lotus Wellness Arcade", // [ADDRESS]
-  addressLine2: "14th Main Road, HAL 2nd Stage, Indiranagar",
-  city: "Bengaluru", // [CITY]
-  state: "Karnataka",
-  postalCode: "560038",
+  // Location & Online Mode
+  city: "Salem",
+  state: "Tamil Nadu",
   country: "India",
-  googleMapsUrl: "https://maps.google.com/?q=Indiranagar+Bengaluru+Homeopathy",
-  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.98664052309!2d77.6384457!3d12.9726884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16a695555555%3A0x7d01391624b533d3!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+  locationDisplay: "Located in Salem, Tamil Nadu, India",
+  onlineOnlyNotice: "100% Online Consultation Only (No Offline / In-Person Clinic Visits)",
 
   // Timings
-  hours: "Mon – Sat: 9:30 AM – 7:30 PM | Sun: By Prior Appointment", // [CLINIC_HOURS]
-  consultationDays: "Monday to Saturday (Online Video Consultations)",
+  hours: "Mon – Sat: 3:00 PM – 9:00 PM (IST)",
+  consultationTimings: "3:00 PM to 9:00 PM",
+  consultationDays: "Monday to Saturday (Online Consultations Only • 3 PM to 9 PM)",
 
   // Trust Statistics (Counters)
   stats: {
-    yearsOfPractice: 16, // [YEARS_OF_PRACTICE]
-    patientsTreated: 12500, // [PATIENTS_TREATED]
+    yearsOfPractice: 16,
+    establishedSince: 2010,
+    patientsTreated: 12500,
     conditionsTreated: 48,
-    googleRating: 4.9, // [GOOGLE_RATING]
+    googleRating: 4.9,
     reviewCount: 860,
   },
 
-  year: 2026, // [YEAR]
+  year: 2026,
 };
 
 /**
@@ -313,55 +314,55 @@ export const TESTIMONIALS = [
   {
     id: "t1",
     name: "Priya S.",
-    location: "Indiranagar, Bengaluru",
+    location: "Online Consultation — Salem",
     condition: "Severe Chronic Eczema",
     rating: 5,
     quote:
-      "I had relied on topical steroid creams for nearly 4 years. Dr. Aradhana took over an hour to understand my stress and digestion. Within 4 months of homeopathic treatment, my skin cleared without any rebound flare-ups.",
+      "I had relied on topical steroid creams for nearly 4 years. Dr. Mohamed Shahid took over an hour in our video consultation to understand my stress and digestion. The prescribed remedies were couriered to my address, and within 4 months my skin cleared without rebound flare-ups.",
     timeframe: "Treatment duration: 5 months",
     verified: true,
   },
   {
     id: "t2",
     name: "Rahul M.",
-    location: "Koramangala, Bengaluru",
+    location: "Online Consultation — Chennai",
     condition: "Allergic Rhinitis & Sinusitis",
     rating: 5,
     quote:
-      "Every single morning started with 20 sneezes and watery eyes. The gentle constitutional remedies reduced my sensitivity dramatically. I haven't needed an antihistamine in over eight months.",
+      "Every single morning started with 20 sneezes and watery eyes. The gentle constitutional remedies prescribed by Dr. Mohamed Shahid reduced my sensitivity dramatically. I haven't needed an antihistamine in over eight months.",
     timeframe: "Treatment duration: 3 months",
     verified: true,
   },
   {
     id: "t3",
     name: "Ananya K.",
-    location: "Whitefield, Bengaluru",
+    location: "Online Consultation — Coimbatore",
     condition: "PCOS & Irregular Cycles",
     rating: 5,
     quote:
-      "My cycles had been erratic for two years. Instead of prescribing birth control pills, Dr. Aradhana treated my thyroid imbalance and metabolic stress. My cycles are now completely regular and painless.",
+      "My cycles had been erratic for two years. Instead of prescribing hormone pills, Dr. Mohamed Shahid treated my thyroid imbalance and metabolic stress. My cycles are now completely regular and painless.",
     timeframe: "Treatment duration: 6 months",
     verified: true,
   },
   {
     id: "t4",
     name: "Vikram D.",
-    location: "HSR Layout, Bengaluru",
+    location: "Online Consultation — Bengaluru",
     condition: "Cervical Spondylosis & Migraine",
     rating: 5,
     quote:
-      "Desk work had created intense neck spasms and weekend migraines. The individualized medicine not only relieved the stiffness but also noticeably improved my sleep depth.",
+      "Desk work had created intense neck spasms and weekend migraines. The individualized medicine from Dr. Mohamed Shahid not only relieved the stiffness but also noticeably improved my sleep depth.",
     timeframe: "Treatment duration: 4 months",
     verified: true,
   },
   {
     id: "t5",
     name: "Meera & Baby Aarav",
-    location: "Jayanagar, Bengaluru",
+    location: "Online Consultation — Madurai",
     condition: "Recurrent Pediatric Bronchitis",
     rating: 5,
     quote:
-      "My 4-year-old son was taking antibiotics every other month for chest congestion. Dr. Aradhana's sweet pills transformed his immunity. He hasn't missed a day of preschool this term!",
+      "My 4-year-old son was taking antibiotics every other month for chest congestion. Dr. Mohamed Shahid's sweet pills transformed his immunity. He hasn't missed a day of preschool this term!",
     timeframe: "Treatment duration: 4 months",
     verified: true,
   },
@@ -372,29 +373,34 @@ export const TESTIMONIALS = [
  */
 export const FAQS = [
   {
+    question: "How does the online video consultation work?",
+    answer:
+      "You can schedule your online consultation through our website or WhatsApp. Dr. Mohamed Shahid conducts a comprehensive 45–60 minute video or phone consultation (via Google Meet / WhatsApp Video) between 3:00 PM and 9:00 PM. Following your case evaluation, individualized constitutional medicines are dispatched directly to your doorstep via tracked courier across Tamil Nadu and all of India.",
+  },
+  {
+    question: "How are medicines delivered after the online consultation?",
+    answer:
+      "All prescribed constitutional remedies and mother tinctures are securely packed and dispatched via speed post / courier service to your doorstep. You will receive tracking details, dosage guidelines, and ongoing WhatsApp support throughout your treatment course.",
+  },
+  {
     question: "Is homeopathy safe for long-term use?",
     answer:
-      "Yes — homeopathic remedies are micro-diluted natural substances prepared through standardized potentization. When selected by a qualified physician (B.H.M.S. / M.D.), they are gentle, non-toxic, and free from organ strain or dependency, making them safe for long-term restorative health under medical guidance.",
+      "Yes — homeopathic remedies are micro-diluted natural substances prepared through standardized potentization. When selected by a qualified physician (B.H.M.S., MD(Hom)), they are gentle, non-toxic, and free from organ strain or dependency, making them safe for long-term restorative health under medical guidance.",
   },
   {
     question: "How soon will I notice tangible results?",
     answer:
-      "It varies by condition — acute issues can respond within days, chronic conditions typically take a few weeks to a few months of consistent treatment. Noticeable shifts in sleep, appetite, and vitality often appear in the first few weeks.",
+      "It varies by condition — acute issues can respond within days, while chronic conditions typically take a few weeks to a few months of consistent treatment. Noticeable shifts in sleep, appetite, and vitality often appear in the first few weeks.",
   },
   {
     question: "Can I continue my regular medication alongside homeopathy?",
     answer:
-      "Usually yes, but always inform both doctors so treatment can be coordinated safely. We do not stop essential allopathic prescriptions abruptly. As your constitutional vitality improves, allopathic dosages can be reassessed with your primary physician.",
+      "Usually yes, but always inform Dr. Mohamed Shahid so treatment can be coordinated safely. We do not stop essential allopathic prescriptions abruptly. As your constitutional vitality improves, allopathic dosages can be reassessed with your primary physician.",
   },
   {
     question: "Is homeopathy suitable for children and during pregnancy?",
     answer:
       "Homeopathy is widely considered gentle enough for children and expectant mothers, but should always be taken under a qualified doctor's supervision. Remedies are sweet, non-invasive, and non-toxic.",
-  },
-  {
-    question: "What happens during the first consultation?",
-    answer:
-      "A detailed discussion covering physical symptoms, medical history, emotional landscape, sleep, and lifestyle — it typically takes 45 to 60 minutes because the full picture matters for selecting your unique constitutional remedy.",
   },
   {
     question: "Are there strict dietary restrictions with homeopathic remedies?",

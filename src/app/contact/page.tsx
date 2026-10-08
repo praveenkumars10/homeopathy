@@ -6,7 +6,7 @@ import { PageHeader } from "@/components/PageHeader";
 export default function ContactPage() {
   return (
     <>
-      <PageHeader title="Contact & Location" breadcrumbLabel="Contact" backgroundImage="/images/banner_doctor.jpg" />
+      <PageHeader title="Online Consultation Booking" breadcrumbLabel="Online Consultation" backgroundImage="/images/banner_doctor.jpg" />
       <div className="pt-8 md:pt-12">
         <BookAppointment />
       </div>

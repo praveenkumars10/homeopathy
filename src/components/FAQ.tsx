@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FAQS } from "@/lib/constants";
+import { FAQS, CLINIC_CONFIG } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle, MessageSquare } from "lucide-react";
 import { SectionDivider } from "./ui/SectionDivider";
@@ -96,7 +96,7 @@ export function FAQ() {
             className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#D9663B] hover:underline"
           >
             <MessageSquare className="w-4 h-4" />
-            <span>Send a quick query to Dr. Sharma &rarr;</span>
+            <span>Send a quick query to {CLINIC_CONFIG.doctorName} &rarr;</span>
           </a>
         </div>
 

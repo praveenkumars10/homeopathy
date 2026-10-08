@@ -80,7 +80,7 @@ export function WhyChooseUs() {
               Years of Clinical Practice
             </span>
             <span className="text-xs text-[#E8F0EB]/60 mt-1">
-              Dedicated classical care
+              Established Since {CLINIC_CONFIG.establishedYear}
             </span>
           </motion.div>
 
@@ -93,10 +93,10 @@ export function WhyChooseUs() {
               <AnimatedCounter value={CLINIC_CONFIG.stats.patientsTreated} suffix="+" />
             </span>
             <span className="text-sm sm:text-base font-medium text-[#FAF7F0] mt-2">
-              Patients Treated
+              Online Patients Treated
             </span>
             <span className="text-xs text-[#E8F0EB]/60 mt-1">
-              Across Karnataka & India
+              Across Tamil Nadu &amp; India
             </span>
           </motion.div>
 

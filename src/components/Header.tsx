@@ -43,7 +43,7 @@ export function Header() {
 
   return (
     <>
-      {/* Top Banner Notice - Hours & Location */}
+      {/* Top Banner Notice - Hours, Online Only Notice & Reg No */}
       <div className="bg-[#17382F] text-[#E8F0EB] text-xs py-1.5 px-4 hidden sm:block border-b border-[#1F4B3F]">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-6">
@@ -51,9 +51,9 @@ export function Header() {
               <Clock className="w-3.5 h-3.5 text-[#C98B3E]" />
               {CLINIC_CONFIG.hours}
             </span>
-            <span className="flex items-center gap-1.5 text-xs text-[#E8F0EB]/90">
-              <MapPin className="w-3.5 h-3.5 text-[#C98B3E]" />
-              {CLINIC_CONFIG.city}
+            <span className="flex items-center gap-1.5 text-xs text-amber-300 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              100% Online Consultations Only (No Offline Visits) • Base: Salem
             </span>
           </div>
           <div className="flex items-center space-x-4">
@@ -61,7 +61,7 @@ export function Header() {
               ★ {CLINIC_CONFIG.stats.googleRating} Google Rating ({CLINIC_CONFIG.stats.reviewCount}+ reviews)
             </span>
             <span className="text-white/30">|</span>
-            <span className="text-xs text-[#E8F0EB]/80">Classical Hahnemannian Homeopathy</span>
+            <span className="text-xs text-[#E8F0EB]/80">Govt Reg. No: {CLINIC_CONFIG.registrationNo} • Gold Medalist</span>
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@ export function Header() {
               href="/contact"
               className="inline-flex items-center justify-center bg-[#D9663B] hover:bg-[#c2552b] text-white text-[13px] font-semibold px-4 py-1.5 rounded-full shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap"
             >
-              Book Appointment
+              Book Consultation
             </Link>
           </div>
 
@@ -126,7 +126,7 @@ export function Header() {
             <a
               href={`tel:${CLINIC_CONFIG.phoneClean}`}
               className="p-1.5 rounded-full bg-[#1F4B3F]/8 text-[#1F4B3F]"
-              aria-label="Call clinic"
+              aria-label="Call doctor"
             >
               <Phone className="w-4 h-4" />
             </a>
@@ -184,7 +184,7 @@ export function Header() {
 
                 <div className="space-y-4">
                   <div className="text-xs font-semibold uppercase tracking-wider text-[#C98B3E] px-2">
-                    Navigation
+                    Online Consultation
                   </div>
                   <nav className="flex flex-col space-y-1">
                     {navLinks.map((link) => (
@@ -216,7 +216,7 @@ export function Header() {
                   className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-[#D9663B] text-white font-semibold text-sm shadow-md"
                 >
                   <Calendar className="w-4 h-4" />
-                  Book Appointment
+                  Book Online Consultation
                 </a>
               </div>
             </motion.div>
@@ -224,7 +224,7 @@ export function Header() {
         )}
       </AnimatePresence>
 
-      {/* Mobile Fixed Bottom Bar (50/50 Call Now & Book Appointment) */}
+      {/* Mobile Fixed Bottom Bar (50/50 Call Now & Book Consultation) */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-[#FAF7F0] border-t border-[#1F4B3F]/15 p-2.5 flex gap-2 lg:hidden shadow-[0_-4px_12px_rgba(0,0,0,0.06)]">
         <a
           href={`tel:${CLINIC_CONFIG.phoneClean}`}
@@ -238,7 +238,7 @@ export function Header() {
           className="flex-1 flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-[#D9663B] text-white font-semibold text-sm shadow-md transition-colors active:scale-95"
         >
           <Calendar className="w-4 h-4" />
-          <span>Book Visit</span>
+          <span>Book Online</span>
         </a>
       </div>
     </>
