@@ -53,7 +53,7 @@ export function Header() {
             </span>
             <span className="flex items-center gap-1.5 text-xs text-amber-300 font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              100% Online Consultations Only (No Offline Visits) • Base: Salem
+              100% Online Consultations Only • Base: Salem
             </span>
           </div>
           <div className="flex items-center space-x-4">

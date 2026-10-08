@@ -329,8 +329,8 @@ _Sent via ${CLINIC_CONFIG.clinicName} Online Consultation Portal_`;
                     <p className="font-bold text-[#1F4B3F]">
                       3:00 PM – 9:00 PM (Monday to Saturday)
                     </p>
-                    <span className="text-xs font-semibold text-[#D9663B] block mt-0.5">
-                      100% Online Consultations Only (No Offline Visits)
+                    <span className="text-xs font-semibold text-[#1F4B3F] block mt-0.5">
+                      100% Online Consultations Only
                     </span>
                   </div>
                 </div>

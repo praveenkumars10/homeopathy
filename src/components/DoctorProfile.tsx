@@ -32,7 +32,7 @@ export function DoctorProfile() {
     },
     {
       icon: <ShieldCheck className="w-4 h-4 text-[#C98B3E]" />,
-      text: "100% Online Consultation Only (No Offline Clinic Visits)",
+      text: "100% Online Consultations Only",
     },
   ];
 
@@ -118,14 +118,11 @@ export function DoctorProfile() {
 
                 {/* Bottom Notice: Online Consultation Only */}
                 <div className="pt-4 border-t border-white/15 space-y-2 text-xs">
-                  <div className="flex items-center gap-2 text-[#FAF7F0] font-semibold bg-emerald-950/60 rounded-xl px-3 py-2 border border-emerald-500/30">
+                  <div className="flex items-center gap-2 text-[#FAF7F0] font-semibold bg-emerald-950/60 rounded-xl px-3 py-2 border border-emerald-500/30 justify-center">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span>100% Online Consultations Only</span>
                   </div>
-                  <div className="text-[11px] text-amber-200/90 text-center font-medium">
-                    (No offline / in-person clinic visits)
-                  </div>
-                  <div className="text-[11px] text-[#E8F0EB]/70 text-center">
+                  <div className="text-[11px] text-[#E8F0EB]/80 text-center">
                     Timings: 3:00 PM – 9:00 PM (IST) • Base: Salem, TN
                   </div>
                 </div>
@@ -150,12 +147,12 @@ export function DoctorProfile() {
               </div>
 
               {/* Online-only Banner callout */}
-              <div className="bg-[#FAF7F0] border-l-4 border-[#D9663B] p-3.5 rounded-r-xl border border-[#1F4B3F]/10">
-                <span className="text-xs font-bold text-[#D9663B] uppercase tracking-wide block">
-                  Important Notice:
+              <div className="bg-[#FAF7F0] border-l-4 border-[#1F4B3F] p-3.5 rounded-r-xl border border-[#1F4B3F]/10">
+                <span className="text-xs font-bold text-[#1F4B3F] uppercase tracking-wide block">
+                  Online Consultation Practice:
                 </span>
                 <p className="text-xs text-[#23291F] font-medium mt-0.5">
-                  This practice offers <strong>strictly 100% online video &amp; phone consultations</strong>. No offline or physical clinic visits are conducted. Individualized homeopathic medicines are dispatched directly to your address via courier across India.
+                  This practice offers <strong>100% online video &amp; phone consultations</strong>. Individualized homeopathic medicines are dispatched directly to your address via courier across India.
                 </p>
               </div>
 

@@ -247,7 +247,7 @@ export function Footer() {
                 <span>{CLINIC_CONFIG.hours}</span>
               </p>
               <p className="text-[11px] font-semibold text-[#C98B3E]">
-                * 100% Online Consultations Only (No Offline Visits)
+                * 100% Online Consultations Only
               </p>
             </div>
 

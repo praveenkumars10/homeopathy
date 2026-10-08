@@ -10,8 +10,8 @@ export const CLINIC_CONFIG = {
   // Brand & Identity
   clinicName: "Allensha Homeopathy",
   shortName: "Allensha",
-  tagline: "100% Online Consultations Only (No Offline Visits) — Dr. M. Mohamed Shahid",
-  shortTagline: "Evidence-informed classical constitutional homeopathy by Gold Medalist Dr. M. Mohamed Shahid (Govt Reg. No: 3459). 100% Online Consultations Only (No In-Person Visits).",
+  tagline: "100% Online Consultations Only — Dr. M. Mohamed Shahid",
+  shortTagline: "Evidence-informed classical constitutional homeopathy by Gold Medalist Dr. M. Mohamed Shahid (Govt Reg. No: 3459). 100% Online Consultations Only.",
   
   // Doctor Profile
   doctorName: "Dr. M. Mohamed Shahid",
@@ -22,7 +22,7 @@ export const CLINIC_CONFIG = {
   experienceYears: 16,
   establishedYear: 2010,
   doctorBio:
-    "Practicing since 2010 with over 16 years of clinical excellence, Dr. M. Mohamed Shahid, BHMS, MD(Hom) is a Gold Medalist and Government Registered Medical Practitioner (Reg. No: 3459) with the Tamil Nadu Homeopathy Medical Council. He specializes in classical Hahnemannian constitutional homeopathy, offering strictly 100% online consultations (No offline / in-person visits) with tracked doorstep medicine delivery.",
+    "Practicing since 2010 with over 16 years of clinical excellence, Dr. M. Mohamed Shahid, BHMS, MD(Hom) is a Gold Medalist and Government Registered Medical Practitioner (Reg. No: 3459) with the Tamil Nadu Homeopathy Medical Council. He specializes in classical Hahnemannian constitutional homeopathy, offering 100% online consultations with tracked doorstep medicine delivery.",
   doctorPhilosophy:
     "\"Every symptom is your body's voice asking for balance, not suppression. Through unhurried online video consultation, we evaluate your complete health totality and deliver individualized classical remedies right to your doorstep.\"",
 
@@ -37,7 +37,7 @@ export const CLINIC_CONFIG = {
   state: "Tamil Nadu",
   country: "India",
   locationDisplay: "Located in Salem, Tamil Nadu, India",
-  onlineOnlyNotice: "100% Online Consultation Only (No Offline / In-Person Clinic Visits)",
+  onlineOnlyNotice: "100% Online Consultations Only",
 
   // Timings
   hours: "Mon – Sat: 3:00 PM – 9:00 PM (IST)",

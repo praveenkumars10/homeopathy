@@ -23,7 +23,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://allensha.com"),
   title: `${CLINIC_CONFIG.doctorName} | 100% Online Homeopathy Consultation Only (Base: Salem, Tamil Nadu)`,
-  description: `${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom) — Gold Medalist & Government Registered Medical Practitioner (Reg. No: 3459, Tamil Nadu Homeopathy Medical Council). 16+ years experience (Since 2010). 100% Online Consultations Only (No Offline Visits). Timings: 3:00 PM – 9:00 PM.`,
+  description: `${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom) — Gold Medalist & Government Registered Medical Practitioner (Reg. No: 3459, Tamil Nadu Homeopathy Medical Council). 16+ years experience (Since 2010). 100% Online Consultations Only. Timings: 3:00 PM – 9:00 PM.`,
   keywords: [
     "Online Homeopathy Consultation Only",
     "Dr M Mohamed Shahid",
