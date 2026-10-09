@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { CLINICAL_CASES, ClinicalCase } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,7 +13,6 @@ import {
   Maximize2,
   X,
   ShieldCheck,
-  Download,
 } from "lucide-react";
 
 export function BeforeAfterShowcase() {
@@ -25,25 +24,6 @@ export function BeforeAfterShowcase() {
     caseTitle: string;
   } | null>(null);
 
-  // Helper to get watermarked URL for any clinical image
-  const getWatermarkedUrl = useCallback((cleanUrl: string) => {
-    if (cleanUrl.includes("/images/testimonials/")) {
-      return cleanUrl.replace("/images/testimonials/", "/images/testimonials/watermarked/");
-    }
-    return cleanUrl;
-  }, []);
-
-  // Download watermarked image explicitly when user clicks Download button
-  const handleDownloadWatermarked = useCallback((cleanUrl: string, title: string, type: string) => {
-    const watermarkedUrl = getWatermarkedUrl(cleanUrl);
-    const link = document.createElement("a");
-    link.href = watermarkedUrl;
-    link.download = `Allensha-${title.toLowerCase().replace(/[^a-z0-9]/g, "-")}-${type.toLowerCase()}-watermarked.jpg`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }, [getWatermarkedUrl]);
-
   const getActiveBeforeImage = (caseItem: ClinicalCase) => {
     return selectedBeforeMap[caseItem.id] || caseItem.beforeImage;
   };
@@ -53,7 +33,10 @@ export function BeforeAfterShowcase() {
   };
 
   return (
-    <div className="space-y-8 select-none protected-media">
+    <div
+      className="space-y-8 select-none protected-media"
+      onContextMenu={(e) => e.preventDefault()}
+    >
       {/* Case Studies Grid */}
       <motion.div
         variants={staggerContainer}
@@ -103,7 +86,7 @@ export function BeforeAfterShowcase() {
                   
                   {/* Before Image Frame */}
                   <div
-                    className="relative rounded-xl overflow-hidden aspect-[4/5] bg-neutral-200 group/img shadow-sm protected-clinical-image cursor-pointer"
+                    className="relative rounded-xl overflow-hidden aspect-[4/5] bg-neutral-200 group/img shadow-sm protected-clinical-image cursor-pointer select-none"
                     onContextMenu={(e) => e.preventDefault()}
                     onDragStart={(e) => e.preventDefault()}
                     onClick={() =>
@@ -182,7 +165,7 @@ export function BeforeAfterShowcase() {
 
                   {/* After Image Frame */}
                   <div
-                    className="relative rounded-xl overflow-hidden aspect-[4/5] bg-neutral-200 group/img shadow-sm ring-2 ring-[#1F4B3F]/20 protected-clinical-image cursor-pointer"
+                    className="relative rounded-xl overflow-hidden aspect-[4/5] bg-neutral-200 group/img shadow-sm ring-2 ring-[#1F4B3F]/20 protected-clinical-image cursor-pointer select-none"
                     onContextMenu={(e) => e.preventDefault()}
                     onDragStart={(e) => e.preventDefault()}
                     onClick={() =>
@@ -262,7 +245,7 @@ export function BeforeAfterShowcase() {
         })}
       </motion.div>
 
-      {/* Lightbox Modal with Explicit Download */}
+      {/* Lightbox Modal (View Only - No Download) */}
       <AnimatePresence>
         {activeModalImage && (
           <motion.div
@@ -271,6 +254,7 @@ export function BeforeAfterShowcase() {
             exit={{ opacity: 0 }}
             onClick={() => setActiveModalImage(null)}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md select-none"
+            onContextMenu={(e) => e.preventDefault()}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -315,37 +299,20 @@ export function BeforeAfterShowcase() {
                 />
               </div>
 
-              {/* Modal Footer with Download Button */}
-              <div className="p-3.5 sm:p-4 bg-[#FAF7F0] border-t border-[#1F4B3F]/10 flex items-center justify-between gap-3 text-xs text-[#5C6659] flex-wrap">
+              {/* Modal Footer (View Only) */}
+              <div className="p-3.5 sm:p-4 bg-[#FAF7F0] border-t border-[#1F4B3F]/10 flex items-center justify-between gap-3 text-xs text-[#5C6659]">
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-[#1F4B3F]" />
-                  <span>Allensha Homeopathy Clinical Records</span>
+                  <span>Allensha Homeopathy Clinical Records • View Only</span>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      handleDownloadWatermarked(
-                        activeModalImage.src,
-                        activeModalImage.caseTitle,
-                        activeModalImage.label
-                      )
-                    }
-                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#1F4B3F] text-white font-semibold text-xs hover:bg-[#173a30] transition-colors shadow-sm"
-                  >
-                    <Download className="w-3.5 h-3.5 text-[#C98B3E]" />
-                    <span>Download Case Image</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => setActiveModalImage(null)}
-                    className="text-[#D9663B] font-semibold hover:underline"
-                  >
-                    Close
-                  </button>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => setActiveModalImage(null)}
+                  className="px-3.5 py-1.5 rounded-lg bg-[#1F4B3F] text-white font-medium text-xs hover:bg-[#173a30] transition-colors"
+                >
+                  Close
+                </button>
               </div>
             </motion.div>
           </motion.div>
