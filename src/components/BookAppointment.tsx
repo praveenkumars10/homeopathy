@@ -57,10 +57,16 @@ Primary Health Concern: ${formData.concern}
 Notes / Symptoms: ${notes}`;
 
     const encodedText = encodeURIComponent(formattedMessage);
-    const whatsappDeepLink = `https://wa.me/${CLINIC_CONFIG.whatsappNumber}?text=${encodedText}`;
+    const whatsappDeepLink = `https://api.whatsapp.com/send?phone=${CLINIC_CONFIG.whatsappNumber}&text=${encodedText}`;
 
-    // Directly open WhatsApp chat with pre-filled message
-    window.open(whatsappDeepLink, "_blank", "noopener,noreferrer");
+    // Seamless auto-open WhatsApp with pre-filled message on Mobile & Desktop
+    const link = document.createElement("a");
+    link.href = whatsappDeepLink;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
