@@ -21,17 +21,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://allensha.com"),
-  title: `${CLINIC_CONFIG.doctorName} | 100% Online Homeopathy Consultation Only (Base: Salem, Tamil Nadu)`,
-  description: `${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom) — Gold Medalist & Government Registered Medical Practitioner (Reg. No: 3459, Tamil Nadu Homeopathy Medical Council). 16+ years experience (Since 2010). 100% Online Consultations Only. Timings: 3:00 PM – 9:00 PM.`,
+  metadataBase: new URL(CLINIC_CONFIG.siteUrl || "https://allensha.com"),
+  title: {
+    default: `${CLINIC_CONFIG.clinicName} | ${CLINIC_CONFIG.doctorName} | 100% Online Consultation Only`,
+    template: `%s | ${CLINIC_CONFIG.clinicName}`,
+  },
+  description: `${CLINIC_CONFIG.clinicName} — Consult with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist & Govt Registered Practitioner (Reg. No: 3459). 16+ years experience. 100% Online Video & Phone Consultations with doorstep medicine delivery.`,
   keywords: [
-    "Online Homeopathy Consultation Only",
+    "Allen Sha Homeopathy",
+    "Allen Sha",
+    "Allensha Homeopathy",
     "Dr M Mohamed Shahid",
     "BHMS MD Hom Gold Medalist",
     "Government Registered Medical Practitioner 3459",
     "Tamil Nadu Homeopathy Medical Council",
+    "Online Homeopathy Consultation Only",
     "Homeopathy doctor Salem online consultation",
     "Classical homeopathy video consultation",
+    "Constitutional homeopathy doctor",
     "Homeopathy for eczema and skin diseases",
     "Homeopathic hair loss treatment",
     "PCOS homeopathic treatment online",
@@ -39,10 +46,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: CLINIC_CONFIG.doctorName }],
   creator: CLINIC_CONFIG.clinicName,
+  publisher: CLINIC_CONFIG.clinicName,
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
-    title: `${CLINIC_CONFIG.doctorName} | ${CLINIC_CONFIG.clinicName} Online Homeopathy`,
-    description: CLINIC_CONFIG.tagline,
-    url: "https://allensha.com",
+    title: `${CLINIC_CONFIG.clinicName} | ${CLINIC_CONFIG.doctorName}`,
+    description: CLINIC_CONFIG.shortTagline,
+    url: CLINIC_CONFIG.siteUrl || "https://allensha.com",
     siteName: CLINIC_CONFIG.clinicName,
     locale: "en_IN",
     type: "website",
@@ -57,8 +68,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${CLINIC_CONFIG.doctorName} | ${CLINIC_CONFIG.clinicName}`,
-    description: CLINIC_CONFIG.tagline,
+    title: `${CLINIC_CONFIG.clinicName} | ${CLINIC_CONFIG.doctorName}`,
+    description: CLINIC_CONFIG.shortTagline,
     images: ["/images/hero-consultation.jpg"],
   },
   icons: {
@@ -74,6 +85,16 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 };
 

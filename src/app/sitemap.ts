@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
+import { CLINIC_CONFIG } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://allensha.com";
+  const baseUrl = CLINIC_CONFIG.siteUrl || "https://allensha.com";
 
   return [
     {

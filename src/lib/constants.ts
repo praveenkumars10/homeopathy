@@ -10,6 +10,7 @@ export const CLINIC_CONFIG = {
   // Brand & Identity
   clinicName: "Allen Sha Homeopathy",
   shortName: "Allen Sha",
+  siteUrl: "https://allensha.com",
   tagline: "100% Online Consultations Only — Dr. M. Mohamed Shahid",
   shortTagline: "Evidence-informed classical constitutional homeopathy by Gold Medalist Dr. M. Mohamed Shahid (Govt Reg. No: 3459). 100% Online Consultations Only.",
   
