@@ -77,14 +77,14 @@ export function Header() {
         >
           <div className="px-5 sm:px-8 lg:px-10 flex items-center justify-between h-14">
           {/* Logo & Brand Identity */}
-          <Link href="/" className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-[#1F4B3F]/30 rounded-lg">
-            <ClinicBrandLogo className="w-8 h-8 transition-transform group-hover:scale-105" />
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-[#1F4B3F]/30 rounded-lg">
+            <ClinicBrandLogo className="w-9 h-9 sm:w-10 sm:h-10 transition-transform group-hover:scale-105" />
             <div className="flex flex-col leading-none">
-              <span className="font-serif font-extrabold text-xl text-[#1F4B3F] tracking-tight">
+              <span className="font-serif font-extrabold text-xl sm:text-2xl text-[#1F4B3F] tracking-tight">
                 {CLINIC_CONFIG.shortName}
               </span>
-              <span className="text-[10px] tracking-wider uppercase text-[#5C6659]/80 font-medium -mt-0.5">
-                Holistic Health
+              <span className="text-[10px] tracking-wider uppercase text-[#5C6659]/90 font-semibold -mt-0.5">
+                Homoeopathy Consultant
               </span>
             </div>
           </Link>
@@ -166,11 +166,16 @@ export function Header() {
             >
               <div>
                 <div className="flex items-center justify-between pb-4 border-b border-[#1F4B3F]/10 mb-6">
-                  <div className="flex items-center gap-2">
-                    <ClinicBrandLogo className="w-8 h-8" />
-                    <span className="font-serif font-bold text-lg text-[#1F4B3F]">
-                      {CLINIC_CONFIG.shortName}
-                    </span>
+                  <div className="flex items-center gap-2.5">
+                    <ClinicBrandLogo className="w-9 h-9" />
+                    <div className="flex flex-col leading-none">
+                      <span className="font-serif font-bold text-lg text-[#1F4B3F]">
+                        {CLINIC_CONFIG.shortName}
+                      </span>
+                      <span className="text-[9px] tracking-wider uppercase text-[#5C6659]/90 font-semibold">
+                        Homoeopathy Consultant
+                      </span>
+                    </div>
                   </div>
                   <button
                     type="button"

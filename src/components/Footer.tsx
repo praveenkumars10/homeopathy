@@ -76,14 +76,16 @@ export function Footer() {
           
           {/* Col 1: Brand & Philosophy */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <ClinicBrandLogo className="w-10 h-10" />
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-2xl bg-white p-1.5 shadow-md flex items-center justify-center shrink-0">
+                <ClinicBrandLogo className="w-9 h-9" />
+              </div>
               <div>
-                <span className="font-serif font-bold text-xl block leading-tight text-[#FAF7F0]">
+                <span className="font-serif font-bold text-2xl block leading-tight text-[#FAF7F0]">
                   {CLINIC_CONFIG.shortName}
                 </span>
-                <span className="text-[11px] tracking-wider uppercase text-[#C98B3E] font-medium">
-                  Holistic Health Clinic
+                <span className="text-[11px] tracking-wider uppercase text-[#C98B3E] font-semibold">
+                  Homoeopathy Consultant
                 </span>
               </div>
             </div>

@@ -89,8 +89,14 @@ export function DoctorProfile() {
 
                 {/* Central Emblem & Reg Info */}
                 <div className="py-6 text-center space-y-3">
-                  <div className="w-20 h-20 mx-auto rounded-full bg-white/10 border-2 border-[#C98B3E] flex items-center justify-center shadow-inner">
-                    <Award className="w-10 h-10 text-[#C98B3E]" />
+                  <div className="w-24 h-24 mx-auto rounded-full bg-white p-2.5 border-2 border-[#C98B3E] flex items-center justify-center shadow-xl relative">
+                    <Image
+                      src="/images/logo-icon-transparent.png"
+                      alt="Allensha Homeopathy Brand Emblem"
+                      width={80}
+                      height={80}
+                      className="object-contain"
+                    />
                   </div>
 
                   <div>

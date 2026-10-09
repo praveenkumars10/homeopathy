@@ -129,9 +129,15 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1F4B3F]/40 via-transparent to-transparent" />
 
                 {/* Bottom Left Inset Caption */}
-                <div className="absolute bottom-3 left-3 right-3 bg-white/90 backdrop-blur-md rounded-xl p-3 border border-[#1F4B3F]/10 flex items-center gap-3 shadow-md">
-                  <div className="w-9 h-9 rounded-full bg-[#E8F0EB] flex items-center justify-center text-[#1F4B3F] shrink-0">
-                    <Award className="w-5 h-5 text-[#C98B3E]" />
+                <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md rounded-xl p-3 border border-[#1F4B3F]/10 flex items-center gap-3 shadow-md">
+                  <div className="w-10 h-10 rounded-full bg-white p-1 flex items-center justify-center shrink-0 border border-[#1F4B3F]/15 shadow-sm">
+                    <Image
+                      src="/images/logo-icon-transparent.png"
+                      alt="Allensha Homeopathy Logo"
+                      width={36}
+                      height={36}
+                      className="object-contain"
+                    />
                   </div>
                   <div className="text-xs">
                     <p className="font-semibold text-[#1F4B3F]">

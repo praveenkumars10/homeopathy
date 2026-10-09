@@ -61,6 +61,16 @@ export const metadata: Metadata = {
     description: CLINIC_CONFIG.tagline,
     images: ["/images/hero-consultation.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/images/logo-icon-transparent.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/images/logo-icon-transparent.png" },
+    ],
+    shortcut: "/favicon.ico",
+  },
   robots: {
     index: true,
     follow: true,

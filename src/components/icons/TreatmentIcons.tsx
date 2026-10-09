@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
@@ -265,43 +266,18 @@ export function BotanicalBranch({ className = "w-full h-8 text-primary/20", ...p
   );
 }
 
-export function ClinicBrandLogo({ className = "w-9 h-9", ...props }: IconProps) {
+export function ClinicBrandLogo({ className = "w-9 h-9", ...props }: { className?: string; [key: string]: any }) {
   return (
-    <svg
-      viewBox="0 0 36 36"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      {...props}
-    >
-      <circle cx="18" cy="18" r="17" fill="#1F4B3F" />
-      {/* Elegant botanical leaf merging into medical cross/balance */}
-      <path
-        d="M18 7C14 12 11 17 11 22C11 26 14.5 28.5 18 28.5C21.5 28.5 25 26 25 22C25 17 22 12 18 7Z"
-        fill="#FAF7F0"
-        fillOpacity="0.2"
-        stroke="#FAF7F0"
-        strokeWidth="1.5"
+    <div className={`relative inline-flex items-center justify-center shrink-0 ${className}`}>
+      <Image
+        src="/images/logo-icon-transparent.png"
+        alt="Allensha Homeopathy Logo"
+        width={64}
+        height={64}
+        className="w-full h-full object-contain"
+        priority
       />
-      <path
-        d="M18 10V26"
-        stroke="#FAF7F0"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M18 14C16 16 14 19 14 21"
-        stroke="#C98B3E"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-      <path
-        d="M18 17C20 19 22 21 22 23"
-        stroke="#C98B3E"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-      <circle cx="18" cy="11" r="1.5" fill="#D9663B" />
-    </svg>
+    </div>
   );
 }
+
