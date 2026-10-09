@@ -78,3 +78,20 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
   background: #1F4B3F66;
 }
+
+/* Anti-Screenshot & Medical Media Protection */
+.protected-media {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+@media print {
+  .protected-clinical-image {
+    display: none !important;
+  }
+}
+
