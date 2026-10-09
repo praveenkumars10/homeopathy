@@ -17,17 +17,19 @@ export function AnimatedCounter({
   suffix = "",
   prefix = "",
   decimals = 0,
-  duration = 2000,
+  duration = 1500,
   className = "",
 }: AnimatedCounterProps) {
   const [displayValue, setDisplayValue] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
   const hasAnimated = useRef(false);
 
   useEffect(() => {
-    if (isInView && !hasAnimated.current) {
+    const triggerAnimation = () => {
+      if (hasAnimated.current) return;
       hasAnimated.current = true;
+
       let startTimestamp: number | null = null;
       const startValue = 0;
 
@@ -48,7 +50,25 @@ export function AnimatedCounter({
       };
 
       window.requestAnimationFrame(step);
+    };
+
+    if (isInView) {
+      triggerAnimation();
+    } else if (ref.current && typeof window !== "undefined") {
+      const rect = ref.current.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        triggerAnimation();
+      }
     }
+
+    // Safety fallback for mobile browser viewports
+    const fallbackTimer = setTimeout(() => {
+      if (!hasAnimated.current) {
+        triggerAnimation();
+      }
+    }, 500);
+
+    return () => clearTimeout(fallbackTimer);
   }, [isInView, value, duration]);
 
   const formattedNumber =
