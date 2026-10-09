@@ -27,9 +27,9 @@ export const CLINIC_CONFIG = {
     "\"Every symptom is your body's voice asking for balance, not suppression. Through unhurried online video consultation, we evaluate your complete health totality and deliver individualized classical remedies right to your doorstep.\"",
 
   // Contact Information
-  phone: "+91 98765 43210",
-  phoneClean: "+919876543210",
-  whatsappNumber: "919876543210",
+  phone: "+91 98944 80585",
+  phoneClean: "+919894480585",
+  whatsappNumber: "919894480585",
   email: "care@allensha.com",
   
   // Location & Online Mode

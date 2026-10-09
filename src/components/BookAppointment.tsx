@@ -30,8 +30,6 @@ export function BookAppointment({ selectedCondition }: BookAppointmentProps) {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
-
   useEffect(() => {
     if (selectedCondition) {
       setFormData((prev) => ({ ...prev, concern: selectedCondition }));
@@ -45,38 +43,24 @@ export function BookAppointment({ selectedCondition }: BookAppointmentProps) {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  /**
-   * V1 CLIENT-SIDE WHATSAPP DEEP-LINK DISPATCH
-   * 
-   * UPGRADE PATH FOR V2:
-   * To transition to an email inbox, CRM, or database:
-   * 1. Replace this handler with a fetch POST request to an API route (e.g. /api/appointments)
-   *    or a service like Formspree (e.g. action="https://formspree.io/f/YOUR_FORM_ID").
-   * 2. Store records in Supabase / Postgres / Airtable.
-   * 3. Send automated confirmation SMS via Twilio / Gupshup.
-   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const formattedMessage = `*New Online Consultation Inquiry — ${CLINIC_CONFIG.shortName}*
+    const notes = formData.message.trim() || "None";
+    const formattedMessage = `New Online Consultation Inquiry — ${CLINIC_CONFIG.shortName}
 ---------------------------------------
-*Patient Name:* ${formData.name.trim()}
-*Phone:* ${formData.phone.trim()}
-*Preferred Date:* ${formData.date || "Next available slot"}
-*Consultation Mode:* ${formData.consultationType}
-*Preferred Time:* 3:00 PM – 9:00 PM (IST)
-*Primary Health Concern:* ${formData.concern}
-${formData.message ? `*Notes / Symptoms:* ${formData.message.trim()}\n` : ""}*Doctor:* ${CLINIC_CONFIG.doctorName}, ${CLINIC_CONFIG.qualifications}
-*Base:* ${CLINIC_CONFIG.locationDisplay}
----------------------------------------
-_Sent via ${CLINIC_CONFIG.clinicName} Online Consultation Portal_`;
+Patient Name: ${formData.name.trim()}
+Phone: ${formData.phone.trim()}
+Preferred Date: ${formData.date || "Next available slot"}
+Consultation Mode: ${formData.consultationType}
+Primary Health Concern: ${formData.concern}
+Notes / Symptoms: ${notes}`;
 
     const encodedText = encodeURIComponent(formattedMessage);
     const whatsappDeepLink = `https://wa.me/${CLINIC_CONFIG.whatsappNumber}?text=${encodedText}`;
 
-    // Open WhatsApp in new tab
+    // Directly open WhatsApp chat with pre-filled message
     window.open(whatsappDeepLink, "_blank", "noopener,noreferrer");
-    setSubmitted(true);
   };
 
   return (
@@ -113,104 +97,74 @@ _Sent via ${CLINIC_CONFIG.clinicName} Online Consultation Portal_`;
               </p>
             </div>
 
-            {submitted ? (
-              <div className="bg-[#E8F0EB] rounded-2xl p-6 text-center space-y-4 border border-[#1F4B3F]/15">
-                <div className="w-12 h-12 rounded-full bg-[#1F4B3F] text-white flex items-center justify-center mx-auto">
-                  <CheckCircle2 className="w-6 h-6" />
-                </div>
-                <h4 className="font-serif font-bold text-lg text-[#1F4B3F]">
-                  WhatsApp Connected!
-                </h4>
-                <p className="text-sm text-[#5C6659]">
-                  Your appointment details were formatted and opened in WhatsApp. If it didn&apos;t open automatically, click the button below:
-                </p>
-                <div className="pt-2">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+              {/* Consultation Type Selector */}
+              <div>
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#5C6659] mb-2">
+                  Consultation Mode (3:00 PM – 9:00 PM)
+                </label>
+                <div className="grid grid-cols-2 gap-3">
                   <button
                     type="button"
-                    onClick={handleSubmit}
-                    className="inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold px-6 py-2.5 rounded-full text-sm shadow hover:bg-[#20b858] transition-colors"
+                    onClick={() => setFormData({ ...formData, consultationType: "Online Video" })}
+                    className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl border text-xs font-semibold transition-all ${
+                      formData.consultationType === "Online Video"
+                        ? "bg-[#1F4B3F] text-white border-[#1F4B3F] shadow-sm"
+                        : "bg-[#FAF7F0] text-[#23291F] border-[#1F4B3F]/15 hover:bg-[#E8F0EB]"
+                    }`}
                   >
-                    <MessageCircle className="w-4 h-4" />
-                    Open WhatsApp Chat
+                    <Video className="w-4 h-4" />
+                    <span>Online Video</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setFormData({ ...formData, consultationType: "Phone Call" })}
+                    className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl border text-xs font-semibold transition-all ${
+                      formData.consultationType === "Phone Call"
+                        ? "bg-[#1F4B3F] text-white border-[#1F4B3F] shadow-sm"
+                        : "bg-[#FAF7F0] text-[#23291F] border-[#1F4B3F]/15 hover:bg-[#E8F0EB]"
+                    }`}
+                  >
+                    <Phone className="w-4 h-4" />
+                    <span>Phone Call</span>
                   </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => setSubmitted(false)}
-                  className="text-xs text-[#1F4B3F] hover:underline block mx-auto pt-2"
-                >
-                  Edit details or submit another inquiry
-                </button>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
-                {/* Consultation Type Selector */}
+
+              {/* Name & Phone Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#5C6659] mb-2">
-                    Consultation Mode (3:00 PM – 9:00 PM)
+                  <label htmlFor="name" className="block text-xs font-semibold text-[#23291F] mb-1.5">
+                    Full Name <span className="text-[#D9663B]">*</span>
                   </label>
-                  <div className="grid grid-cols-2 gap-3">
-                    <button
-                      type="button"
-                      onClick={() => setFormData({ ...formData, consultationType: "Online Video Call" })}
-                      className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl border text-xs font-semibold transition-all ${
-                        formData.consultationType === "Online Video Call" || formData.consultationType === "Online Video"
-                          ? "bg-[#1F4B3F] text-white border-[#1F4B3F] shadow-sm"
-                          : "bg-[#FAF7F0] text-[#23291F] border-[#1F4B3F]/15 hover:bg-[#E8F0EB]"
-                      }`}
-                    >
-                      <Video className="w-4 h-4" />
-                      <span>Online Video Call</span>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setFormData({ ...formData, consultationType: "Phone Consultation" })}
-                      className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl border text-xs font-semibold transition-all ${
-                        formData.consultationType === "Phone Consultation" || formData.consultationType === "Phone Call"
-                          ? "bg-[#1F4B3F] text-white border-[#1F4B3F] shadow-sm"
-                          : "bg-[#FAF7F0] text-[#23291F] border-[#1F4B3F]/15 hover:bg-[#E8F0EB]"
-                      }`}
-                    >
-                      <Phone className="w-4 h-4" />
-                      <span>Phone Consultation</span>
-                    </button>
-                  </div>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="e.g. Ramesh Kumar"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2.5 rounded-xl border border-[#1F4B3F]/20 focus:border-[#1F4B3F] focus:ring-2 focus:ring-[#1F4B3F]/20 text-sm bg-[#FAF7F0]/50 text-[#23291F] placeholder:text-[#5C6659]/50 transition-colors"
+                  />
                 </div>
 
-                {/* Name & Phone Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-xs font-semibold text-[#23291F] mb-1.5">
-                      Full Name <span className="text-[#D9663B]">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      placeholder="e.g. Ramesh Kumar"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-xl border border-[#1F4B3F]/20 focus:border-[#1F4B3F] focus:ring-2 focus:ring-[#1F4B3F]/20 text-sm bg-[#FAF7F0]/50 text-[#23291F] placeholder:text-[#5C6659]/50 transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-xs font-semibold text-[#23291F] mb-1.5">
-                      WhatsApp / Phone Number <span className="text-[#D9663B]">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      placeholder="e.g. +91 98765 43210"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-xl border border-[#1F4B3F]/20 focus:border-[#1F4B3F] focus:ring-2 focus:ring-[#1F4B3F]/20 text-sm bg-[#FAF7F0]/50 text-[#23291F] placeholder:text-[#5C6659]/50 transition-colors"
-                    />
-                  </div>
+                <div>
+                  <label htmlFor="phone" className="block text-xs font-semibold text-[#23291F] mb-1.5">
+                    WhatsApp / Phone Number <span className="text-[#D9663B]">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    placeholder="e.g. 9894480585"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2.5 rounded-xl border border-[#1F4B3F]/20 focus:border-[#1F4B3F] focus:ring-2 focus:ring-[#1F4B3F]/20 text-sm bg-[#FAF7F0]/50 text-[#23291F] placeholder:text-[#5C6659]/50 transition-colors"
+                  />
                 </div>
+              </div>
 
                 {/* Preferred Date & Concern Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -279,7 +233,6 @@ _Sent via ${CLINIC_CONFIG.clinicName} Online Consultation Portal_`;
                   🔒 100% Medical Confidentiality • Consultations between 3:00 PM – 9:00 PM
                 </p>
               </form>
-            )}
           </div>
 
           {/* Right Column: Online Consultation Practice Details */}
