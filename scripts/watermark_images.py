@@ -31,7 +31,7 @@ def apply_single_watermark():
         draw = ImageDraw.Draw(overlay)
         
         # Font size proportional to image dimensions
-        font_size = int(min(width, height) * 0.12)
+        font_size = int(min(width, height) * 0.13)
         font = ImageFont.truetype(font_path, font_size)
         
         watermark_text = "ALLEN SHA"
@@ -42,24 +42,27 @@ def apply_single_watermark():
         cx = (width - tw) // 2
         cy = (height - th) // 2
         
-        # Single Center Watermark with subtle shadow & outline
+        # Single Center Watermark with prominent dark outline for 100% contrast
         text_img = Image.new("RGBA", (width, height), (255, 255, 255, 0))
         t_draw = ImageDraw.Draw(text_img)
         
-        # Dark shadow outline for visibility on bright/dark backgrounds
-        for dx, dy in [(-2,0), (2,0), (0,-2), (0,2), (-2,-2), (2,2), (-2,2), (2,-2), (1,2), (2,3)]:
-            t_draw.text((cx + dx, cy + dy), watermark_text, font=font, fill=(0, 0, 0, 85))
-        # Main semi-transparent white text
-        t_draw.text((cx, cy), watermark_text, font=font, fill=(255, 255, 255, 150))
+        # Crisp outline around text
+        for ox in range(-3, 4):
+            for oy in range(-3, 4):
+                if ox != 0 or oy != 0:
+                    t_draw.text((cx + ox, cy + oy), watermark_text, font=font, fill=(0, 0, 0, 120))
         
-        # Slight angle (-20 deg)
-        rotated_text = text_img.rotate(-20, resample=Image.Resampling.BICUBIC, center=(width//2, height//2))
+        # Crisp semi-transparent white fill
+        t_draw.text((cx, cy), watermark_text, font=font, fill=(255, 255, 255, 190))
+        
+        # Rotate -25 deg around center
+        rotated_text = text_img.rotate(-25, resample=Image.Resampling.BICUBIC, center=(width//2, height//2))
         overlay.alpha_composite(rotated_text)
         
         # Composite overlay with original image
         final_img = Image.alpha_composite(img, overlay).convert("RGB")
-        final_img.save(file_path, "JPEG", quality=92, optimize=True)
-        print(f"Applied single watermark to: {file_path}")
+        final_img.save(file_path, "JPEG", quality=95, optimize=True)
+        print(f"Applied high-contrast single watermark to: {file_path}")
 
 if __name__ == "__main__":
     apply_single_watermark()
