@@ -1,24 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
-import { TESTIMONIALS, CLINICAL_CASES } from "@/lib/constants";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import { TESTIMONIALS } from "@/lib/constants";
+import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import {
   Star,
   Quote,
   CheckCircle2,
   ShieldAlert,
-  Images,
-  MessageSquareQuote,
   Sparkles,
 } from "lucide-react";
 import { SectionDivider } from "./ui/SectionDivider";
 import { BeforeAfterShowcase } from "./BeforeAfterShowcase";
 
 export function Testimonials() {
-  const [activeTab, setActiveTab] = useState<"cases" | "reviews" | "all">("cases");
-
   return (
     <section id="testimonials" className="py-16 md:py-24 bg-[#FAF7F0] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,81 +37,35 @@ export function Testimonials() {
           <SectionDivider variant="botanical" className="my-2" />
         </div>
 
-        {/* Interactive View Filter Tabs */}
-        <div className="flex items-center justify-center gap-2 sm:gap-3 mb-10 flex-wrap">
-          <button
-            type="button"
-            onClick={() => setActiveTab("cases")}
-            className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
-              activeTab === "cases"
-                ? "bg-[#1F4B3F] text-white shadow-md"
-                : "bg-white text-[#23291F] border border-[#1F4B3F]/15 hover:bg-[#E8F0EB]"
-            }`}
-          >
-            <Images className="w-4 h-4 text-[#C98B3E]" />
-            <span>Before & After Cases ({CLINICAL_CASES.length})</span>
-          </button>
+        {/* Section 1: Clinical Before & After Cases */}
+        <div className="mb-14">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h3 className="font-serif font-bold text-2xl text-[#1F4B3F] flex items-center gap-2">
+                <span>Photographic Clinical Results</span>
+                <span className="text-xs font-sans font-semibold bg-[#C98B3E]/15 text-[#915B17] px-2.5 py-0.5 rounded-full">
+                  Verified Cases
+                </span>
+              </h3>
+              <p className="text-xs sm:text-sm text-[#5C6659] mt-1">
+                Side-by-side photographic documentation before and after constitutional homeopathy treatment.
+              </p>
+            </div>
+          </div>
 
-          <button
-            type="button"
-            onClick={() => setActiveTab("reviews")}
-            className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
-              activeTab === "reviews"
-                ? "bg-[#1F4B3F] text-white shadow-md"
-                : "bg-white text-[#23291F] border border-[#1F4B3F]/15 hover:bg-[#E8F0EB]"
-            }`}
-          >
-            <MessageSquareQuote className="w-4 h-4 text-[#C98B3E]" />
-            <span>Patient Reviews ({TESTIMONIALS.length})</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setActiveTab("all")}
-            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
-              activeTab === "all"
-                ? "bg-[#1F4B3F] text-white shadow-md"
-                : "bg-white text-[#5C6659] border border-[#1F4B3F]/15 hover:bg-[#E8F0EB]"
-            }`}
-          >
-            <span>View All</span>
-          </button>
+          <BeforeAfterShowcase />
         </div>
 
-        {/* Section 1: Clinical Before & After Cases */}
-        {(activeTab === "cases" || activeTab === "all") && (
-          <div className="mb-14">
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <h3 className="font-serif font-bold text-2xl text-[#1F4B3F] flex items-center gap-2">
-                  <span>Photographic Clinical Results</span>
-                  <span className="text-xs font-sans font-semibold bg-[#C98B3E]/15 text-[#915B17] px-2.5 py-0.5 rounded-full">
-                    Verified Cases
-                  </span>
-                </h3>
-                <p className="text-xs sm:text-sm text-[#5C6659] mt-1">
-                  Side-by-side photographic documentation before and after constitutional homeopathy treatment.
-                </p>
-              </div>
-            </div>
-
-            <BeforeAfterShowcase />
-          </div>
-        )}
-
         {/* Section 2: Patient Written Reviews */}
-        {(activeTab === "reviews" || activeTab === "all") && (
-          <div className={activeTab === "all" ? "pt-10 border-t border-[#1F4B3F]/15" : ""}>
-            {activeTab === "all" && (
-              <div className="mb-6">
-                <h3 className="font-serif font-bold text-2xl text-[#1F4B3F]">
-                  Written Patient Testimonials
-                </h3>
-                <p className="text-xs sm:text-sm text-[#5C6659] mt-1">
-                  In-depth experiences of patients undergoing constitutional care.
-                </p>
-              </div>
-            )}
+        <div className="pt-10 border-t border-[#1F4B3F]/15">
+          <div className="mb-6">
+            <h3 className="font-serif font-bold text-2xl text-[#1F4B3F]">
+              Written Patient Testimonials
+            </h3>
+            <p className="text-xs sm:text-sm text-[#5C6659] mt-1">
+              In-depth experiences of patients undergoing constitutional care.
+            </p>
+          </div>
 
             <motion.div
               variants={staggerContainer}
@@ -166,7 +116,6 @@ export function Testimonials() {
               ))}
             </motion.div>
           </div>
-        )}
 
         {/* Regulatory Healthcare Compliance Disclaimer Note */}
         <div className="mt-12 p-4 rounded-xl bg-[#E8F0EB]/50 border border-[#1F4B3F]/10 max-w-2xl mx-auto flex items-start gap-3 text-xs text-[#5C6659]">

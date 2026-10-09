@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 
 export function BeforeAfterShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedBeforeMap, setSelectedBeforeMap] = useState<Record<string, string>>({});
   const [activeModalImage, setActiveModalImage] = useState<{
     src: string;
@@ -25,14 +24,6 @@ export function BeforeAfterShowcase() {
     label: string;
     caseTitle: string;
   } | null>(null);
-
-  // Derive unique categories
-  const categories = ["All", ...Array.from(new Set(CLINICAL_CASES.map((c) => c.category)))];
-
-  const filteredCases =
-    selectedCategory === "All"
-      ? CLINICAL_CASES
-      : CLINICAL_CASES.filter((c) => c.category === selectedCategory);
 
   const getActiveBeforeImage = (caseItem: ClinicalCase) => {
     return selectedBeforeMap[caseItem.id] || caseItem.beforeImage;
@@ -44,24 +35,6 @@ export function BeforeAfterShowcase() {
 
   return (
     <div className="space-y-8">
-      {/* Category Filter Pills */}
-      <div className="flex items-center justify-center gap-2 flex-wrap">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            type="button"
-            onClick={() => setSelectedCategory(cat)}
-            className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
-              selectedCategory === cat
-                ? "bg-[#1F4B3F] text-white shadow-sm"
-                : "bg-white text-[#5C6659] border border-[#1F4B3F]/15 hover:bg-[#E8F0EB] hover:text-[#1F4B3F]"
-            }`}
-          >
-            {cat} {cat === "All" && `(${CLINICAL_CASES.length})`}
-          </button>
-        ))}
-      </div>
-
       {/* Case Studies Grid */}
       <motion.div
         variants={staggerContainer}
@@ -70,7 +43,7 @@ export function BeforeAfterShowcase() {
         viewport={{ once: true, margin: "-50px" }}
         className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10"
       >
-        {filteredCases.map((caseItem) => {
+        {CLINICAL_CASES.map((caseItem) => {
           const currentBefore = getActiveBeforeImage(caseItem);
           const hasMultipleBefore = caseItem.beforeImages && caseItem.beforeImages.length > 1;
 
