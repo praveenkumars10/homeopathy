@@ -271,7 +271,7 @@ export function ClinicBrandLogo({ className = "w-9 h-9", ...props }: { className
     <div className={`relative inline-flex items-center justify-center shrink-0 ${className}`}>
       <Image
         src="/images/logo-icon-transparent.png"
-        alt="Allensha Homeopathy Logo"
+        alt="Allen Sha Homeopathy Logo"
         width={64}
         height={64}
         className="w-full h-full object-contain"

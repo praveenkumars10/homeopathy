@@ -48,7 +48,7 @@ export function WhyChooseUs() {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-[#E8F0EB] text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
             <Sparkles className="w-3.5 h-3.5 text-[#C98B3E]" />
-            <span>Why Choose Allensha</span>
+            <span>Why Choose Allen Sha</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-4xl font-serif font-bold text-[#FAF7F0] tracking-tight">

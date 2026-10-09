@@ -133,7 +133,7 @@ export function Hero() {
                   <div className="w-10 h-10 rounded-full bg-white p-1 flex items-center justify-center shrink-0 border border-[#1F4B3F]/15 shadow-sm">
                     <Image
                       src="/images/logo-icon-transparent.png"
-                      alt="Allensha Homeopathy Logo"
+                      alt="Allen Sha Homeopathy Logo"
                       width={36}
                       height={36}
                       className="object-contain"

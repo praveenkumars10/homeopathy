@@ -303,7 +303,7 @@ export function BeforeAfterShowcase() {
               <div className="p-3.5 sm:p-4 bg-[#FAF7F0] border-t border-[#1F4B3F]/10 flex items-center justify-between gap-3 text-xs text-[#5C6659]">
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-[#1F4B3F]" />
-                  <span>Allensha Homeopathy Clinical Records • View Only</span>
+                  <span>Allen Sha Homeopathy Clinical Records • View Only</span>
                 </div>
 
                 <button

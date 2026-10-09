@@ -92,7 +92,7 @@ export function DoctorProfile() {
                   <div className="w-24 h-24 mx-auto rounded-full bg-white p-2.5 border-2 border-[#C98B3E] flex items-center justify-center shadow-xl relative">
                     <Image
                       src="/images/logo-icon-transparent.png"
-                      alt="Allensha Homeopathy Brand Emblem"
+                      alt="Allen Sha Homeopathy Brand Emblem"
                       width={80}
                       height={80}
                       className="object-contain"
