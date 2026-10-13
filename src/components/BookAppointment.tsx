@@ -164,7 +164,7 @@ Notes / Symptoms: ${notes}`;
                     id="phone"
                     name="phone"
                     required
-                    placeholder="e.g. 9894480585"
+                    placeholder="e.g. 8667480918"
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-2.5 rounded-xl border border-[#1F4B3F]/20 focus:border-[#1F4B3F] focus:ring-2 focus:ring-[#1F4B3F]/20 text-sm bg-[#FAF7F0]/50 text-[#23291F] placeholder:text-[#5C6659]/50 transition-colors"
