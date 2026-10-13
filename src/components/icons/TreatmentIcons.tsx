@@ -265,12 +265,13 @@ export function BotanicalBranch({ className = "w-full h-8 text-primary/20", ...p
     </svg>
   );
 }
+import { assetUrl } from "@/lib/assets";
 
 export function ClinicBrandLogo({ className = "w-9 h-9", ...props }: { className?: string; [key: string]: any }) {
   return (
     <div className={`relative inline-flex items-center justify-center shrink-0 ${className}`}>
       <Image
-        src="/images/logo-icon-transparent.png"
+        src={assetUrl("/images/logo-icon-transparent.png")}
         alt="Allen Sha Homeopathy Logo"
         width={64}
         height={64}

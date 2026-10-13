@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { CLINIC_CONFIG } from "@/lib/constants";
+import { assetUrl } from "@/lib/assets";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
 import { Award, GraduationCap, ShieldCheck, HeartHandshake, CheckCircle2 } from "lucide-react";
@@ -91,7 +92,7 @@ export function DoctorProfile() {
                 <div className="py-6 text-center space-y-3">
                   <div className="w-24 h-24 mx-auto rounded-full bg-white p-2.5 border-2 border-[#C98B3E] flex items-center justify-center shadow-xl relative">
                     <Image
-                      src="/images/logo-icon-transparent.png"
+                      src={assetUrl("/images/logo-icon-transparent.png")}
                       alt="Allen Sha Homeopathy Brand Emblem"
                       width={80}
                       height={80}

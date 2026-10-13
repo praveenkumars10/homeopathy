@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { CLINIC_CONFIG } from "@/lib/constants";
+import { assetUrl } from "@/lib/assets";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
 import { Calendar, MessageCircle, Star, Award, ShieldCheck, Sparkles } from "lucide-react";
@@ -117,7 +118,7 @@ export function Hero() {
             <div className="relative rounded-3xl p-2 bg-gradient-to-b from-[#E8F0EB] to-white/70 shadow-xl border border-[#1F4B3F]/10">
               <div className="relative aspect-[4/3] sm:aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/hero-consultation.jpg"
+                  src={assetUrl("/images/hero-consultation.jpg")}
                   alt={`Online video consultation by ${CLINIC_CONFIG.doctorName}`}
                   fill
                   priority
@@ -132,7 +133,7 @@ export function Hero() {
                 <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md rounded-xl p-3 border border-[#1F4B3F]/10 flex items-center gap-3 shadow-md">
                   <div className="w-10 h-10 rounded-full bg-white p-1 flex items-center justify-center shrink-0 border border-[#1F4B3F]/15 shadow-sm">
                     <Image
-                      src="/images/logo-icon-transparent.png"
+                      src={assetUrl("/images/logo-icon-transparent.png")}
                       alt="Allen Sha Homeopathy Logo"
                       width={36}
                       height={36}

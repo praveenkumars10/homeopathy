@@ -1,3 +1,5 @@
+import { assetUrl } from "./assets";
+
 /**
  * Centralized Clinic Configuration & Content
  * 
@@ -83,7 +85,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     fullSymptoms: ["Telogen effluvium", "Alopecia areata", "Chronic seborrheic dandruff", "Hormonal thinning"],
     approach: "Restoring follicular nourishment through constitutional remineralization and hormonal balance.",
     iconName: "hair",
-    image: "/images/treatments/hair.jpg",
+    image: assetUrl("/images/treatments/hair.jpg"),
   },
   {
     id: "skin-conditions",
@@ -94,7 +96,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     fullSymptoms: ["Atopic dermatitis", "Plaque psoriasis", "Cystic acne", "Urticaria / Hives"],
     approach: "Treating internal blood dyscrasias and gut-skin axis disharmony rather than skin-deep suppression.",
     iconName: "skin",
-    image: "/images/treatments/skin.jpg",
+    image: assetUrl("/images/treatments/skin.jpg"),
   },
   {
     id: "allergies-respiratory",
@@ -105,7 +107,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     fullSymptoms: ["Seasonal hay fever", "Bronchial asthma", "Chronic sinusitis", "Dust & pollen allergy"],
     approach: "Modulating hyperactive immunoglobulin response to build innate mucosal resilience.",
     iconName: "respiratory",
-    image: "/images/treatments/respiratory.jpg",
+    image: assetUrl("/images/treatments/respiratory.jpg"),
   },
   {
     id: "womens-health",
@@ -116,7 +118,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     fullSymptoms: ["Irregular cycles", "PCOS hormonal cysts", "Hypothyroidism", "Menopausal hot flashes"],
     approach: "Gentle neuroendocrine balancing remedies that re-align natural ovulatory and metabolic rhythms.",
     iconName: "women",
-    image: "/images/treatments/women.jpg",
+    image: assetUrl("/images/treatments/women.jpg"),
   },
   {
     id: "child-health",
@@ -127,7 +129,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     fullSymptoms: ["Frequent colds & fevers", "Enlarged adenoids/tonsils", "Childhood asthma", "Dentition distress"],
     approach: "Sweet, gentle micro-dilutions that children love, fortifying constitutional vitality safely.",
     iconName: "child",
-    image: "/images/treatments/child.jpg",
+    image: assetUrl("/images/treatments/child.jpg"),
   },
   {
     id: "chronic-joint-pain",
@@ -138,7 +140,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     fullSymptoms: ["Osteoarthritis", "Rheumatoid flare-ups", "Chronic tension migraine", "Lumbar disc distress"],
     approach: "Targeting inflammatory cellular diathesis and joint degeneration to enhance mobility and comfort.",
     iconName: "joint",
-    image: "/images/treatments/joint.jpg",
+    image: assetUrl("/images/treatments/joint.jpg"),
   },
   {
     id: "mental-wellness",
@@ -149,7 +151,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     fullSymptoms: ["Chronic work burnout", "Anxiety & restlessness", "Insomnia & sleep disruption", "Brain fog"],
     approach: "Holistic psychosomatic remedies that ease nervous tension without sedation or habit-forming effects.",
     iconName: "brain",
-    image: "/images/treatments/mental.jpg",
+    image: assetUrl("/images/treatments/mental.jpg"),
   },
   {
     id: "digestive-health",
@@ -160,7 +162,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     fullSymptoms: ["Acid reflux & heartburn", "IBS (spastic colon)", "Chronic bloating", "Food intolerances"],
     approach: "Healing digestive vitality and the gut-brain vagal pathway for complete gastrointestinal comfort.",
     iconName: "digestive",
-    image: "/images/treatments/digestive.jpg",
+    image: assetUrl("/images/treatments/digestive.jpg"),
   },
 ];
 
@@ -220,8 +222,8 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     duration: "4 Weeks of Constitutional Homeopathy",
     summary:
       "Patient presented with a painful, deep non-healing ulcerated lesion at the fingertip with yellow tissue inflammation. Following individualised constitutional homeopathic treatment, natural cellular regeneration was initiated, inflammation completely subsided, and the finger healed cleanly without scar tissue.",
-    beforeImage: "/images/testimonials/case1-finger-before.jpg",
-    afterImage: "/images/testimonials/case1-finger-after.jpg",
+    beforeImage: assetUrl("/images/testimonials/case1-finger-before.jpg"),
+    afterImage: assetUrl("/images/testimonials/case1-finger-after.jpg"),
     beforeLabel: "Before Treatment",
     afterLabel: "After Homeopathy",
     resultBadge: "Complete Tissue Healing",
@@ -235,8 +237,8 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     duration: "6 Weeks of Constitutional Homeopathy",
     summary:
       "Extensive clusters of stubborn, rough verruca warts covering the dorsum of the hand and wrist. While external cautery or burning often leaves scars and recurrent outbreaks, constitutional homeopathy stimulated internal immunity, causing all warts to naturally fall off and leaving completely clear, smooth skin.",
-    beforeImage: "/images/testimonials/case2-warts-before.jpg",
-    afterImage: "/images/testimonials/case2-warts-after.jpg",
+    beforeImage: assetUrl("/images/testimonials/case2-warts-before.jpg"),
+    afterImage: assetUrl("/images/testimonials/case2-warts-after.jpg"),
     beforeLabel: "Before Treatment",
     afterLabel: "After Homeopathy",
     resultBadge: "100% Wart Clearance",
@@ -250,8 +252,8 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     duration: "8 Weeks of Constitutional Homeopathy",
     summary:
       "Patient presented with a critical, long-standing ulcerated wound on the foot exhibiting tissue breakdown, peripheral redness, and non-healing slough. When conventional dressings showed slow response, constitutional homeopathic prescribing stimulated cellular microcirculation and innate vitality, resulting in complete wound closure and healthy epithelial regeneration.",
-    beforeImage: "/images/testimonials/case3-foot-ulcer-before.jpg",
-    afterImage: "/images/testimonials/case3-foot-ulcer-after.jpg",
+    beforeImage: assetUrl("/images/testimonials/case3-foot-ulcer-before.jpg"),
+    afterImage: assetUrl("/images/testimonials/case3-foot-ulcer-after.jpg"),
     beforeLabel: "Before Treatment (Open Deep Ulcer)",
     afterLabel: "After Homeopathy (Complete Healing)",
     resultBadge: "100% Wound Closure",
@@ -265,8 +267,8 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     duration: "5 Weeks of Constitutional Homeopathy",
     summary:
       "Patient presented with a large, thickened, severely darkened lichenoid eczema patch over the arm causing persistent irritation. Rather than temporary symptomatic suppression with topical cortisone, deep constitutional homeopathy addressed internal immune dysregulation, resulting in complete clearance of the patch and full restoration of normal skin complexion.",
-    beforeImage: "/images/testimonials/case4-arm-eczema-before.jpg",
-    afterImage: "/images/testimonials/case4-arm-eczema-after.jpg",
+    beforeImage: assetUrl("/images/testimonials/case4-arm-eczema-before.jpg"),
+    afterImage: assetUrl("/images/testimonials/case4-arm-eczema-after.jpg"),
     beforeLabel: "Before Treatment (Severe Lichenoid Plaque)",
     afterLabel: "After Homeopathy (Normal Skin Tone)",
     resultBadge: "Full Texture & Tone Restored",
@@ -280,8 +282,8 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     duration: "3 Weeks of Constitutional Homeopathy",
     summary:
       "Patient suffered from an excruciatingly tender, ulcerated thumb pulp with localized tissue necrosis and chronic nail-fold inflammation. Constitutional homeopathic remedies halted suppuration, stimulated healthy tissue granulation, and restored the natural thumb contour and nail-bed integrity without surgical incision or scarring.",
-    beforeImage: "/images/testimonials/case5-thumb-before.jpg",
-    afterImage: "/images/testimonials/case5-thumb-after.jpg",
+    beforeImage: assetUrl("/images/testimonials/case5-thumb-before.jpg"),
+    afterImage: assetUrl("/images/testimonials/case5-thumb-after.jpg"),
     beforeLabel: "Before Treatment (Ulcerated Thumb Pulp)",
     afterLabel: "After Homeopathy (Full Tissue Recovery)",
     resultBadge: "100% Granulation & Healing",
@@ -295,12 +297,12 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     duration: "7 Weeks of Constitutional Homeopathy",
     summary:
       "Patient presented with severe right knee swelling, fluid effusion, and crippling pain necessitating continuous compression bandage support to ambulate. Individualized constitutional remedies resolved the chronic synovial inflammation, facilitating natural fluid absorption and pain relief. The patient regained erect weight-bearing posture and independent mobility without requiring knee wraps or pain injections.",
-    beforeImage: "/images/testimonials/case6-knee-before-1.jpg",
+    beforeImage: assetUrl("/images/testimonials/case6-knee-before-1.jpg"),
     beforeImages: [
-      "/images/testimonials/case6-knee-before-1.jpg",
-      "/images/testimonials/case6-knee-before-2.jpg",
+      assetUrl("/images/testimonials/case6-knee-before-1.jpg"),
+      assetUrl("/images/testimonials/case6-knee-before-2.jpg"),
     ],
-    afterImage: "/images/testimonials/case6-knee-after.jpg",
+    afterImage: assetUrl("/images/testimonials/case6-knee-after.jpg"),
     beforeLabel: "Before Treatment (Severe Effusion with Bandage)",
     afterLabel: "After Homeopathy (Erect Posture, Swelling Gone)",
     resultBadge: "Full Mobility & Swelling Resolved",

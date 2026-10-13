@@ -8,10 +8,13 @@ interface PageHeaderProps {
 }
 
 export function PageHeader({ title, breadcrumbLabel, backgroundImage }: PageHeaderProps) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const resolvedBg = backgroundImage.startsWith("/") ? `${basePath}${backgroundImage}` : backgroundImage;
+
   return (
     <div 
       className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      style={{ backgroundImage: `url(${resolvedBg})` }}
     >
       <div className="absolute inset-0 bg-[#1F4B3F]/75"></div>
       <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto mt-8">
