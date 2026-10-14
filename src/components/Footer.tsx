@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { CLINIC_CONFIG, TREATMENTS } from "@/lib/constants";
+import { assetUrl } from "@/lib/assets";
 import { ClinicBrandLogo } from "./icons/TreatmentIcons";
 import {
   Phone,
@@ -246,10 +248,32 @@ export function Footer() {
         </div>
 
         {/* Bottom Legal & Copyright Bar */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#E8F0EB]/60">
-          <p>
-            &copy; {CLINIC_CONFIG.year} {CLINIC_CONFIG.clinicName}. All rights reserved.
-          </p>
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#E8F0EB]/65">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+            <span>&copy; {CLINIC_CONFIG.year} {CLINIC_CONFIG.clinicName}.</span>
+            <span className="hidden sm:inline text-white/30">•</span>
+            <a
+              href="https://www.iinfovision.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#C98B3E]/40 text-[#E8F0EB]/85 hover:text-white transition-all group"
+              title="I Info Vision - Innovate • Inform • Inspire"
+            >
+              <Image
+                src={assetUrl("/images/i-info-vision-logo.png")}
+                alt="I Info Vision"
+                width={20}
+                height={20}
+                className="w-5 h-5 rounded-full object-cover shrink-0 shadow-sm"
+              />
+              <span className="text-[11px] tracking-wide">
+                All copyrights reserved by{" "}
+                <span className="font-semibold text-white group-hover:text-[#C98B3E] transition-colors">
+                  I Info Vision
+                </span>
+              </span>
+            </a>
+          </div>
 
           <p className="text-center md:text-right max-w-xl text-[11px] leading-relaxed">
             Medical disclaimer: Information provided on this website is for educational and appointment inquiry purposes and does not substitute direct medical diagnosis.
