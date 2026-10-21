@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { TREATMENTS } from "@/lib/constants";
 import { ArrowLeft, ArrowRight, Sparkles, ChevronRight } from "lucide-react";
@@ -12,33 +12,9 @@ interface TreatmentsProps {
 
 export function Treatments({ onSelectCondition }: TreatmentsProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeftState, setScrollLeftState] = useState(0);
-
-  // Check scroll positions for button active state
-  const checkScrollability = () => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-      setCanScrollLeft(scrollLeft > 10);
-      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 10);
-    }
-  };
-
-  useEffect(() => {
-    const el = scrollContainerRef.current;
-    if (el) {
-      checkScrollability();
-      el.addEventListener("scroll", checkScrollability);
-      window.addEventListener("resize", checkScrollability);
-      return () => {
-        el.removeEventListener("scroll", checkScrollability);
-        window.removeEventListener("resize", checkScrollability);
-      };
-    }
-  }, []);
 
   // Slide left / right with seamless looping
   const slideLeft = () => {

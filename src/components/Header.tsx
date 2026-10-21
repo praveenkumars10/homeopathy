@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { CLINIC_CONFIG } from "@/lib/constants";
 import { ClinicBrandLogo } from "./icons/TreatmentIcons";
-import { Phone, Menu, X, Calendar, Clock, MapPin } from "lucide-react";
+import { Phone, Menu, X, Calendar, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { drawerSlideRight } from "@/lib/animations";
 

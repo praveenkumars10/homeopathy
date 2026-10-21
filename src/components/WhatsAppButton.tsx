@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { CLINIC_CONFIG } from "@/lib/constants";
-import { MessageCircle, X } from "lucide-react";
+import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function WhatsAppButton() {

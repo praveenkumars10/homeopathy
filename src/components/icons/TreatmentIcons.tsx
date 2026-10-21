@@ -267,7 +267,7 @@ export function BotanicalBranch({ className = "w-full h-8 text-primary/20", ...p
 }
 import { assetUrl } from "@/lib/assets";
 
-export function ClinicBrandLogo({ className = "w-9 h-9", ...props }: { className?: string; [key: string]: any }) {
+export function ClinicBrandLogo({ className = "w-9 h-9" }: { className?: string }) {
   return (
     <div className={`relative inline-flex items-center justify-center shrink-0 ${className}`}>
       <Image

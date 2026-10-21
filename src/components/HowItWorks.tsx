@@ -4,7 +4,7 @@ import React from "react";
 import { TREATMENT_STEPS } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
-import { ClipboardList, Stethoscope, Activity, ArrowRight } from "lucide-react";
+import { ClipboardList, Activity, ArrowRight } from "lucide-react";
 import { DropperBottleIcon } from "./icons/TreatmentIcons";
 
 export function HowItWorks() {

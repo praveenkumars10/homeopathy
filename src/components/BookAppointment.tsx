@@ -1,17 +1,14 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { CLINIC_CONFIG, TREATMENTS } from "@/lib/constants";
 import {
-  Calendar,
   Clock,
   MapPin,
   Phone,
-  Mail,
   Send,
   MessageCircle,
   Video,
-  Building2,
   CheckCircle2,
 } from "lucide-react";
 import { SectionDivider } from "./ui/SectionDivider";
@@ -21,6 +18,7 @@ interface BookAppointmentProps {
 }
 
 export function BookAppointment({ selectedCondition }: BookAppointmentProps) {
+  const [prevCondition, setPrevCondition] = useState(selectedCondition);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -30,11 +28,12 @@ export function BookAppointment({ selectedCondition }: BookAppointmentProps) {
     message: "",
   });
 
-  useEffect(() => {
+  if (selectedCondition !== prevCondition) {
+    setPrevCondition(selectedCondition);
     if (selectedCondition) {
       setFormData((prev) => ({ ...prev, concern: selectedCondition }));
     }
-  }, [selectedCondition]);
+  }
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>

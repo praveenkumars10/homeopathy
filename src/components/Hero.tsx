@@ -6,7 +6,7 @@ import { CLINIC_CONFIG } from "@/lib/constants";
 import { assetUrl } from "@/lib/assets";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
-import { Calendar, MessageCircle, Star, Award, ShieldCheck, Sparkles } from "lucide-react";
+import { Calendar, MessageCircle, Star, ShieldCheck, Sparkles } from "lucide-react";
 import { AnimatedCounter } from "./ui/AnimatedCounter";
 
 export function Hero() {
