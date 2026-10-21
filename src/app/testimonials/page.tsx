@@ -9,7 +9,7 @@ export default function TestimonialsPage() {
   return (
     <>
       <PageHeader title="Patient Testimonials" breadcrumbLabel="Reviews" backgroundImage="/images/hero-consultation.jpg" />
-      <Testimonials />
+      <Testimonials compactTop />
       <SectionDivider variant="leaf-center" />
       <BookAppointment />
     </>

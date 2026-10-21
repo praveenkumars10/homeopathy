@@ -95,7 +95,7 @@ export function SeoPageContent({
   return (
     <>
       {/* Main Content Area */}
-      <section className="py-12 md:py-20 bg-[#FAF7F0]">
+      <section className="pt-6 md:pt-10 pb-14 md:pb-20 bg-[#FAF7F0]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* H1 + Intro */}
           <div className="mb-10 md:mb-14">

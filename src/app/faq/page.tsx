@@ -9,7 +9,7 @@ export default function FAQPage() {
   return (
     <>
       <PageHeader title="Frequently Asked Questions" breadcrumbLabel="FAQ" backgroundImage="/images/banner_treatments.jpg" />
-      <FAQ />
+      <FAQ compactTop />
       <SectionDivider variant="botanical" />
       <BookAppointment />
     </>

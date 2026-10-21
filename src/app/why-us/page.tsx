@@ -9,7 +9,7 @@ export default function WhyUsPage() {
   return (
     <>
       <PageHeader title="Why Choose Us" breadcrumbLabel="Why Us" backgroundImage="/images/hero-consultation.jpg" />
-      <WhyChooseUs />
+      <WhyChooseUs compactTop />
       <SectionDivider variant="wave-bottom" fillColor="#1F4B3F" className="-mt-1" />
       <BookAppointment />
     </>

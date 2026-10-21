@@ -9,7 +9,7 @@ import { fadeInUp } from "@/lib/animations";
 import { Award, GraduationCap, ShieldCheck, HeartHandshake, CheckCircle2 } from "lucide-react";
 import { SectionDivider } from "./ui/SectionDivider";
 
-export function DoctorProfile() {
+export function DoctorProfile({ compactTop = false }: { compactTop?: boolean } = {}) {
   const credentials = [
     {
       icon: <GraduationCap className="w-4 h-4 text-[#C98B3E]" />,
@@ -38,11 +38,14 @@ export function DoctorProfile() {
   ];
 
   return (
-    <section id="doctor" className="py-16 md:py-24 bg-[#FAF7F0] relative">
+    <section
+      id="doctor"
+      className={`${compactTop ? "pt-6 md:pt-10 pb-16 md:pb-24" : "py-16 md:py-24"} bg-[#FAF7F0] relative`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12 md:mb-16">
+        <div className={`text-center max-w-3xl mx-auto space-y-3 ${compactTop ? "mb-8 md:mb-10" : "mb-12 md:mb-16"}`}>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0EB] text-[#1F4B3F] text-xs font-semibold tracking-wider uppercase">
             Physician Profile &amp; Credentials
           </div>

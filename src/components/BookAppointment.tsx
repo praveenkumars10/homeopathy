@@ -15,9 +15,10 @@ import { SectionDivider } from "./ui/SectionDivider";
 
 interface BookAppointmentProps {
   selectedCondition?: string;
+  compactTop?: boolean;
 }
 
-export function BookAppointment({ selectedCondition }: BookAppointmentProps) {
+export function BookAppointment({ selectedCondition, compactTop = false }: BookAppointmentProps) {
   const [prevCondition, setPrevCondition] = useState(selectedCondition);
   const [formData, setFormData] = useState({
     name: "",
@@ -69,11 +70,14 @@ Notes / Symptoms: ${notes}`;
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-[#FAF7F0] relative">
+    <section
+      id="contact"
+      className={`${compactTop ? "pt-6 md:pt-10 pb-16 md:pb-24" : "py-16 md:py-24"} bg-[#FAF7F0] relative`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12 md:mb-16">
+        <div className={`text-center max-w-3xl mx-auto space-y-3 ${compactTop ? "mb-8 md:mb-10" : "mb-12 md:mb-16"}`}>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0EB] text-[#1F4B3F] text-xs font-semibold tracking-wider uppercase">
             100% Online Consultation
           </div>

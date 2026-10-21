@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle, MessageSquare } from "lucide-react";
 import { SectionDivider } from "./ui/SectionDivider";
 
-export function FAQ() {
+export function FAQ({ compactTop = false }: { compactTop?: boolean } = {}) {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First open by default
 
   const toggleFAQ = (index: number) => {
@@ -14,11 +14,14 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-[#FAF7F0] relative">
+    <section
+      id="faq"
+      className={`${compactTop ? "pt-6 md:pt-10 pb-16 md:pb-24" : "py-16 md:py-24"} bg-[#FAF7F0] relative`}
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center space-y-3 mb-12 md:mb-16">
+        <div className={`text-center space-y-3 ${compactTop ? "mb-8 md:mb-10" : "mb-12 md:mb-16"}`}>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0EB] text-[#1F4B3F] text-xs font-semibold tracking-wider uppercase">
             Clarity & Guidance
           </div>

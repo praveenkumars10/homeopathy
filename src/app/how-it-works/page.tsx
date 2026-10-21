@@ -9,7 +9,7 @@ export default function HowItWorksPage() {
   return (
     <>
       <PageHeader title="How Treatment Works" breadcrumbLabel="How It Works" backgroundImage="/images/hero-consultation.jpg" />
-      <HowItWorks />
+      <HowItWorks compactTop />
       <SectionDivider variant="leaf-center" />
       <BookAppointment />
     </>

@@ -8,7 +8,7 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { ShieldCheck, HeartPulse, Clock, Sparkles } from "lucide-react";
 import { MortarPestleIcon } from "./icons/TreatmentIcons";
 
-export function WhyChooseUs() {
+export function WhyChooseUs({ compactTop = false }: { compactTop?: boolean } = {}) {
   const highlights = [
     {
       icon: <MortarPestleIcon className="w-6 h-6 text-[#C98B3E]" />,
@@ -37,7 +37,10 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-us" className="bg-[#1F4B3F] text-white py-16 md:py-24 relative overflow-hidden">
+    <section
+      id="why-us"
+      className={`bg-[#1F4B3F] text-white ${compactTop ? "pt-8 md:pt-12 pb-16 md:pb-24" : "py-16 md:py-24"} relative overflow-hidden`}
+    >
       {/* Background organic light accents */}
       <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-[#E8F0EB]/5 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-[#C98B3E]/10 blur-3xl pointer-events-none" />
@@ -45,7 +48,7 @@ export function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div className={`text-center max-w-3xl mx-auto space-y-4 ${compactTop ? "mb-8 md:mb-10" : "mb-16"}`}>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-[#E8F0EB] text-xs font-semibold tracking-wider uppercase backdrop-blur-sm">
             <Sparkles className="w-3.5 h-3.5 text-[#C98B3E]" />
             <span>Why Choose Allen Sha</span>

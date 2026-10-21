@@ -8,9 +8,10 @@ import { motion } from "framer-motion";
 
 interface TreatmentsProps {
   onSelectCondition?: (conditionTitle: string) => void;
+  compactTop?: boolean;
 }
 
-export function Treatments({ onSelectCondition }: TreatmentsProps) {
+export function Treatments({ onSelectCondition, compactTop = false }: TreatmentsProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -72,7 +73,10 @@ export function Treatments({ onSelectCondition }: TreatmentsProps) {
   };
 
   return (
-    <section id="treatments" className="py-16 md:py-24 bg-[#FAF7F0] relative overflow-hidden">
+    <section
+      id="treatments"
+      className={`${compactTop ? "pt-6 md:pt-10 pb-16 md:pb-24" : "py-16 md:py-24"} bg-[#FAF7F0] relative overflow-hidden`}
+    >
       {/* Background ambient accents */}
       <div className="absolute top-1/2 -left-20 w-72 h-72 rounded-full bg-[#E8F0EB]/60 blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 -right-20 w-72 h-72 rounded-full bg-[#C98B3E]/10 blur-3xl pointer-events-none" />
@@ -80,7 +84,7 @@ export function Treatments({ onSelectCondition }: TreatmentsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header with Left Text & Right Nav Arrow Buttons */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-14">
+        <div className={`flex flex-col md:flex-row md:items-end justify-between gap-6 ${compactTop ? "mb-6 md:mb-10" : "mb-10 md:mb-14"}`}>
           <div className="max-w-2xl space-y-3">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0EB] text-[#1F4B3F] text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-[#C98B3E]" />

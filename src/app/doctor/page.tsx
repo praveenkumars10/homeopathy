@@ -9,7 +9,7 @@ export default function DoctorPage() {
   return (
     <>
       <PageHeader title="Meet the Doctor" breadcrumbLabel="Doctor" backgroundImage="/images/banner_doctor.jpg" />
-      <DoctorProfile />
+      <DoctorProfile compactTop />
       <SectionDivider variant="botanical" />
       <BookAppointment />
     </>

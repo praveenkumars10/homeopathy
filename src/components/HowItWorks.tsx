@@ -7,7 +7,7 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { ClipboardList, Activity, ArrowRight } from "lucide-react";
 import { DropperBottleIcon } from "./icons/TreatmentIcons";
 
-export function HowItWorks() {
+export function HowItWorks({ compactTop = false }: { compactTop?: boolean } = {}) {
   const stepIcons = [
     <ClipboardList key="1" className="w-6 h-6 text-[#1F4B3F]" />,
     <DropperBottleIcon key="2" className="w-6 h-6 text-[#C98B3E]" />,
@@ -15,11 +15,14 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-16 md:py-24 bg-[#FAF7F0] relative overflow-hidden">
+    <section
+      id="how-it-works"
+      className={`${compactTop ? "pt-6 md:pt-10 pb-16 md:pb-24" : "py-16 md:py-24"} bg-[#FAF7F0] relative overflow-hidden`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div className={`text-center max-w-3xl mx-auto space-y-4 ${compactTop ? "mb-8 md:mb-10" : "mb-16"}`}>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0EB] text-[#1F4B3F] text-xs font-semibold tracking-wider uppercase">
             The Patient Journey
           </div>

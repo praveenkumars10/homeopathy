@@ -14,13 +14,16 @@ import {
 import { SectionDivider } from "./ui/SectionDivider";
 import { BeforeAfterShowcase } from "./BeforeAfterShowcase";
 
-export function Testimonials() {
+export function Testimonials({ compactTop = false }: { compactTop?: boolean } = {}) {
   return (
-    <section id="testimonials" className="py-16 md:py-24 bg-[#FAF7F0] relative">
+    <section
+      id="testimonials"
+      className={`${compactTop ? "pt-6 md:pt-10 pb-16 md:pb-24" : "py-16 md:py-24"} bg-[#FAF7F0] relative`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3 mb-8 md:mb-12">
+        <div className={`text-center max-w-3xl mx-auto space-y-3 ${compactTop ? "mb-6 md:mb-8" : "mb-8 md:mb-12"}`}>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0EB] text-[#1F4B3F] text-xs font-semibold tracking-wider uppercase">
             <Sparkles className="w-3.5 h-3.5 text-[#C98B3E]" />
             Clinical Evidence & Patient Stories

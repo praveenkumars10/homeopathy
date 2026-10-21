@@ -12,7 +12,7 @@ export default function TreatmentsPage() {
   return (
     <>
       <PageHeader title="Our Specialised Treatments" breadcrumbLabel="Treatments" backgroundImage="/images/banner_treatments.jpg" />
-      <Treatments onSelectCondition={setSelectedCondition} />
+      <Treatments compactTop onSelectCondition={setSelectedCondition} />
 
       <SectionDivider variant="wave-top" fillColor="#1F4B3F" className="-mb-1" />
 

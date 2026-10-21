@@ -13,11 +13,11 @@ export function PageHeader({ title, breadcrumbLabel, backgroundImage }: PageHead
 
   return (
     <div 
-      className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center bg-cover bg-center"
+      className="relative w-full h-[260px] md:h-[340px] flex items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: `url(${resolvedBg})` }}
     >
       <div className="absolute inset-0 bg-[#1F4B3F]/75"></div>
-      <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto mt-8">
+      <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto mt-6">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#FAF7F0] mb-4 drop-shadow-lg tracking-tight">
           {title}
         </h1>
