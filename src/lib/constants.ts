@@ -15,6 +15,7 @@ export const CLINIC_CONFIG = {
   siteUrl: "https://www.allensha.com",
   tagline: "100% Online Consultations Only — Dr. M. Mohamed Shahid",
   shortTagline: "Evidence-informed classical constitutional homeopathy by Gold Medalist Dr. M. Mohamed Shahid (Govt Reg. No: 3459). 100% Online Consultations Only.",
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || "G-MBXWNHWBCT",
   
   // Doctor Profile
   doctorName: "Dr. M. Mohamed Shahid",

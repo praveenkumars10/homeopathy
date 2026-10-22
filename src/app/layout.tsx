@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { CLINIC_CONFIG } from "@/lib/constants";
 import { Header } from "@/components/Header";
@@ -152,6 +153,23 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased bg-[#FAF7F0] text-[#23291F] min-h-screen flex flex-col" suppressHydrationWarning>
+        {CLINIC_CONFIG.googleAnalyticsId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${CLINIC_CONFIG.googleAnalyticsId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', '${CLINIC_CONFIG.googleAnalyticsId}');
+              `}
+            </Script>
+          </>
+        )}
         <Header />
         <main className="flex-grow">
           {children}
