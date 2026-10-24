@@ -178,7 +178,7 @@ export function Treatments({ onSelectCondition, compactTop = false }: Treatments
                 {/* Subtle Top Category Badge */}
                 <div className="absolute top-6 left-0 right-0 flex justify-center z-10 px-4">
                   <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-white/90 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
-                    {item.category.split("&")[0].trim()}
+                    {item.badge || item.category.split("&")[0].trim()}
                   </span>
                 </div>
 

@@ -68,6 +68,7 @@ export interface TreatmentCondition {
   id: string;
   title: string;
   cardTitle: string;
+  badge: string;
   category: "Hair & Skin" | "Allergies & Respiratory" | "Women's & Child Health" | "Chronic & Pain Management";
   shortDescription: string;
   fullSymptoms: string[];
@@ -81,6 +82,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     id: "hair-scalp",
     title: "Hair & Scalp",
     cardTitle: "Hair Treatment",
+    badge: "HAIR",
     category: "Hair & Skin",
     shortDescription: "Hair fall, dandruff, alopecia areata and premature thinning, treated at the metabolic root cause.",
     fullSymptoms: ["Telogen effluvium", "Alopecia areata", "Chronic seborrheic dandruff", "Hormonal thinning"],
@@ -92,6 +94,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     id: "skin-conditions",
     title: "Skin Conditions",
     cardTitle: "Skin Disorders",
+    badge: "SKIN",
     category: "Hair & Skin",
     shortDescription: "Psoriasis, eczema, vitiligo, hormonal acne and allergic skin flare-ups without topical steroids.",
     fullSymptoms: ["Atopic dermatitis", "Plaque psoriasis", "Cystic acne", "Urticaria / Hives"],
@@ -103,6 +106,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     id: "allergies-respiratory",
     title: "Allergies & Respiratory",
     cardTitle: "Respiratory & Allergy",
+    badge: "RESPIRATORY",
     category: "Allergies & Respiratory",
     shortDescription: "Asthma, chronic bronchitis, allergic rhinitis, morning sneezing and recurrent colds.",
     fullSymptoms: ["Seasonal hay fever", "Bronchial asthma", "Chronic sinusitis", "Dust & pollen allergy"],
@@ -114,6 +118,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     id: "womens-health",
     title: "Women's Health",
     cardTitle: "Women's Health",
+    badge: "WOMEN'S",
     category: "Women's & Child Health",
     shortDescription: "PCOS/PCOD, thyroid irregularities, painful periods, fibroids and perimenopausal support.",
     fullSymptoms: ["Irregular cycles", "PCOS hormonal cysts", "Hypothyroidism", "Menopausal hot flashes"],
@@ -125,6 +130,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     id: "child-health",
     title: "Child Health",
     cardTitle: "Child Health",
+    badge: "CHILD",
     category: "Women's & Child Health",
     shortDescription: "Pediatric immunity, recurrent tonsillitis, adenoids, poor appetite and childhood allergies.",
     fullSymptoms: ["Frequent colds & fevers", "Enlarged adenoids/tonsils", "Childhood asthma", "Dentition distress"],
@@ -136,6 +142,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     id: "chronic-joint-pain",
     title: "Chronic & Joint Pain",
     cardTitle: "Joint & Pain Relief",
+    badge: "CHRONIC",
     category: "Chronic & Pain Management",
     shortDescription: "Arthritis, cervical spondylosis, migraine, sciatica and long-standing musculoskeletal stiffness.",
     fullSymptoms: ["Osteoarthritis", "Rheumatoid flare-ups", "Chronic tension migraine", "Lumbar disc distress"],
@@ -147,6 +154,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     id: "mental-wellness",
     title: "Mental Wellness",
     cardTitle: "Mental Wellness",
+    badge: "WELLNESS",
     category: "Chronic & Pain Management",
     shortDescription: "Stress, situational anxiety, panic episodes and sleep latency issues, treated without dependency.",
     fullSymptoms: ["Chronic work burnout", "Anxiety & restlessness", "Insomnia & sleep disruption", "Brain fog"],
@@ -158,6 +166,7 @@ export const TREATMENTS: TreatmentCondition[] = [
     id: "digestive-health",
     title: "Digestive Health",
     cardTitle: "Digestive Health",
+    badge: "DIGESTIVE",
     category: "Chronic & Pain Management",
     shortDescription: "Irritable Bowel Syndrome (IBS), chronic acidity, GERD, constipation and sluggish metabolism.",
     fullSymptoms: ["Acid reflux & heartburn", "IBS (spastic colon)", "Chronic bloating", "Food intolerances"],

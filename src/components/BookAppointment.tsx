@@ -205,7 +205,7 @@ Notes / Symptoms: ${notes}`;
                     >
                       {TREATMENTS.map((t) => (
                         <option key={t.id} value={t.title}>
-                          {t.title} ({t.category.split("&")[0].trim()})
+                          {t.title} ({t.badge || t.category.split("&")[0].trim()})
                         </option>
                       ))}
                       <option value="General Chronic Health">General Chronic / Other Concern</option>
