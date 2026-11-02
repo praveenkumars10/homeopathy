@@ -5,14 +5,14 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { Calendar, Video, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Book an Online Homeopathy Appointment | Allen Sha Homeopathy",
-  description: `Book an online homeopathy appointment with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist. Video or phone consultation. Mon–Sat, 3 PM – 9 PM. WhatsApp booking available. Medicines delivered to your doorstep.`,
+  title: "Book an Online Homoeopathy Appointment | Allen Sha Homoeopathy",
+  description: `Book an online homoeopathy appointment with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist. Video or phone consultation. Mon–Sat, 3 PM – 9 PM. WhatsApp booking available. Medicines delivered to your doorstep.`,
   keywords: [
-    "book homeopathy appointment online",
-    "online homeopathy appointment",
-    "schedule homeopathy consultation",
-    "book homeopathy doctor online",
-    "WhatsApp homeopathy appointment",
+    "book homoeopathy appointment online",
+    "online homoeopathy appointment",
+    "schedule homoeopathy consultation",
+    "book homoeopathy doctor online",
+    "WhatsApp homoeopathy appointment",
   ],
   alternates: { canonical: "/book-online-homeopathy-appointment/" },
 };
@@ -21,13 +21,13 @@ export default function BookAppointmentPage() {
   return (
     <>
       <PageHeader
-        title="Book an Online Homeopathy Appointment"
+        title="Book an Online Homoeopathy Appointment"
         breadcrumbLabel="Book Appointment"
         backgroundImage="/images/banner_doctor.jpg"
       />
       <SeoPageContent
-        h1="Book an Online Homeopathy Appointment"
-        intro={`Booking your online homeopathy appointment with ${CLINIC_CONFIG.doctorName} is simple and convenient. Whether you prefer a video call or phone consultation, you can schedule your appointment via WhatsApp and receive your medicines at your doorstep.`}
+        h1="Book an Online Homoeopathy Appointment"
+        intro={`Booking your online homoeopathy appointment with ${CLINIC_CONFIG.doctorName} is simple and convenient. Whether you prefer a video call or phone consultation, you can schedule your appointment via WhatsApp and receive your medicines at your doorstep.`}
         highlights={[
           "Book via WhatsApp — quick, simple, and direct",
           "Choose video call (Google Meet / WhatsApp Video) or phone call",

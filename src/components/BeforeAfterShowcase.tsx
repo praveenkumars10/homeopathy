@@ -101,7 +101,7 @@ export function BeforeAfterShowcase() {
                     <Image
                       key={currentBefore}
                       src={currentBefore}
-                      alt={`${caseItem.title} - Before Homeopathy Treatment`}
+                      alt={`${caseItem.title} - Before Homoeopathy Treatment`}
                       fill
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 30vw"
                       draggable={false}
@@ -172,14 +172,14 @@ export function BeforeAfterShowcase() {
                       setActiveModalImage({
                         src: caseItem.afterImage,
                         alt: `${caseItem.title} - After`,
-                        label: caseItem.afterLabel || "After Homeopathy",
+                        label: caseItem.afterLabel || "After Homoeopathy",
                         caseTitle: caseItem.title,
                       })
                     }
                   >
                     <Image
                       src={caseItem.afterImage}
-                      alt={`${caseItem.title} - After Homeopathy Treatment`}
+                      alt={`${caseItem.title} - After Homoeopathy Treatment`}
                       fill
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 30vw"
                       draggable={false}
@@ -201,7 +201,7 @@ export function BeforeAfterShowcase() {
                         setActiveModalImage({
                           src: caseItem.afterImage,
                           alt: `${caseItem.title} - After`,
-                          label: caseItem.afterLabel || "After Homeopathy",
+                          label: caseItem.afterLabel || "After Homoeopathy",
                           caseTitle: caseItem.title,
                         });
                       }}
@@ -303,7 +303,7 @@ export function BeforeAfterShowcase() {
               <div className="p-3.5 sm:p-4 bg-[#FAF7F0] border-t border-[#1F4B3F]/10 flex items-center justify-between gap-3 text-xs text-[#5C6659]">
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-[#1F4B3F]" />
-                  <span>Allen Sha Homeopathy Clinical Records • View Only</span>
+                  <span>Allen Sha Homoeopathy Clinical Records • View Only</span>
                 </div>
 
                 <button

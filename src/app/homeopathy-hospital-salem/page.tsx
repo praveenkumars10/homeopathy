@@ -5,19 +5,19 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { Building2, Video, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Homeopathy Hospital in Salem — Allen Sha Homeopathy",
-  description: `${CLINIC_CONFIG.clinicName} in Salem offers 100% online homeopathy consultations by ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist. ${CLINIC_CONFIG.experienceYears}+ years experience. Constitutional homeopathy with doorstep medicine delivery.`,
+  title: "Homoeopathy Hospital in Salem — Allen Sha Homoeopathy",
+  description: `${CLINIC_CONFIG.clinicName} in Salem offers 100% online homoeopathy consultations by ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist. ${CLINIC_CONFIG.experienceYears}+ years experience. Constitutional homoeopathy with doorstep medicine delivery.`,
   keywords: [
-    "homeopathy hospital Salem",
-    "homeopathy clinic Salem",
-    "Allen Sha Homeopathy Salem",
-    "best homeopathy hospital Salem",
-    "homeopathic treatment Salem",
+    "homoeopathy hospital Salem",
+    "homoeopathy clinic Salem",
+    "Allen Sha Homoeopathy Salem",
+    "best homoeopathy hospital Salem",
+    "homoeopathic treatment Salem",
   ],
   alternates: { canonical: "/homeopathy-hospital-salem/" },
   openGraph: {
-    title: `Homeopathy Hospital in Salem — ${CLINIC_CONFIG.clinicName}`,
-    description: `${CLINIC_CONFIG.clinicName} — trusted homeopathy practice in Salem since ${CLINIC_CONFIG.establishedYear}. Online consultations with doorstep medicine delivery.`,
+    title: `Homoeopathy Hospital in Salem — ${CLINIC_CONFIG.clinicName}`,
+    description: `${CLINIC_CONFIG.clinicName} — trusted homoeopathy practice in Salem since ${CLINIC_CONFIG.establishedYear}. Online consultations with doorstep medicine delivery.`,
   },
 };
 
@@ -26,10 +26,10 @@ export default function HomeopathyHospitalSalemPage() {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     name: CLINIC_CONFIG.clinicName,
-    description: `Homeopathy hospital and online consultation practice in Salem`,
-    url: `${CLINIC_CONFIG.siteUrl}/homeopathy-hospital-salem/`,
+    description: `Homoeopathy hospital and online consultation practice in Salem`,
+    url: `${CLINIC_CONFIG.siteUrl}/homoeopathy-hospital-salem/`,
     telephone: CLINIC_CONFIG.phoneClean,
-    medicalSpecialty: "Homeopathic",
+    medicalSpecialty: "Homoeopathic",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Salem",
@@ -39,7 +39,7 @@ export default function HomeopathyHospitalSalemPage() {
     physician: {
       "@type": "Physician",
       name: CLINIC_CONFIG.doctorName,
-      medicalSpecialty: "Homeopathy",
+      medicalSpecialty: "Homoeopathy",
       description: CLINIC_CONFIG.qualifications,
     },
     aggregateRating: {
@@ -56,29 +56,29 @@ export default function HomeopathyHospitalSalemPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHeader
-        title="Homeopathy Hospital in Salem"
+        title="Homoeopathy Hospital in Salem"
         breadcrumbLabel="Hospital — Salem"
         backgroundImage="/images/hero-consultation.jpg"
       />
       <SeoPageContent
-        h1="Homeopathy Hospital in Salem — Allen Sha Homeopathy"
-        intro={`${CLINIC_CONFIG.clinicName} is a trusted homeopathy practice based in Salem, Tamil Nadu, established in ${CLINIC_CONFIG.establishedYear}. Led by ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom) Gold Medalist, we offer 100% online consultations with personalized constitutional treatment and doorstep medicine delivery across India.`}
+        h1="Homoeopathy Hospital in Salem — Allen Sha Homoeopathy"
+        intro={`${CLINIC_CONFIG.clinicName} is a trusted homoeopathy practice based in Salem, Tamil Nadu, established in ${CLINIC_CONFIG.establishedYear}. Led by ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom) Gold Medalist, we offer 100% online consultations with personalized constitutional treatment and doorstep medicine delivery across India.`}
         highlights={[
           `Established in ${CLINIC_CONFIG.establishedYear} — ${CLINIC_CONFIG.experienceYears}+ years of service`,
           `${CLINIC_CONFIG.stats.patientsTreated.toLocaleString()}+ patients treated`,
           `${CLINIC_CONFIG.stats.googleRating} ★ Google rating with ${CLINIC_CONFIG.stats.reviewCount}+ reviews`,
           "100% online consultations — video & phone",
-          "Classical constitutional homeopathy approach",
+          "Classical constitutional homoeopathy approach",
           "Doorstep medicine delivery across Tamil Nadu & India",
         ]}
         sections={[
           {
-            heading: "About Allen Sha Homeopathy — Salem",
+            heading: "About Allen Sha Homoeopathy — Salem",
             icon: <Building2 className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <>
                 <p className="mb-3">
-                  {CLINIC_CONFIG.clinicName} was founded in {CLINIC_CONFIG.establishedYear} by {CLINIC_CONFIG.doctorName} with a vision to bring genuine classical homeopathy to patients who deserve unhurried, personalized medical attention. Based in Salem, Tamil Nadu, our practice has grown to serve patients from across India through our 100% online consultation model.
+                  {CLINIC_CONFIG.clinicName} was founded in {CLINIC_CONFIG.establishedYear} by {CLINIC_CONFIG.doctorName} with a vision to bring genuine classical homoeopathy to patients who deserve unhurried, personalized medical attention. Based in Salem, Tamil Nadu, our practice has grown to serve patients from across India through our 100% online consultation model.
                 </p>
                 <p>
                   Unlike conventional clinics that may offer brief consultations, every patient at {CLINIC_CONFIG.clinicName} receives a 45–60 minute in-depth case assessment, ensuring no aspect of their health is overlooked. This constitutional approach means we treat the person, not just the disease.
@@ -126,8 +126,8 @@ export default function HomeopathyHospitalSalemPage() {
         ]}
         faqs={[
           {
-            question: "Is Allen Sha Homeopathy a registered hospital in Salem?",
-            answer: `${CLINIC_CONFIG.clinicName} is a registered homeopathic medical practice led by ${CLINIC_CONFIG.doctorName}, a Government Registered Medical Practitioner (Reg. No: ${CLINIC_CONFIG.registrationNo}) with the Tamil Nadu Homeopathy Medical Council. We offer 100% online consultations.`,
+            question: "Is Allen Sha Homoeopathy a registered hospital in Salem?",
+            answer: `${CLINIC_CONFIG.clinicName} is a registered homoeopathic medical practice led by ${CLINIC_CONFIG.doctorName}, a Government Registered Medical Practitioner (Reg. No: ${CLINIC_CONFIG.registrationNo}) with the Tamil Nadu Homoeopathy Medical Council. We offer 100% online consultations.`,
           },
           {
             question: "Can I visit the hospital in Salem for an in-person consultation?",
@@ -135,7 +135,7 @@ export default function HomeopathyHospitalSalemPage() {
           },
         ]}
         relatedLinks={[
-          { label: "Homeopathy Doctor in Salem", href: "/homeopathy-doctor-salem/", description: "Dr. Mohamed Shahid's qualifications and experience" },
+          { label: "Homoeopathy Doctor in Salem", href: "/homeopathy-doctor-salem/", description: "Dr. Mohamed Shahid's qualifications and experience" },
           { label: "Online Consultation in Salem", href: "/online-homeopathy-consultation-salem/", description: "Book your online appointment from Salem" },
           { label: "Book an Appointment", href: "/book-online-homeopathy-appointment/", description: "Schedule your consultation today" },
           { label: "Patient Reviews", href: "/testimonials/", description: "Read verified patient experiences" },

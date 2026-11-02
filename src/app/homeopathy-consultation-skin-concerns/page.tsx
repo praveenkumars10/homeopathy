@@ -5,16 +5,16 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { Sparkles, ShieldCheck, AlertCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Homeopathy Consultation for Skin Concerns | Eczema, Psoriasis, Acne & Allergies",
-  description: `Permanent, non-suppressive homeopathic treatment for chronic skin conditions by ${CLINIC_CONFIG.doctorName}. Treat eczema, psoriasis, acne, urticaria, fungal infections & hair loss at the root.`,
+  title: "Homoeopathy Consultation for Skin Concerns | Eczema, Psoriasis, Acne & Allergies",
+  description: `Permanent, non-suppressive homoeopathic treatment for chronic skin conditions by ${CLINIC_CONFIG.doctorName}. Treat eczema, psoriasis, acne, urticaria, fungal infections & hair loss at the root.`,
   keywords: [
-    "homeopathy for skin diseases",
-    "psoriasis homeopathy treatment online",
-    "eczema homeopathy doctor",
-    "acne homeopathic cure",
-    "urticaria homeopathy",
-    "skin allergy homeopathy doctor salem",
-    "homeopathic skin specialist online",
+    "homoeopathy for skin diseases",
+    "psoriasis homoeopathy treatment online",
+    "eczema homoeopathy doctor",
+    "acne homoeopathic cure",
+    "urticaria homoeopathy",
+    "skin allergy homoeopathy doctor salem",
+    "homoeopathic skin specialist online",
   ],
   alternates: { canonical: "/homeopathy-consultation-skin-concerns/" },
 };
@@ -23,13 +23,13 @@ export default function HomeopathyConsultationSkinConcernsPage() {
   return (
     <>
       <PageHeader
-        title="Homeopathy for Skin Concerns"
+        title="Homoeopathy for Skin Concerns"
         breadcrumbLabel="Skin Health"
         backgroundImage="/images/banner_doctor.jpg"
       />
       <SeoPageContent
-        h1="Homeopathy Consultation for Skin Concerns"
-        intro={`The skin is the mirror of your internal health. Applying topical steroid creams often suppresses skin eruptions deeper into the body, causing chronic relapse. ${CLINIC_CONFIG.doctorName} treats skin diseases from within through constitutional classical homeopathy — eliminating the root cause without steroid rebound.`}
+        h1="Homoeopathy Consultation for Skin Concerns"
+        intro={`The skin is the mirror of your internal health. Applying topical steroid creams often suppresses skin eruptions deeper into the body, causing chronic relapse. ${CLINIC_CONFIG.doctorName} treats skin diseases from within through constitutional classical homoeopathy — eliminating the root cause without steroid rebound.`}
         highlights={[
           "Steroid-free internal healing without skin thinning or rebound flares",
           "Permanent relief from chronic, relapsing eczema and plaque psoriasis",
@@ -40,12 +40,12 @@ export default function HomeopathyConsultationSkinConcernsPage() {
         ]}
         sections={[
           {
-            heading: "Skin Conditions We Successfully Treat with Homeopathy",
+            heading: "Skin Conditions We Successfully Treat with Homoeopathy",
             icon: <Sparkles className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <div className="space-y-3">
                 <p>
-                  Constitutional homeopathy has historically demonstrated remarkable results in treating severe, persistent, and recurrent dermatological complaints:
+                  Constitutional homoeopathy has historically demonstrated remarkable results in treating severe, persistent, and recurrent dermatological complaints:
                 </p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
                   {[
@@ -70,7 +70,7 @@ export default function HomeopathyConsultationSkinConcernsPage() {
             ),
           },
           {
-            heading: "The Danger of Steroid Creams & The Homeopathic Advantage",
+            heading: "The Danger of Steroid Creams & The Homoeopathic Advantage",
             icon: <AlertCircle className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <>
@@ -78,7 +78,7 @@ export default function HomeopathyConsultationSkinConcernsPage() {
                   When a skin rash or eczema flare occurs, conventional dermatological practice usually prescribes topical corticosteroid ointments or immunosuppressants. While they temporarily quiet the skin, they do not resolve the internal metabolic or immunological dysfunction. Once the cream is stopped, the condition frequently erupts with increased severity (topical steroid withdrawal).
                 </p>
                 <p>
-                  According to Hering&apos;s Law of Cure, genuine healing proceeds from within outward and from above downward. Homeopathy treats skin disorders as systemic constitutional expressions. By purifying internal vitality and balancing cellular immunity, homeopathy clears the skin permanently while strengthening overall health.
+                  According to Hering&apos;s Law of Cure, genuine healing proceeds from within outward and from above downward. Homoeopathy treats skin disorders as systemic constitutional expressions. By purifying internal vitality and balancing cellular immunity, homoeopathy clears the skin permanently while strengthening overall health.
                 </p>
               </>
             ),
@@ -95,7 +95,7 @@ export default function HomeopathyConsultationSkinConcernsPage() {
         ]}
         faqs={[
           {
-            question: "Will my skin get worse initially before getting better (homeopathic aggravation)?",
+            question: "Will my skin get worse initially before getting better (homoeopathic aggravation)?",
             answer: "In a small percentage of cases previously suppressed with heavy steroid creams, a mild temporary cleansing response may occur as the body expels toxins. Dr. M. Allensha uses gentle potencies and gradual taper protocols to ensure healing proceeds smoothly and comfortably.",
           },
           {
@@ -104,7 +104,7 @@ export default function HomeopathyConsultationSkinConcernsPage() {
           },
           {
             question: "Can I stop my topical ointments immediately?",
-            answer: "If you have been using strong topical corticosteroids for months, we advise never stopping them abruptly to prevent severe steroid withdrawal rebounds. Dr. Allensha will provide a step-by-step tapering protocol while introducing homeopathic constitutional medicine.",
+            answer: "If you have been using strong topical corticosteroids for months, we advise never stopping them abruptly to prevent severe steroid withdrawal rebounds. Dr. Allensha will provide a step-by-step tapering protocol while introducing homoeopathic constitutional medicine.",
           },
         ]}
         relatedLinks={[

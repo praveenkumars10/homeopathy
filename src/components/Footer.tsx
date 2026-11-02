@@ -253,12 +253,12 @@ export function Footer() {
                 Regional Consultations
               </h5>
               <ul className="space-y-1.5 text-[#E8F0EB]/70">
-                <li><a href="/online-homeopathy-consultation-salem/" className="hover:text-white hover:underline transition-colors">Online Homeopathy Consultation in Salem</a></li>
-                <li><a href="/homeopathy-doctor-salem/" className="hover:text-white hover:underline transition-colors">Homeopathy Doctor in Salem</a></li>
-                <li><a href="/homeopathy-hospital-salem/" className="hover:text-white hover:underline transition-colors">Homeopathy Hospital in Salem</a></li>
-                <li><a href="/best-online-homeopathy-consultation-salem/" className="hover:text-white hover:underline transition-colors">Best Online Homeopathy in Salem</a></li>
+                <li><a href="/online-homeopathy-consultation-salem/" className="hover:text-white hover:underline transition-colors">Online Homoeopathy Consultation in Salem</a></li>
+                <li><a href="/homeopathy-doctor-salem/" className="hover:text-white hover:underline transition-colors">Homoeopathy Doctor in Salem</a></li>
+                <li><a href="/homeopathy-hospital-salem/" className="hover:text-white hover:underline transition-colors">Homoeopathy Hospital in Salem</a></li>
+                <li><a href="/best-online-homeopathy-consultation-salem/" className="hover:text-white hover:underline transition-colors">Best Online Homoeopathy in Salem</a></li>
                 <li><a href="/online-homeopathy-consultation-attur/" className="hover:text-white hover:underline transition-colors">Online Consultation in Attur</a></li>
-                <li><a href="/homeopathy-consultation-namakkal/" className="hover:text-white hover:underline transition-colors">Homeopathy Consultation in Namakkal</a></li>
+                <li><a href="/homeopathy-consultation-namakkal/" className="hover:text-white hover:underline transition-colors">Homoeopathy Consultation in Namakkal</a></li>
                 <li><a href="/online-homeopathy-consultation-tamil-nadu/" className="hover:text-white hover:underline transition-colors">Online Consultation Across Tamil Nadu</a></li>
               </ul>
             </div>
@@ -268,11 +268,11 @@ export function Footer() {
                 Specialized Consultations
               </h5>
               <ul className="space-y-1.5 text-[#E8F0EB]/70">
-                <li><a href="/homeopathy-consultation-womens-health/" className="hover:text-white hover:underline transition-colors">Homeopathy for Women&apos;s Health (PCOD, Thyroid)</a></li>
+                <li><a href="/homeopathy-consultation-womens-health/" className="hover:text-white hover:underline transition-colors">Homoeopathy for Women&apos;s Health (PCOD, Thyroid)</a></li>
                 <li><a href="/homeopathy-consultation-skin-concerns/" className="hover:text-white hover:underline transition-colors">Skin Concerns (Psoriasis, Eczema, Acne)</a></li>
                 <li><a href="/homeopathy-consultation-allergy-concerns/" className="hover:text-white hover:underline transition-colors">Allergy Concerns (Rhinitis, Asthma, Dust)</a></li>
-                <li><a href="/homeopathy-consultation-children/" className="hover:text-white hover:underline transition-colors">Homeopathy Consultation for Children</a></li>
-                <li><a href="/homeopathy-consultation-adults/" className="hover:text-white hover:underline transition-colors">Homeopathy Consultation for Adults</a></li>
+                <li><a href="/homeopathy-consultation-children/" className="hover:text-white hover:underline transition-colors">Homoeopathy Consultation for Children</a></li>
+                <li><a href="/homeopathy-consultation-adults/" className="hover:text-white hover:underline transition-colors">Homoeopathy Consultation for Adults</a></li>
                 <li><a href="/book-online-homeopathy-appointment/" className="hover:text-white hover:underline transition-colors">Book an Online Appointment</a></li>
               </ul>
             </div>
@@ -282,11 +282,11 @@ export function Footer() {
                 Patient Resources & Guides
               </h5>
               <ul className="space-y-1.5 text-[#E8F0EB]/70">
-                <li><a href="/how-online-homeopathy-consultation-works/" className="hover:text-white hover:underline transition-colors">How Online Homeopathy Works</a></li>
-                <li><a href="/homeopathy-consultation-fees/" className="hover:text-white hover:underline transition-colors">Online Homeopathy Consultation Fees</a></li>
+                <li><a href="/how-online-homeopathy-consultation-works/" className="hover:text-white hover:underline transition-colors">How Online Homoeopathy Works</a></li>
+                <li><a href="/homeopathy-consultation-fees/" className="hover:text-white hover:underline transition-colors">Online Homoeopathy Consultation Fees</a></li>
                 <li><a href="/what-to-expect-homeopathy-consultation/" className="hover:text-white hover:underline transition-colors">What to Expect During a Consultation</a></li>
                 <li><a href="/how-to-prepare-homeopathy-appointment/" className="hover:text-white hover:underline transition-colors">How to Prepare for an Appointment</a></li>
-                <li><a href="/questions-to-ask-homeopathy-doctor/" className="hover:text-white hover:underline transition-colors">Questions to Ask a Homeopathy Doctor</a></li>
+                <li><a href="/questions-to-ask-homeopathy-doctor/" className="hover:text-white hover:underline transition-colors">Questions to Ask a Homoeopathy Doctor</a></li>
                 <li><a href="/online-vs-in-person-homeopathy-consultation/" className="hover:text-white hover:underline transition-colors">Online vs In-Person Consultation</a></li>
                 <li><a href="/frequently-asked-questions-homeopathy/" className="hover:text-white hover:underline transition-colors">Frequently Asked Questions (FAQ)</a></li>
               </ul>

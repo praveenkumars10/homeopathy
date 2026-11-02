@@ -5,18 +5,18 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { Award, Video, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Best Online Homeopathy Consultation in Salem | Gold Medalist Doctor",
-  description: `Experience the best online homeopathy consultation in Salem with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist. ${CLINIC_CONFIG.stats.googleRating}★ Google rating. ${CLINIC_CONFIG.experienceYears}+ years. 100% online with doorstep medicine delivery.`,
+  title: "Best Online Homoeopathy Consultation in Salem | Gold Medalist Doctor",
+  description: `Experience the best online homoeopathy consultation in Salem with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist. ${CLINIC_CONFIG.stats.googleRating}★ Google rating. ${CLINIC_CONFIG.experienceYears}+ years. 100% online with doorstep medicine delivery.`,
   keywords: [
-    "best online homeopathy consultation Salem",
-    "best homeopathy doctor Salem online",
-    "top homeopathic consultant Salem",
-    "best rated homeopathy Salem",
-    "Gold Medalist homeopathy doctor Salem",
+    "best online homoeopathy consultation Salem",
+    "best homoeopathy doctor Salem online",
+    "top homoeopathic consultant Salem",
+    "best rated homoeopathy Salem",
+    "Gold Medalist homoeopathy doctor Salem",
   ],
   alternates: { canonical: "/best-online-homeopathy-consultation-salem/" },
   openGraph: {
-    title: `Best Online Homeopathy Consultation in Salem — ${CLINIC_CONFIG.clinicName}`,
+    title: `Best Online Homoeopathy Consultation in Salem — ${CLINIC_CONFIG.clinicName}`,
     description: `${CLINIC_CONFIG.stats.googleRating}★ rated. Gold Medalist doctor. ${CLINIC_CONFIG.experienceYears}+ years experience.`,
   },
 };
@@ -25,13 +25,13 @@ export default function BestOnlineConsultationSalemPage() {
   return (
     <>
       <PageHeader
-        title="Best Online Homeopathy Consultation in Salem"
+        title="Best Online Homoeopathy Consultation in Salem"
         breadcrumbLabel="Best Consultation — Salem"
         backgroundImage="/images/hero-consultation.jpg"
       />
       <SeoPageContent
-        h1="Best Online Homeopathy Consultation in Salem"
-        intro={`When searching for the best online homeopathy consultation in Salem, patients look for verified credentials, genuine patient outcomes, and a doctor who truly listens. ${CLINIC_CONFIG.clinicName}, led by Gold Medalist ${CLINIC_CONFIG.doctorName}, delivers all three — with a ${CLINIC_CONFIG.stats.googleRating}★ Google rating and ${CLINIC_CONFIG.stats.patientsTreated.toLocaleString()}+ patients treated.`}
+        h1="Best Online Homoeopathy Consultation in Salem"
+        intro={`When searching for the best online homoeopathy consultation in Salem, patients look for verified credentials, genuine patient outcomes, and a doctor who truly listens. ${CLINIC_CONFIG.clinicName}, led by Gold Medalist ${CLINIC_CONFIG.doctorName}, delivers all three — with a ${CLINIC_CONFIG.stats.googleRating}★ Google rating and ${CLINIC_CONFIG.stats.patientsTreated.toLocaleString()}+ patients treated.`}
         highlights={[
           `${CLINIC_CONFIG.stats.googleRating} ★ Google rating — ${CLINIC_CONFIG.stats.reviewCount}+ verified reviews`,
           "Gold Medalist — BHMS, MD(Hom)",
@@ -80,7 +80,7 @@ export default function BestOnlineConsultationSalemPage() {
         ]}
         faqs={[
           {
-            question: "Why is Allen Sha considered the best homeopathy consultation in Salem?",
+            question: "Why is Allen Sha considered the best homoeopathy consultation in Salem?",
             answer: `With a ${CLINIC_CONFIG.stats.googleRating}★ Google rating, ${CLINIC_CONFIG.stats.reviewCount}+ verified reviews, Gold Medal credentials, Government registration, and ${CLINIC_CONFIG.experienceYears}+ years of practice, ${CLINIC_CONFIG.clinicName} consistently delivers deep, personalized constitutional care that produces lasting results.`,
           },
           {

@@ -10,23 +10,23 @@ import { assetUrl } from "./assets";
 
 export const CLINIC_CONFIG = {
   // Brand & Identity
-  clinicName: "Allen Sha Homeopathy",
+  clinicName: "Allen Sha Homoeopathy",
   shortName: "Allen Sha",
   siteUrl: "https://www.allensha.com",
   tagline: "100% Online Consultations Only — Dr. M. Mohamed Shahid",
-  shortTagline: "Evidence-informed classical constitutional homeopathy by Gold Medalist Dr. M. Mohamed Shahid (Govt Reg. No: 3459). 100% Online Consultations Only.",
+  shortTagline: "Evidence-informed classical constitutional homoeopathy by Gold Medalist Dr. M. Mohamed Shahid (Govt Reg. No: 3459). 100% Online Consultations Only.",
   googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || "G-MBXWNHWBCT",
   
   // Doctor Profile
   doctorName: "Dr. M. Mohamed Shahid",
-  doctorTitle: "Chief Homeopathic Physician & Classical Constitutional Specialist",
+  doctorTitle: "Chief Homoeopathic Physician & Classical Constitutional Specialist",
   qualifications: "BHMS, MD(Hom) — Gold Medalist",
   registrationNo: "3459",
-  medicalCouncilReg: "Government Registered Medical Practitioner — Reg. No: 3459 (Tamil Nadu Homeopathy Medical Council)",
+  medicalCouncilReg: "Government Registered Medical Practitioner — Reg. No: 3459 (Tamil Nadu Homoeopathy Medical Council)",
   experienceYears: 16,
   establishedYear: 2010,
   doctorBio:
-    "Practicing since 2010 with over 16 years of clinical excellence, Dr. M. Mohamed Shahid, BHMS, MD(Hom) is a Gold Medalist and Government Registered Medical Practitioner (Reg. No: 3459) with the Tamil Nadu Homeopathy Medical Council. He specializes in classical Hahnemannian constitutional homeopathy, offering 100% online consultations with tracked doorstep medicine delivery.",
+    "Practicing since 2010 with over 16 years of clinical excellence, Dr. M. Mohamed Shahid, BHMS, MD(Hom) is a Gold Medalist and Government Registered Medical Practitioner (Reg. No: 3459) with the Tamil Nadu Homoeopathy Medical Council. He specializes in classical Hahnemannian constitutional homoeopathy, offering 100% online consultations with tracked doorstep medicine delivery.",
   doctorPhilosophy:
     "\"Every symptom is your body's voice asking for balance, not suppression. Through unhurried online video consultation, we evaluate your complete health totality and deliver individualized classical remedies right to your doorstep.\"",
 
@@ -204,7 +204,7 @@ export const TREATMENT_STEPS = [
 ];
 /**
  * Clinical Before & After Cases
- * Real patient photographic outcomes treated at Allen Sha Homeopathy
+ * Real patient photographic outcomes treated at Allen Sha Homoeopathy
  */
 export interface ClinicalCase {
   id: string;
@@ -229,13 +229,13 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     patientProfile: "Adult Patient, Severe Lesion",
     condition: "Deep Finger Ulceration & Tissue Inflammation",
     category: "Skin & Wound Care",
-    duration: "4 Weeks of Constitutional Homeopathy",
+    duration: "4 Weeks of Constitutional Homoeopathy",
     summary:
-      "Patient presented with a painful, deep non-healing ulcerated lesion at the fingertip with yellow tissue inflammation. Following individualised constitutional homeopathic treatment, natural cellular regeneration was initiated, inflammation completely subsided, and the finger healed cleanly without scar tissue.",
+      "Patient presented with a painful, deep non-healing ulcerated lesion at the fingertip with yellow tissue inflammation. Following individualised constitutional homoeopathic treatment, natural cellular regeneration was initiated, inflammation completely subsided, and the finger healed cleanly without scar tissue.",
     beforeImage: assetUrl("/images/testimonials/case1-finger-before.jpg"),
     afterImage: assetUrl("/images/testimonials/case1-finger-after.jpg"),
     beforeLabel: "Before Treatment",
-    afterLabel: "After Homeopathy",
+    afterLabel: "After Homoeopathy",
     resultBadge: "Complete Tissue Healing",
   },
   {
@@ -243,14 +243,14 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     title: "Extensive Hand Warts (Verruca Vulgaris) Clearance",
     patientProfile: "Adult Patient, Multiple Lesions",
     condition: "Multiple Recurrent Hand Warts & Papillomas",
-    category: "Dermatological Homeopathy",
-    duration: "6 Weeks of Constitutional Homeopathy",
+    category: "Dermatological Homoeopathy",
+    duration: "6 Weeks of Constitutional Homoeopathy",
     summary:
-      "Extensive clusters of stubborn, rough verruca warts covering the dorsum of the hand and wrist. While external cautery or burning often leaves scars and recurrent outbreaks, constitutional homeopathy stimulated internal immunity, causing all warts to naturally fall off and leaving completely clear, smooth skin.",
+      "Extensive clusters of stubborn, rough verruca warts covering the dorsum of the hand and wrist. While external cautery or burning often leaves scars and recurrent outbreaks, constitutional homoeopathy stimulated internal immunity, causing all warts to naturally fall off and leaving completely clear, smooth skin.",
     beforeImage: assetUrl("/images/testimonials/case2-warts-before.jpg"),
     afterImage: assetUrl("/images/testimonials/case2-warts-after.jpg"),
     beforeLabel: "Before Treatment",
-    afterLabel: "After Homeopathy",
+    afterLabel: "After Homoeopathy",
     resultBadge: "100% Wart Clearance",
   },
   {
@@ -259,13 +259,13 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     patientProfile: "Adult Patient, Chronic Non-Healing Wound",
     condition: "Deep Foot Ulcer with Peripheral Necrosis & Slough",
     category: "Diabetic & Wound Care",
-    duration: "8 Weeks of Constitutional Homeopathy",
+    duration: "8 Weeks of Constitutional Homoeopathy",
     summary:
-      "Patient presented with a critical, long-standing ulcerated wound on the foot exhibiting tissue breakdown, peripheral redness, and non-healing slough. When conventional dressings showed slow response, constitutional homeopathic prescribing stimulated cellular microcirculation and innate vitality, resulting in complete wound closure and healthy epithelial regeneration.",
+      "Patient presented with a critical, long-standing ulcerated wound on the foot exhibiting tissue breakdown, peripheral redness, and non-healing slough. When conventional dressings showed slow response, constitutional homoeopathic prescribing stimulated cellular microcirculation and innate vitality, resulting in complete wound closure and healthy epithelial regeneration.",
     beforeImage: assetUrl("/images/testimonials/case3-foot-ulcer-before.jpg"),
     afterImage: assetUrl("/images/testimonials/case3-foot-ulcer-after.jpg"),
     beforeLabel: "Before Treatment (Open Deep Ulcer)",
-    afterLabel: "After Homeopathy (Complete Healing)",
+    afterLabel: "After Homoeopathy (Complete Healing)",
     resultBadge: "100% Wound Closure",
   },
   {
@@ -274,13 +274,13 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     patientProfile: "Adult Patient, Recurrent Skin Lesion",
     condition: "Severe Violaceous Hyperpigmented Patch on Arm",
     category: "Skin & Allergy Care",
-    duration: "5 Weeks of Constitutional Homeopathy",
+    duration: "5 Weeks of Constitutional Homoeopathy",
     summary:
-      "Patient presented with a large, thickened, severely darkened lichenoid eczema patch over the arm causing persistent irritation. Rather than temporary symptomatic suppression with topical cortisone, deep constitutional homeopathy addressed internal immune dysregulation, resulting in complete clearance of the patch and full restoration of normal skin complexion.",
+      "Patient presented with a large, thickened, severely darkened lichenoid eczema patch over the arm causing persistent irritation. Rather than temporary symptomatic suppression with topical cortisone, deep constitutional homoeopathy addressed internal immune dysregulation, resulting in complete clearance of the patch and full restoration of normal skin complexion.",
     beforeImage: assetUrl("/images/testimonials/case4-arm-eczema-before.jpg"),
     afterImage: assetUrl("/images/testimonials/case4-arm-eczema-after.jpg"),
     beforeLabel: "Before Treatment (Severe Lichenoid Plaque)",
-    afterLabel: "After Homeopathy (Normal Skin Tone)",
+    afterLabel: "After Homoeopathy (Normal Skin Tone)",
     resultBadge: "Full Texture & Tone Restored",
   },
   {
@@ -289,13 +289,13 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     patientProfile: "Adult Patient, Pulp Infection",
     condition: "Deep Thumb Pulp Necrosis, Nail-Fold Infection & Tissue Loss",
     category: "Infection & Wound Care",
-    duration: "3 Weeks of Constitutional Homeopathy",
+    duration: "3 Weeks of Constitutional Homoeopathy",
     summary:
-      "Patient suffered from an excruciatingly tender, ulcerated thumb pulp with localized tissue necrosis and chronic nail-fold inflammation. Constitutional homeopathic remedies halted suppuration, stimulated healthy tissue granulation, and restored the natural thumb contour and nail-bed integrity without surgical incision or scarring.",
+      "Patient suffered from an excruciatingly tender, ulcerated thumb pulp with localized tissue necrosis and chronic nail-fold inflammation. Constitutional homoeopathic remedies halted suppuration, stimulated healthy tissue granulation, and restored the natural thumb contour and nail-bed integrity without surgical incision or scarring.",
     beforeImage: assetUrl("/images/testimonials/case5-thumb-before.jpg"),
     afterImage: assetUrl("/images/testimonials/case5-thumb-after.jpg"),
     beforeLabel: "Before Treatment (Ulcerated Thumb Pulp)",
-    afterLabel: "After Homeopathy (Full Tissue Recovery)",
+    afterLabel: "After Homoeopathy (Full Tissue Recovery)",
     resultBadge: "100% Granulation & Healing",
   },
   {
@@ -304,7 +304,7 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     patientProfile: "Senior Patient, Mobility Impairment",
     condition: "Severe Knee Joint Swelling, Chronic Effusion & Walking Difficulty",
     category: "Joint & Pain Management",
-    duration: "7 Weeks of Constitutional Homeopathy",
+    duration: "7 Weeks of Constitutional Homoeopathy",
     summary:
       "Patient presented with severe right knee swelling, fluid effusion, and crippling pain necessitating continuous compression bandage support to ambulate. Individualized constitutional remedies resolved the chronic synovial inflammation, facilitating natural fluid absorption and pain relief. The patient regained erect weight-bearing posture and independent mobility without requiring knee wraps or pain injections.",
     beforeImage: assetUrl("/images/testimonials/case6-knee-before-1.jpg"),
@@ -314,7 +314,7 @@ export const CLINICAL_CASES: ClinicalCase[] = [
     ],
     afterImage: assetUrl("/images/testimonials/case6-knee-after.jpg"),
     beforeLabel: "Before Treatment (Severe Effusion with Bandage)",
-    afterLabel: "After Homeopathy (Erect Posture, Swelling Gone)",
+    afterLabel: "After Homoeopathy (Erect Posture, Swelling Gone)",
     resultBadge: "Full Mobility & Swelling Resolved",
   },
 ];
@@ -396,9 +396,9 @@ export const FAQS = [
       "All prescribed constitutional remedies and mother tinctures are securely packed and dispatched via speed post / courier service to your doorstep. You will receive tracking details, dosage guidelines, and ongoing WhatsApp support throughout your treatment course.",
   },
   {
-    question: "Is homeopathy safe for long-term use?",
+    question: "Is homoeopathy safe for long-term use?",
     answer:
-      "Yes — homeopathic remedies are micro-diluted natural substances prepared through standardized potentization. When selected by a qualified physician (B.H.M.S., MD(Hom)), they are gentle, non-toxic, and free from organ strain or dependency, making them safe for long-term restorative health under medical guidance.",
+      "Yes — homoeopathic remedies are micro-diluted natural substances prepared through standardized potentization. When selected by a qualified physician (B.H.M.S., MD(Hom)), they are gentle, non-toxic, and free from organ strain or dependency, making them safe for long-term restorative health under medical guidance.",
   },
   {
     question: "How soon will I notice tangible results?",
@@ -406,17 +406,17 @@ export const FAQS = [
       "It varies by condition — acute issues can respond within days, while chronic conditions typically take a few weeks to a few months of consistent treatment. Noticeable shifts in sleep, appetite, and vitality often appear in the first few weeks.",
   },
   {
-    question: "Can I continue my regular medication alongside homeopathy?",
+    question: "Can I continue my regular medication alongside homoeopathy?",
     answer:
       "Usually yes, but always inform Dr. Mohamed Shahid so treatment can be coordinated safely. We do not stop essential allopathic prescriptions abruptly. As your constitutional vitality improves, allopathic dosages can be reassessed with your primary physician.",
   },
   {
-    question: "Is homeopathy suitable for children and during pregnancy?",
+    question: "Is homoeopathy suitable for children and during pregnancy?",
     answer:
-      "Homeopathy is widely considered gentle enough for children and expectant mothers, but should always be taken under a qualified doctor's supervision. Remedies are sweet, non-invasive, and non-toxic.",
+      "Homoeopathy is widely considered gentle enough for children and expectant mothers, but should always be taken under a qualified doctor's supervision. Remedies are sweet, non-invasive, and non-toxic.",
   },
   {
-    question: "Are there strict dietary restrictions with homeopathic remedies?",
+    question: "Are there strict dietary restrictions with homoeopathic remedies?",
     answer:
       "Modern classical practice requires very few restrictions. We simply recommend leaving a clean palate 15 minutes before and after taking your remedy dose (avoiding raw coffee, camphor, or strong menthol right around intake) to ensure optimal sublingual absorption.",
   },

@@ -5,14 +5,14 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { Video, Clock, Package } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "How Online Homeopathy Consultation Works | Step-by-Step Guide",
-  description: `Learn how online homeopathy consultation works at ${CLINIC_CONFIG.clinicName}. Step-by-step guide: WhatsApp booking, 45–60 min video consultation with ${CLINIC_CONFIG.doctorName}, doorstep medicine delivery & follow-up care.`,
+  title: "How Online Homoeopathy Consultation Works | Step-by-Step Guide",
+  description: `Learn how online homoeopathy consultation works at ${CLINIC_CONFIG.clinicName}. Step-by-step guide: WhatsApp booking, 45–60 min video consultation with ${CLINIC_CONFIG.doctorName}, doorstep medicine delivery & follow-up care.`,
   keywords: [
-    "how online homeopathy consultation works",
-    "online homeopathy process",
-    "homeopathy video consultation steps",
-    "homeopathy consultation process",
-    "what happens in homeopathy consultation",
+    "how online homoeopathy consultation works",
+    "online homoeopathy process",
+    "homoeopathy video consultation steps",
+    "homoeopathy consultation process",
+    "what happens in homoeopathy consultation",
   ],
   alternates: { canonical: "/how-online-homeopathy-consultation-works/" },
 };
@@ -21,8 +21,8 @@ export default function HowOnlineConsultationWorksPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "How to Get an Online Homeopathy Consultation",
-    description: `Step-by-step guide to online homeopathy consultation at ${CLINIC_CONFIG.clinicName}`,
+    name: "How to Get an Online Homoeopathy Consultation",
+    description: `Step-by-step guide to online homoeopathy consultation at ${CLINIC_CONFIG.clinicName}`,
     step: [
       {
         "@type": "HowToStep",
@@ -58,13 +58,13 @@ export default function HowOnlineConsultationWorksPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHeader
-        title="How Online Homeopathy Consultation Works"
+        title="How Online Homoeopathy Consultation Works"
         breadcrumbLabel="How It Works"
         backgroundImage="/images/hero-consultation.jpg"
       />
       <SeoPageContent
-        h1="How Online Homeopathy Consultation Works"
-        intro={`Wondering how an online homeopathy consultation works? It's simple, secure, and just as effective as an in-person visit. Here's a complete walkthrough of the process at ${CLINIC_CONFIG.clinicName}.`}
+        h1="How Online Homoeopathy Consultation Works"
+        intro={`Wondering how an online homoeopathy consultation works? It's simple, secure, and just as effective as an in-person visit. Here's a complete walkthrough of the process at ${CLINIC_CONFIG.clinicName}.`}
         sections={[
           {
             heading: "Step 1: Book Your Appointment via WhatsApp",

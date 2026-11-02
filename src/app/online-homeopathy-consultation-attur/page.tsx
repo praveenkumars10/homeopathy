@@ -5,18 +5,18 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { MapPin, Video, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Online Homeopathy Consultation in Attur | Dr. M. Mohamed Shahid",
-  description: `Book an online homeopathy consultation from Attur with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist. 100% online video & phone consultations. Medicines delivered to your doorstep in Attur, Salem District.`,
+  title: "Online Homoeopathy Consultation in Attur | Dr. M. Mohamed Shahid",
+  description: `Book an online homoeopathy consultation from Attur with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist. 100% online video & phone consultations. Medicines delivered to your doorstep in Attur, Salem District.`,
   keywords: [
-    "online homeopathy consultation Attur",
-    "homeopathy doctor Attur",
-    "homeopathic treatment Attur",
-    "Attur Salem homeopathy online",
-    "best homeopathy doctor near Attur",
+    "online homoeopathy consultation Attur",
+    "homoeopathy doctor Attur",
+    "homoeopathic treatment Attur",
+    "Attur Salem homoeopathy online",
+    "best homoeopathy doctor near Attur",
   ],
   alternates: { canonical: "/online-homeopathy-consultation-attur/" },
   openGraph: {
-    title: `Online Homeopathy Consultation in Attur — ${CLINIC_CONFIG.clinicName}`,
+    title: `Online Homoeopathy Consultation in Attur — ${CLINIC_CONFIG.clinicName}`,
     description: `Consult ${CLINIC_CONFIG.doctorName} online from Attur, Salem District. Doorstep medicine delivery.`,
   },
 };
@@ -26,10 +26,10 @@ export default function OnlineConsultationAtturPage() {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     name: CLINIC_CONFIG.clinicName,
-    description: `Online homeopathy consultation for patients in Attur, Salem District`,
-    url: `${CLINIC_CONFIG.siteUrl}/online-homeopathy-consultation-attur/`,
+    description: `Online homoeopathy consultation for patients in Attur, Salem District`,
+    url: `${CLINIC_CONFIG.siteUrl}/online-homoeopathy-consultation-attur/`,
     telephone: CLINIC_CONFIG.phoneClean,
-    medicalSpecialty: "Homeopathic",
+    medicalSpecialty: "Homoeopathic",
     areaServed: {
       "@type": "City",
       name: "Attur",
@@ -44,13 +44,13 @@ export default function OnlineConsultationAtturPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHeader
-        title="Online Homeopathy Consultation in Attur"
+        title="Online Homoeopathy Consultation in Attur"
         breadcrumbLabel="Online Consultation — Attur"
         backgroundImage="/images/hero-consultation.jpg"
       />
       <SeoPageContent
-        h1="Online Homeopathy Consultation in Attur"
-        intro={`Residents of Attur, Salem District, can now access expert homeopathic care without traveling to the city. ${CLINIC_CONFIG.clinicName} offers 100% online video and phone consultations with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist — with medicines delivered right to your home in Attur.`}
+        h1="Online Homoeopathy Consultation in Attur"
+        intro={`Residents of Attur, Salem District, can now access expert homoeopathic care without traveling to the city. ${CLINIC_CONFIG.clinicName} offers 100% online video and phone consultations with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist — with medicines delivered right to your home in Attur.`}
         highlights={[
           "Online consultation available for all Attur residents",
           `Consult ${CLINIC_CONFIG.doctorName} — ${CLINIC_CONFIG.experienceYears}+ years experience`,
@@ -61,15 +61,15 @@ export default function OnlineConsultationAtturPage() {
         ]}
         sections={[
           {
-            heading: "Homeopathy Consultation for Attur Patients",
+            heading: "Homoeopathy Consultation for Attur Patients",
             icon: <MapPin className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <>
                 <p className="mb-3">
-                  Attur, located in Salem District, now has access to a qualified Government Registered homeopathic physician through our 100% online consultation service. Whether you&apos;re in Attur town, Narasingapuram, Thumbal, Valasai, or surrounding villages, you can connect with {CLINIC_CONFIG.doctorName} from the comfort of your home.
+                  Attur, located in Salem District, now has access to a qualified Government Registered homoeopathic physician through our 100% online consultation service. Whether you&apos;re in Attur town, Narasingapuram, Thumbal, Valasai, or surrounding villages, you can connect with {CLINIC_CONFIG.doctorName} from the comfort of your home.
                 </p>
                 <p>
-                  Our online model eliminates the need to travel to Salem city for quality homeopathic care. You receive the same in-depth constitutional assessment and personalized treatment that clinic-based patients receive.
+                  Our online model eliminates the need to travel to Salem city for quality homoeopathic care. You receive the same in-depth constitutional assessment and personalized treatment that clinic-based patients receive.
                 </p>
               </>
             ),
@@ -109,7 +109,7 @@ export default function OnlineConsultationAtturPage() {
         ]}
         faqs={[
           {
-            question: "Can I get homeopathy consultation from Attur online?",
+            question: "Can I get homoeopathy consultation from Attur online?",
             answer: `Yes. ${CLINIC_CONFIG.clinicName} offers 100% online consultations to patients in Attur. You can consult via video or phone call with ${CLINIC_CONFIG.doctorName}, and medicines will be delivered to your Attur address.`,
           },
           {
@@ -118,9 +118,9 @@ export default function OnlineConsultationAtturPage() {
           },
         ]}
         relatedLinks={[
-          { label: "Online Consultation in Salem", href: "/online-homeopathy-consultation-salem/", description: "Homeopathy consultation from Salem" },
-          { label: "Consultation in Tamil Nadu", href: "/online-homeopathy-consultation-tamil-nadu/", description: "Online homeopathy across Tamil Nadu" },
-          { label: "Consultation in Namakkal", href: "/homeopathy-consultation-namakkal/", description: "Online homeopathy for Namakkal patients" },
+          { label: "Online Consultation in Salem", href: "/online-homeopathy-consultation-salem/", description: "Homoeopathy consultation from Salem" },
+          { label: "Consultation in Tamil Nadu", href: "/online-homeopathy-consultation-tamil-nadu/", description: "Online homoeopathy across Tamil Nadu" },
+          { label: "Consultation in Namakkal", href: "/homeopathy-consultation-namakkal/", description: "Online homoeopathy for Namakkal patients" },
           { label: "Book an Appointment", href: "/book-online-homeopathy-appointment/", description: "Schedule your online consultation" },
         ]}
       />

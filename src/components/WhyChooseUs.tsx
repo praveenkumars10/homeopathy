@@ -59,7 +59,7 @@ export function WhyChooseUs({ compactTop = false }: { compactTop?: boolean } = {
           </h2>
 
           <p className="text-[#E8F0EB]/80 text-base sm:text-lg leading-relaxed font-light">
-            We sit intentionally between cold, impersonal hospital corridors and uncredentialed wellness claims — providing serious, credentialed medical homeopathy in a warm, empathetic atmosphere.
+            We sit intentionally between cold, impersonal hospital corridors and uncredentialed wellness claims — providing serious, credentialed medical homoeopathy in a warm, empathetic atmosphere.
           </p>
         </div>
 

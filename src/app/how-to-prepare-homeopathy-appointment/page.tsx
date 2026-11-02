@@ -5,14 +5,14 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { CheckSquare, FileText, Camera, Clock, Smartphone, HeartHandshake } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "How to Prepare for a Homeopathy Appointment | Checklist & Tips",
-  description: `Get the most out of your homeopathic consultation with ${CLINIC_CONFIG.doctorName}. Step-by-step preparation checklist: medical reports, symptom timeline, photos, and questions.`,
+  title: "How to Prepare for a Homoeopathy Appointment | Checklist & Tips",
+  description: `Get the most out of your homoeopathic consultation with ${CLINIC_CONFIG.doctorName}. Step-by-step preparation checklist: medical reports, symptom timeline, photos, and questions.`,
   keywords: [
-    "how to prepare for homeopathy appointment",
-    "homeopathic consultation preparation",
-    "homeopathy case taking tips",
-    "preparing for online homeopathy consultation",
-    "what to bring to homeopathy doctor",
+    "how to prepare for homoeopathy appointment",
+    "homoeopathic consultation preparation",
+    "homoeopathy case taking tips",
+    "preparing for online homoeopathy consultation",
+    "what to bring to homoeopathy doctor",
   ],
   alternates: { canonical: "/how-to-prepare-homeopathy-appointment/" },
 };
@@ -21,13 +21,13 @@ export default function HowToPrepareHomeopathyAppointmentPage() {
   return (
     <>
       <PageHeader
-        title="How to Prepare for Your Homeopathy Appointment"
+        title="How to Prepare for Your Homoeopathy Appointment"
         breadcrumbLabel="Prepare for Visit"
         backgroundImage="/images/banner_doctor.jpg"
       />
       <SeoPageContent
-        h1="How to Prepare for a Homeopathy Appointment"
-        intro={`A classical constitutional homeopathy consultation is an interactive, investigative partnership between you and your physician. By preparing a few details before your video appointment with ${CLINIC_CONFIG.doctorName}, you ensure the most accurate remedy selection and the highest value from your session.`}
+        h1="How to Prepare for a Homoeopathy Appointment"
+        intro={`A classical constitutional homoeopathy consultation is an interactive, investigative partnership between you and your physician. By preparing a few details before your video appointment with ${CLINIC_CONFIG.doctorName}, you ensure the most accurate remedy selection and the highest value from your session.`}
         highlights={[
           "Compile a chronological timeline of your symptoms and previous treatments",
           "Gather recent blood tests, scan reports, and prescription lists",
@@ -58,7 +58,7 @@ export default function HowToPrepareHomeopathyAppointmentPage() {
                     2. Build a Chronological Symptom Timeline
                   </h4>
                   <p className="text-sm text-[#5C6659]">
-                    Reflect on when your symptoms first began. What was happening in your life around that time? Was there an acute infection, a change of job, emotional grief, bereavement, pregnancy, or antibiotic overuse? In homeopathy, the onset context is of monumental importance.
+                    Reflect on when your symptoms first began. What was happening in your life around that time? Was there an acute infection, a change of job, emotional grief, bereavement, pregnancy, or antibiotic overuse? In homoeopathy, the onset context is of monumental importance.
                   </p>
                 </div>
 
@@ -100,10 +100,10 @@ export default function HowToPrepareHomeopathyAppointmentPage() {
             content: (
               <>
                 <p className="mb-3">
-                  A common misconception is that patients must stop blood pressure pills, thyroid tablets, insulin, or asthma inhalers before beginning homeopathy. This is untrue and medically dangerous.
+                  A common misconception is that patients must stop blood pressure pills, thyroid tablets, insulin, or asthma inhalers before beginning homoeopathy. This is untrue and medically dangerous.
                 </p>
                 <p>
-                  Keep a list of all your current allopathic, ayurvedic, or nutritional supplements with their exact dosages. {CLINIC_CONFIG.doctorName} will review them during the call. Homeopathic remedies do not chemically interact with allopathic medications when administered properly.
+                  Keep a list of all your current allopathic, ayurvedic, or nutritional supplements with their exact dosages. {CLINIC_CONFIG.doctorName} will review them during the call. Homoeopathic remedies do not chemically interact with allopathic medications when administered properly.
                 </p>
               </>
             ),

@@ -5,16 +5,16 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { Heart, ShieldCheck, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Homeopathy Consultation for Women's Health | PCOD, Thyroid & Hormonal Balance",
-  description: `Holistic, gentle homeopathic treatment for women's health by ${CLINIC_CONFIG.doctorName}. Natural constitutional care for PCOD/PCOS, menstrual irregularities, thyroid, fibroids, menopause & hormonal balance.`,
+  title: "Homoeopathy Consultation for Women's Health | PCOD, Thyroid & Hormonal Balance",
+  description: `Holistic, gentle homoeopathic treatment for women's health by ${CLINIC_CONFIG.doctorName}. Natural constitutional care for PCOD/PCOS, menstrual irregularities, thyroid, fibroids, menopause & hormonal balance.`,
   keywords: [
-    "homeopathy for womens health",
-    "pcod homeopathic treatment",
-    "pcos homeopathy doctor online",
-    "homeopathy irregular periods",
-    "homeopathy menopause symptoms",
-    "female hormonal balance homeopathy",
-    "homeopathy thyroid treatment women",
+    "homoeopathy for womens health",
+    "pcod homoeopathic treatment",
+    "pcos homoeopathy doctor online",
+    "homoeopathy irregular periods",
+    "homoeopathy menopause symptoms",
+    "female hormonal balance homoeopathy",
+    "homoeopathy thyroid treatment women",
   ],
   alternates: { canonical: "/homeopathy-consultation-womens-health/" },
 };
@@ -23,13 +23,13 @@ export default function HomeopathyConsultationWomensHealthPage() {
   return (
     <>
       <PageHeader
-        title="Homeopathy for Women's Health"
+        title="Homoeopathy for Women's Health"
         breadcrumbLabel="Women's Health"
         backgroundImage="/images/banner_doctor.jpg"
       />
       <SeoPageContent
-        h1="Homeopathy Consultation for Women's Health"
-        intro={`Women navigate complex hormonal shifts through puberty, motherhood, and menopause. ${CLINIC_CONFIG.doctorName} provides compassionate, confidential, and holistic constitutional homeopathic treatment addressing root hormonal imbalances without synthetic hormones or invasive procedures.`}
+        h1="Homoeopathy Consultation for Women's Health"
+        intro={`Women navigate complex hormonal shifts through puberty, motherhood, and menopause. ${CLINIC_CONFIG.doctorName} provides compassionate, confidential, and holistic constitutional homoeopathic treatment addressing root hormonal imbalances without synthetic hormones or invasive procedures.`}
         highlights={[
           "100% natural, hormone-free remedies that stimulate internal endocrine balance",
           "Comprehensive constitutional evaluation considering physical and emotional factors",
@@ -45,7 +45,7 @@ export default function HomeopathyConsultationWomensHealthPage() {
             content: (
               <div className="space-y-3">
                 <p>
-                  Constitutional homeopathy works with your endocrine system rather than replacing natural hormones with artificial synthetics. We treat a wide spectrum of female health concerns:
+                  Constitutional homoeopathy works with your endocrine system rather than replacing natural hormones with artificial synthetics. We treat a wide spectrum of female health concerns:
                 </p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
                   {[
@@ -70,7 +70,7 @@ export default function HomeopathyConsultationWomensHealthPage() {
             ),
           },
           {
-            heading: "Why Homeopathy Excels in Hormonal & Gynaecological Health",
+            heading: "Why Homoeopathy Excels in Hormonal & Gynaecological Health",
             icon: <Sparkles className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <>
@@ -78,7 +78,7 @@ export default function HomeopathyConsultationWomensHealthPage() {
                   The female endocrine axis (hypothalamus-pituitary-ovarian-adrenal-thyroid) is exquisitely sensitive to emotional stress, environmental toxins, sleep disruption, and genetic vulnerabilities. Conventional medicine frequently treats hormonal disorders with oral contraceptive pills (OCPs) or synthetic levothyroxine, which mask symptoms without fixing underlying ovarian or adrenal distress.
                 </p>
                 <p>
-                  In contrast, classical homeopathy treats the whole woman. By analyzing your constitutional totality — including mental temperament, stress triggers, thermals, food cravings, and menstrual patterns — {CLINIC_CONFIG.doctorName} selects individual remedies that gently awaken your hypothalamic-pituitary-ovarian axis to restore natural rhythmic equilibrium.
+                  In contrast, classical homoeopathy treats the whole woman. By analyzing your constitutional totality — including mental temperament, stress triggers, thermals, food cravings, and menstrual patterns — {CLINIC_CONFIG.doctorName} selects individual remedies that gently awaken your hypothalamic-pituitary-ovarian axis to restore natural rhythmic equilibrium.
                 </p>
               </>
             ),
@@ -95,12 +95,12 @@ export default function HomeopathyConsultationWomensHealthPage() {
         ]}
         faqs={[
           {
-            question: "Can homeopathy cure PCOD/PCOS permanently?",
-            answer: "Homeopathy has an excellent success rate in treating PCOD. Rather than giving artificial hormones to force a bleed, constitutional remedies restore natural ovulatory cycles, reduce ovarian follicular cysts, and balance insulin sensitivity, enabling sustainable long-term recovery.",
+            question: "Can homoeopathy cure PCOD/PCOS permanently?",
+            answer: "Homoeopathy has an excellent success rate in treating PCOD. Rather than giving artificial hormones to force a bleed, constitutional remedies restore natural ovulatory cycles, reduce ovarian follicular cysts, and balance insulin sensitivity, enabling sustainable long-term recovery.",
           },
           {
-            question: "Is homeopathic treatment safe during puberty or perimenopause?",
-            answer: "Yes, completely safe. Homeopathic remedies are non-toxic, non-hormonal, and have zero side effects. They are gentle enough for teenage girls struggling with menarche irregularities and women transitioning through perimenopause.",
+            question: "Is homoeopathic treatment safe during puberty or perimenopause?",
+            answer: "Yes, completely safe. Homoeopathic remedies are non-toxic, non-hormonal, and have zero side effects. They are gentle enough for teenage girls struggling with menarche irregularities and women transitioning through perimenopause.",
           },
           {
             question: "Do I need to submit blood tests or pelvic ultrasound reports?",

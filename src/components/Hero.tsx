@@ -38,12 +38,12 @@ export function Hero() {
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-serif font-bold text-[#1F4B3F] leading-[1.18] tracking-tight">
-              Homeopathy That Treats the <span className="italic font-normal text-[#C98B3E]">Cause</span>, Not Just the Symptom
+              Homoeopathy That Treats the <span className="italic font-normal text-[#C98B3E]">Cause</span>, Not Just the Symptom
             </h1>
 
             {/* Subheadline */}
             <p className="text-[#5C6659] text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl font-normal">
-              Personalised, natural classical homeopathy for hair, skin, allergies and chronic conditions by <strong className="font-semibold text-[#1F4B3F]">Dr. M. Mohamed Shahid, BHMS, MD(Hom)</strong> (Gold Medalist &amp; Govt Registered Medical Practitioner, Reg. No: 3459). <span className="text-[#D9663B] font-semibold">100% Online Consultations Only</span> via video/phone from 3:00 PM to 9:00 PM, with doorstep medicine delivery across India.
+              Personalised, natural classical homoeopathy for hair, skin, allergies and chronic conditions by <strong className="font-semibold text-[#1F4B3F]">Dr. M. Mohamed Shahid, BHMS, MD(Hom)</strong> (Gold Medalist &amp; Govt Registered Medical Practitioner, Reg. No: 3459). <span className="text-[#D9663B] font-semibold">100% Online Consultations Only</span> via video/phone from 3:00 PM to 9:00 PM, with doorstep medicine delivery across India.
             </p>
 
             {/* CTA Buttons */}
@@ -134,7 +134,7 @@ export function Hero() {
                   <div className="w-10 h-10 rounded-full bg-white p-1 flex items-center justify-center shrink-0 border border-[#1F4B3F]/15 shadow-sm">
                     <Image
                       src={assetUrl("/images/logo-icon-transparent.png")}
-                      alt="Allen Sha Homeopathy Logo"
+                      alt="Allen Sha Homoeopathy Logo"
                       width={36}
                       height={36}
                       className="object-contain"

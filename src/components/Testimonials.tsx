@@ -34,7 +34,7 @@ export function Testimonials({ compactTop = false }: { compactTop?: boolean } = 
           </h2>
 
           <p className="text-[#5C6659] text-base sm:text-lg leading-relaxed">
-            Authentic clinical documentation and patient journeys demonstrating gentle constitutional healing at Allen Sha Homeopathy.
+            Authentic clinical documentation and patient journeys demonstrating gentle constitutional healing at Allen Sha Homoeopathy.
           </p>
 
           <SectionDivider variant="botanical" className="my-2" />
@@ -51,7 +51,7 @@ export function Testimonials({ compactTop = false }: { compactTop?: boolean } = 
                 </span>
               </h3>
               <p className="text-xs sm:text-sm text-[#5C6659] mt-1">
-                Side-by-side photographic documentation before and after constitutional homeopathy treatment.
+                Side-by-side photographic documentation before and after constitutional homoeopathy treatment.
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ export function Testimonials({ compactTop = false }: { compactTop?: boolean } = 
         <div className="mt-12 p-4 rounded-xl bg-[#E8F0EB]/50 border border-[#1F4B3F]/10 max-w-2xl mx-auto flex items-start gap-3 text-xs text-[#5C6659]">
           <ShieldAlert className="w-4 h-4 text-[#C98B3E] shrink-0 mt-0.5" />
           <p className="leading-relaxed">
-            <strong>Clinical Notice:</strong> Homeopathy is an individualized constitutional therapy. Treatment timelines and physiological recovery vary based on each patient&apos;s vitality, pathology chronicity, and compliance. Clinical photographs represent genuine patient cases treated at Allen Sha Homeopathy.
+            <strong>Clinical Notice:</strong> Homoeopathy is an individualized constitutional therapy. Treatment timelines and physiological recovery vary based on each patient&apos;s vitality, pathology chronicity, and compliance. Clinical photographs represent genuine patient cases treated at Allen Sha Homoeopathy.
           </p>
         </div>
 

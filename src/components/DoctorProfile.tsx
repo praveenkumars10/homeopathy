@@ -29,7 +29,7 @@ export function DoctorProfile({ compactTop = false }: { compactTop?: boolean } =
     },
     {
       icon: <Award className="w-4 h-4 text-[#C98B3E]" />,
-      text: "Gold Medalist in Homeopathic Medicine",
+      text: "Gold Medalist in Homoeopathic Medicine",
     },
     {
       icon: <ShieldCheck className="w-4 h-4 text-[#C98B3E]" />,
@@ -51,7 +51,7 @@ export function DoctorProfile({ compactTop = false }: { compactTop?: boolean } =
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-4xl font-serif font-bold text-[#1F4B3F] tracking-tight">
-            Meet Your Homeopathic Physician
+            Meet Your Homoeopathic Physician
           </h2>
 
           <p className="text-[#5C6659] text-base sm:text-lg leading-relaxed">
@@ -96,7 +96,7 @@ export function DoctorProfile({ compactTop = false }: { compactTop?: boolean } =
                   <div className="w-24 h-24 mx-auto rounded-full bg-white p-2.5 border-2 border-[#C98B3E] flex items-center justify-center shadow-xl relative">
                     <Image
                       src={assetUrl("/images/logo-icon-transparent.png")}
-                      alt="Allen Sha Homeopathy Brand Emblem"
+                      alt="Allen Sha Homoeopathy Brand Emblem"
                       width={80}
                       height={80}
                       className="object-contain"
@@ -121,7 +121,7 @@ export function DoctorProfile({ compactTop = false }: { compactTop?: boolean } =
                       Reg. No: {CLINIC_CONFIG.registrationNo}
                     </div>
                     <div className="text-[11px] text-[#C98B3E] font-medium">
-                      Tamil Nadu Homeopathy Medical Council
+                      Tamil Nadu Homoeopathy Medical Council
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ export function DoctorProfile({ compactTop = false }: { compactTop?: boolean } =
                   Online Consultation Practice:
                 </span>
                 <p className="text-xs text-[#23291F] font-medium mt-0.5">
-                  This practice offers <strong>100% online video &amp; phone consultations</strong>. Individualized homeopathic medicines are dispatched directly to your address via courier across India.
+                  This practice offers <strong>100% online video &amp; phone consultations</strong>. Individualized homoeopathic medicines are dispatched directly to your address via courier across India.
                 </p>
               </div>
 

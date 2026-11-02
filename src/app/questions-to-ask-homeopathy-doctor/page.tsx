@@ -5,15 +5,15 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { HelpCircle, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Questions to Ask a Homeopathy Doctor | Patient Consultation Guide",
-  description: `Essential questions to ask your homeopathic doctor during an online consultation. Clarify treatment duration, diet rules, allopathic medicine interactions, side effects, and expectations.`,
+  title: "Questions to Ask a Homoeopathy Doctor | Patient Consultation Guide",
+  description: `Essential questions to ask your homoeopathic doctor during an online consultation. Clarify treatment duration, diet rules, allopathic medicine interactions, side effects, and expectations.`,
   keywords: [
-    "questions to ask homeopathy doctor",
-    "homeopathic consultation questions",
-    "what to ask a homeopath",
-    "homeopathy doctor FAQs",
-    "understanding homeopathic treatment",
-    "homeopathy consultation advice",
+    "questions to ask homoeopathy doctor",
+    "homoeopathic consultation questions",
+    "what to ask a homoeopath",
+    "homoeopathy doctor FAQs",
+    "understanding homoeopathic treatment",
+    "homoeopathy consultation advice",
   ],
   alternates: { canonical: "/questions-to-ask-homeopathy-doctor/" },
 };
@@ -22,17 +22,17 @@ export default function QuestionsToAskHomeopathyDoctorPage() {
   return (
     <>
       <PageHeader
-        title="Questions to Ask a Homeopathy Doctor"
+        title="Questions to Ask a Homoeopathy Doctor"
         breadcrumbLabel="Doctor Questions"
         backgroundImage="/images/banner_doctor.jpg"
       />
       <SeoPageContent
-        h1="Essential Questions to Ask a Homeopathy Doctor"
+        h1="Essential Questions to Ask a Homoeopathy Doctor"
         intro={`An empowered, informed patient achieves the best clinical outcomes. At ${CLINIC_CONFIG.clinicName}, ${CLINIC_CONFIG.doctorName} welcomes thoughtful inquiries and takes the time to explain the rationale behind your constitutional prescription. Here are the most valuable questions you should ask during your appointment.`}
         highlights={[
-          "Understand how classical constitutional homeopathy differs from conventional care",
+          "Understand how classical constitutional homoeopathy differs from conventional care",
           "Clarify realistic recovery timelines for chronic vs acute conditions",
-          "Know how to take, store, and handle homeopathic dilutions and sweet pills",
+          "Know how to take, store, and handle homoeopathic dilutions and sweet pills",
           "Learn exact food and drink restrictions (coffee, onions, camphor, mint)",
           "Discover how to safely manage your existing allopathic prescription drugs",
           "Know what to do during acute emergency flare-ups during treatment",
@@ -45,10 +45,10 @@ export default function QuestionsToAskHomeopathyDoctorPage() {
               <div className="space-y-4">
                 <div className="p-4 rounded-xl bg-[#F4EFE6] border border-[#C98B3E]/20">
                   <h4 className="font-serif font-bold text-[#1F4B3F] text-base mb-1">
-                    1. &quot;What is the root cause of my condition from a homeopathic perspective?&quot;
+                    1. &quot;What is the root cause of my condition from a homoeopathic perspective?&quot;
                   </h4>
                   <p className="text-sm text-[#5C6659]">
-                    Unlike conventional diagnosis that gives a symptom label like &quot;IBS&quot; or &quot;eczema,&quot; a homeopath looks at constitutional susceptibility (miasmatic background, nervous exhaustion, grief, metabolic stagnation). Understanding this helps you make conscious lifestyle adjustments.
+                    Unlike conventional diagnosis that gives a symptom label like &quot;IBS&quot; or &quot;eczema,&quot; a homoeopath looks at constitutional susceptibility (miasmatic background, nervous exhaustion, grief, metabolic stagnation). Understanding this helps you make conscious lifestyle adjustments.
                   </p>
                 </div>
 
@@ -66,7 +66,7 @@ export default function QuestionsToAskHomeopathyDoctorPage() {
                     3. &quot;Can I continue my regular allopathic prescriptions?&quot;
                   </h4>
                   <p className="text-sm text-[#5C6659]">
-                    Never assume you must stop heart, diabetes, thyroid, or psychiatric medications. Ask your homeopath how to coordinate timings (usually leaving a 30 to 60-minute gap between different medications).
+                    Never assume you must stop heart, diabetes, thyroid, or psychiatric medications. Ask your homoeopath how to coordinate timings (usually leaving a 30 to 60-minute gap between different medications).
                   </p>
                 </div>
 
@@ -84,7 +84,7 @@ export default function QuestionsToAskHomeopathyDoctorPage() {
                     5. &quot;What happens if I experience an acute cold, headache, or fever while on treatment?&quot;
                   </h4>
                   <p className="text-sm text-[#5C6659]">
-                    Ask whether you should contact the doctor for an acute homeopathic remedy or take conventional SOS relief. Dr. M. Allensha provides prompt guidance for intercurrent acute sickness via WhatsApp.
+                    Ask whether you should contact the doctor for an acute homoeopathic remedy or take conventional SOS relief. Dr. M. Allensha provides prompt guidance for intercurrent acute sickness via WhatsApp.
                   </p>
                 </div>
 
@@ -93,7 +93,7 @@ export default function QuestionsToAskHomeopathyDoctorPage() {
                     6. &quot;Will my condition worsen before it gets better (aggravation)?&quot;
                   </h4>
                   <p className="text-sm text-[#5C6659]">
-                    Understanding the difference between a curative homeopathic reaction (a brief, mild flare followed by deep lasting relief) and an actual disease deterioration gives you reassurance and peace of mind.
+                    Understanding the difference between a curative homoeopathic reaction (a brief, mild flare followed by deep lasting relief) and an actual disease deterioration gives you reassurance and peace of mind.
                   </p>
                 </div>
 
@@ -121,7 +121,7 @@ export default function QuestionsToAskHomeopathyDoctorPage() {
         faqs={[
           {
             question: "Is it okay to ask why a specific medicine was chosen?",
-            answer: "Absolutely! Dr. M. Allensha is happy to share the homeopathic remedy name and explain the constitutional keynotes that pointed to it.",
+            answer: "Absolutely! Dr. M. Allensha is happy to share the homoeopathic remedy name and explain the constitutional keynotes that pointed to it.",
           },
           {
             question: "Can I ask questions between follow-up appointments?",
@@ -131,7 +131,7 @@ export default function QuestionsToAskHomeopathyDoctorPage() {
         relatedLinks={[
           { label: "What to Expect", href: "/what-to-expect-homeopathy-consultation/", description: "The 4 stages of our case taking" },
           { label: "How to Prepare", href: "/how-to-prepare-homeopathy-appointment/", description: "Pre-appointment checklist" },
-          { label: "Frequently Asked Questions", href: "/frequently-asked-questions-homeopathy/", description: "Top 20+ general homeopathy answers" },
+          { label: "Frequently Asked Questions", href: "/frequently-asked-questions-homeopathy/", description: "Top 20+ general homoeopathy answers" },
           { label: "Book Consultation", href: "/book-online-homeopathy-appointment/", description: "Speak with Dr. Allensha" },
         ]}
       />

@@ -5,15 +5,15 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { MapPin, Heart, Clock, Truck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Online Homeopathy Consultation in Namakkal | Dr. M. Allensha",
-  description: `Looking for an expert homeopathy doctor in Namakkal? Consult Dr. M. Allensha online from Namakkal, Tiruchengode, Rasipuram & Paramathi. Video consultation + door-step medicine delivery.`,
+  title: "Online Homoeopathy Consultation in Namakkal | Dr. M. Allensha",
+  description: `Looking for an expert homoeopathy doctor in Namakkal? Consult Dr. M. Allensha online from Namakkal, Tiruchengode, Rasipuram & Paramathi. Video consultation + door-step medicine delivery.`,
   keywords: [
-    "homeopathy consultation in namakkal",
-    "homeopathy doctor in namakkal",
-    "online homeopathy namakkal",
-    "best homeopathy clinic namakkal",
-    "homeopathic treatment tiruchengode",
-    "homeopathy rasipuram",
+    "homoeopathy consultation in namakkal",
+    "homoeopathy doctor in namakkal",
+    "online homoeopathy namakkal",
+    "best homoeopathy clinic namakkal",
+    "homoeopathic treatment tiruchengode",
+    "homoeopathy rasipuram",
   ],
   alternates: { canonical: "/homeopathy-consultation-namakkal/" },
 };
@@ -22,29 +22,29 @@ export default function HomeopathyConsultationNamakkalPage() {
   return (
     <>
       <PageHeader
-        title="Homeopathy Consultation in Namakkal"
+        title="Homoeopathy Consultation in Namakkal"
         breadcrumbLabel="Namakkal Care"
         backgroundImage="/images/banner_doctor.jpg"
       />
       <SeoPageContent
-        h1="Online Homeopathy Consultation in Namakkal"
-        intro={`Residents of Namakkal district — including Tiruchengode, Rasipuram, Paramathi Velur, and Mohanur — can now access senior homeopathic care with ${CLINIC_CONFIG.doctorName} directly from the comfort of their home through secure online video consultations.`}
+        h1="Online Homoeopathy Consultation in Namakkal"
+        intro={`Residents of Namakkal district — including Tiruchengode, Rasipuram, Paramathi Velur, and Mohanur — can now access senior homoeopathic care with ${CLINIC_CONFIG.doctorName} directly from the comfort of their home through secure online video consultations.`}
         highlights={[
           "Convenient access for patients throughout Namakkal, Tiruchengode & Rasipuram",
           "Comprehensive 45–60 minute classical constitutional evaluation",
-          "High-grade German and authentic homeopathic remedies dispatched promptly",
+          "High-grade German and authentic homoeopathic remedies dispatched promptly",
           "Doorstep speed post / courier delivery across all Namakkal postal codes",
           "Zero travel time or crowded waiting room delays",
           "Dedicated post-consultation WhatsApp follow-up support",
         ]}
         sections={[
           {
-            heading: "Specialized Homeopathic Care for Namakkal District",
+            heading: "Specialized Homoeopathic Care for Namakkal District",
             icon: <MapPin className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <>
                 <p className="mb-3">
-                  Namakkal is known as a dynamic industrial and transport hub with thriving agriculture, poultry, and educational institutions. However, finding specialized classical homeopathic physicians who dedicate 45 to 60 minutes per individual case can be challenging locally.
+                  Namakkal is known as a dynamic industrial and transport hub with thriving agriculture, poultry, and educational institutions. However, finding specialized classical homoeopathic physicians who dedicate 45 to 60 minutes per individual case can be challenging locally.
                 </p>
                 <p>
                   With {CLINIC_CONFIG.doctorName}&apos;s online practice based nearby in Salem, Namakkal residents receive individualized constitutional healthcare without having to undertake highway travel, wait in busy outpatient queues, or disrupt daily business and work commitments.
@@ -110,7 +110,7 @@ export default function HomeopathyConsultationNamakkalPage() {
           },
           {
             question: "Can I consult for chronic diseases like Psoriasis or Thyroid issues?",
-            answer: "Yes. Classical constitutional homeopathy is exceptionally suited for chronic conditions. Dr. M. Allensha analyzes your full history, lifestyle, emotional triggers, and pathology to prescribe targeted constitutional medicine.",
+            answer: "Yes. Classical constitutional homoeopathy is exceptionally suited for chronic conditions. Dr. M. Allensha analyzes your full history, lifestyle, emotional triggers, and pathology to prescribe targeted constitutional medicine.",
           },
         ]}
         relatedLinks={[

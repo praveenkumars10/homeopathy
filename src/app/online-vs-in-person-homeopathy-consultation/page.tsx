@@ -5,14 +5,14 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { Video, CheckCircle2, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Online vs In-Person Homeopathy Consultation | Which is Right for You?",
-  description: `Comparing online video homeopathy consultation vs traditional in-clinic visits. Discover why online classical homeopathy delivers equal clinical efficacy with superior privacy and convenience.`,
+  title: "Online vs In-Person Homoeopathy Consultation | Which is Right for You?",
+  description: `Comparing online video homoeopathy consultation vs traditional in-clinic visits. Discover why online classical homoeopathy delivers equal clinical efficacy with superior privacy and convenience.`,
   keywords: [
-    "online vs in person homeopathy consultation",
-    "is online homeopathy effective",
-    "benefits of online homeopathy",
-    "homeopathy video consultation vs clinic visit",
-    "online homeopathy doctor advantages",
+    "online vs in person homoeopathy consultation",
+    "is online homoeopathy effective",
+    "benefits of online homoeopathy",
+    "homoeopathy video consultation vs clinic visit",
+    "online homoeopathy doctor advantages",
   ],
   alternates: { canonical: "/online-vs-in-person-homeopathy-consultation/" },
 };
@@ -21,13 +21,13 @@ export default function OnlineVsInPersonHomeopathyConsultationPage() {
   return (
     <>
       <PageHeader
-        title="Online vs In-Person Homeopathy Consultation"
+        title="Online vs In-Person Homoeopathy Consultation"
         breadcrumbLabel="Online vs Clinic"
         backgroundImage="/images/banner_doctor.jpg"
       />
       <SeoPageContent
-        h1="Online vs In-Person Homeopathy Consultation: Which is Better?"
-        intro={`Many prospective patients wonder: &quot;Can a homeopathic doctor treat me as effectively over a video call as in person?&quot; Because classical constitutional homeopathy relies fundamentally on deep case taking, vocal dialogue, symptom totality, and visual observation rather than invasive physical probing, online consultations offer equal clinical efficacy with unparalleled patient convenience.`}
+        h1="Online vs In-Person Homoeopathy Consultation: Which is Better?"
+        intro={`Many prospective patients wonder: &quot;Can a homoeopathic doctor treat me as effectively over a video call as in person?&quot; Because classical constitutional homoeopathy relies fundamentally on deep case taking, vocal dialogue, symptom totality, and visual observation rather than invasive physical probing, online consultations offer equal clinical efficacy with unparalleled patient convenience.`}
         highlights={[
           "Identical clinical accuracy — constitutional prescribing relies on symptom totality",
           "Zero highway travel, traffic congestion, or hospital waiting room fatigue",
@@ -87,15 +87,15 @@ export default function OnlineVsInPersonHomeopathyConsultationPage() {
             ),
           },
           {
-            heading: "Why Homeopathy is Uniquely Tailored for Online Healthcare",
+            heading: "Why Homoeopathy is Uniquely Tailored for Online Healthcare",
             icon: <Video className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <>
                 <p className="mb-3">
-                  Unlike surgical or emergency care where physical palpation or immediate equipment is mandatory, classical homeopathy is predominantly a cognitive and observational medical discipline.
+                  Unlike surgical or emergency care where physical palpation or immediate equipment is mandatory, classical homoeopathy is predominantly a cognitive and observational medical discipline.
                 </p>
                 <p>
-                  Samuel Hahnemann, the founder of homeopathy, defined case taking in the <em>Organon of Medicine</em> as listening carefully to the patient&apos;s narrative of their suffering, noting subtle emotional shifts, understanding bodily sensitivities, and analyzing disease progression. A high-definition video session combined with digital photo analysis gives {CLINIC_CONFIG.doctorName} everything required to pinpoint the exact constitutional simillimum.
+                  Samuel Hahnemann, the founder of homoeopathy, defined case taking in the <em>Organon of Medicine</em> as listening carefully to the patient&apos;s narrative of their suffering, noting subtle emotional shifts, understanding bodily sensitivities, and analyzing disease progression. A high-definition video session combined with digital photo analysis gives {CLINIC_CONFIG.doctorName} everything required to pinpoint the exact constitutional simillimum.
                 </p>
               </>
             ),
@@ -105,7 +105,7 @@ export default function OnlineVsInPersonHomeopathyConsultationPage() {
             icon: <ShieldCheck className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <p>
-                Online homeopathy is designed for chronic ailments, recurring complaints, pediatric care, and non-emergency health conditions. Acute surgical emergencies (e.g., acute appendicitis with peritonitis, severe myocardial infarction, compound fractures, severe respiratory failure) require immediate in-person hospitalization and emergency medical services.
+                Online homoeopathy is designed for chronic ailments, recurring complaints, pediatric care, and non-emergency health conditions. Acute surgical emergencies (e.g., acute appendicitis with peritonitis, severe myocardial infarction, compound fractures, severe respiratory failure) require immediate in-person hospitalization and emergency medical services.
               </p>
             ),
           },

@@ -11,14 +11,12 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -29,21 +27,21 @@ export const metadata: Metadata = {
   },
   description: `${CLINIC_CONFIG.clinicName} — Consult with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist & Govt Registered Practitioner (Reg. No: 3459). 16+ years experience. 100% Online Video & Phone Consultations with doorstep medicine delivery.`,
   keywords: [
-    "Allen Sha Homeopathy",
+    "Allen Sha Homoeopathy",
     "Allen Sha",
-    "Allensha Homeopathy",
+    "Allensha Homoeopathy",
     "Dr M Mohamed Shahid",
     "BHMS MD Hom Gold Medalist",
     "Government Registered Medical Practitioner 3459",
-    "Tamil Nadu Homeopathy Medical Council",
-    "Online Homeopathy Consultation Only",
-    "Homeopathy doctor Salem online consultation",
-    "Classical homeopathy video consultation",
-    "Constitutional homeopathy doctor",
-    "Homeopathy for eczema and skin diseases",
-    "Homeopathic hair loss treatment",
-    "PCOS homeopathic treatment online",
-    "Pediatric homeopathy online consultation",
+    "Tamil Nadu Homoeopathy Medical Council",
+    "Online Homoeopathy Consultation Only",
+    "Homoeopathy doctor Salem online consultation",
+    "Classical homoeopathy video consultation",
+    "Constitutional homoeopathy doctor",
+    "Homoeopathy for eczema and skin diseases",
+    "Homoeopathic hair loss treatment",
+    "PCOS homoeopathic treatment online",
+    "Pediatric homoeopathy online consultation",
   ],
   authors: [{ name: CLINIC_CONFIG.doctorName }],
   creator: CLINIC_CONFIG.clinicName,
@@ -113,7 +111,7 @@ export default function RootLayout({
     description: CLINIC_CONFIG.tagline,
     url: "https://allensha.com",
     telephone: CLINIC_CONFIG.phoneClean,
-    medicalSpecialty: "Homeopathic",
+    medicalSpecialty: "Homoeopathic",
     image: "https://allensha.com/images/hero-consultation.jpg",
     priceRange: "₹₹",
     address: {
@@ -133,7 +131,7 @@ export default function RootLayout({
     physician: {
       "@type": "Physician",
       name: CLINIC_CONFIG.doctorName,
-      medicalSpecialty: "Homeopathy",
+      medicalSpecialty: "Homoeopathy",
       jobTitle: CLINIC_CONFIG.doctorTitle,
       description: `${CLINIC_CONFIG.qualifications}, ${CLINIC_CONFIG.medicalCouncilReg}`,
     },

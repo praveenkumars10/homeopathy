@@ -313,7 +313,7 @@ Notes / Symptoms: ${notes}`;
                       Government Registered Medical Practitioner — Reg. No: {CLINIC_CONFIG.registrationNo}
                     </p>
                     <p className="text-[11px] text-[#5C6659]">
-                      Tamil Nadu Homeopathy Medical Council
+                      Tamil Nadu Homoeopathy Medical Council
                     </p>
                     <p className="text-[11px] text-[#C98B3E] font-medium mt-0.5">
                       16+ Years Experience • Practicing Since {CLINIC_CONFIG.establishedYear}

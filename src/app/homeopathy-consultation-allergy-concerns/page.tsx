@@ -5,16 +5,16 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { Wind, ShieldCheck, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Homeopathy Consultation for Allergy Concerns | Rhinitis, Asthma & Dust Allergy",
-  description: `Permanent, non-drowsy allergy relief through classical homeopathy with ${CLINIC_CONFIG.doctorName}. Treat allergic rhinitis, frequent sneezing, dust allergy, asthma, urticaria & food intolerances.`,
+  title: "Homoeopathy Consultation for Allergy Concerns | Rhinitis, Asthma & Dust Allergy",
+  description: `Permanent, non-drowsy allergy relief through classical homoeopathy with ${CLINIC_CONFIG.doctorName}. Treat allergic rhinitis, frequent sneezing, dust allergy, asthma, urticaria & food intolerances.`,
   keywords: [
-    "homeopathy for allergy",
-    "allergic rhinitis homeopathy treatment",
-    "homeopathy dust allergy cure",
-    "asthma homeopathic doctor online",
-    "sinusitis homeopathy salem",
-    "chronic sneezing homeopathy",
-    "homeopathic anti-allergy doctor",
+    "homoeopathy for allergy",
+    "allergic rhinitis homoeopathy treatment",
+    "homoeopathy dust allergy cure",
+    "asthma homoeopathic doctor online",
+    "sinusitis homoeopathy salem",
+    "chronic sneezing homoeopathy",
+    "homoeopathic anti-allergy doctor",
   ],
   alternates: { canonical: "/homeopathy-consultation-allergy-concerns/" },
 };
@@ -23,16 +23,16 @@ export default function HomeopathyConsultationAllergyConcernsPage() {
   return (
     <>
       <PageHeader
-        title="Homeopathy for Allergy Concerns"
+        title="Homoeopathy for Allergy Concerns"
         breadcrumbLabel="Allergy Care"
         backgroundImage="/images/banner_doctor.jpg"
       />
       <SeoPageContent
-        h1="Homeopathy Consultation for Allergy Concerns"
-        intro={`Tired of taking daily antihistamines, nasal sprays, and inhalers that only offer temporary relief while causing drowsiness? ${CLINIC_CONFIG.doctorName} treats allergy hypersensitivity at the immune root through constitutional homeopathy — helping your immune system stop overreacting to harmless airborne particles and environmental allergens.`}
+        h1="Homoeopathy Consultation for Allergy Concerns"
+        intro={`Tired of taking daily antihistamines, nasal sprays, and inhalers that only offer temporary relief while causing drowsiness? ${CLINIC_CONFIG.doctorName} treats allergy hypersensitivity at the immune root through constitutional homoeopathy — helping your immune system stop overreacting to harmless airborne particles and environmental allergens.`}
         highlights={[
           "Long-term desensitization of the immune response naturally",
-          "100% non-drowsy, non-sedating, non-steroidal homeopathic medicines",
+          "100% non-drowsy, non-sedating, non-steroidal homoeopathic medicines",
           "Permanent relief for allergic rhinitis, morning sneezing & watery eyes",
           "Clinically proven constitutional care for bronchial asthma and wheezing",
           "Effective for chronic frontal sinusitis, nasal polyps & adenoids",
@@ -70,7 +70,7 @@ export default function HomeopathyConsultationAllergyConcernsPage() {
             ),
           },
           {
-            heading: "Why Antihistamines Fail to Cure & How Homeopathy Rebuilds Immunity",
+            heading: "Why Antihistamines Fail to Cure & How Homoeopathy Rebuilds Immunity",
             icon: <ShieldCheck className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <>
@@ -78,7 +78,7 @@ export default function HomeopathyConsultationAllergyConcernsPage() {
                   Allopathic anti-allergics (cetirizine, levocetirizine, montelukast) and corticosteroid nasal sprays (fluticasone, budesonide) only block histamine receptors or suppress local inflammatory cascades. The moment the drug leaves the bloodstream, the mast cells degranulate again upon the next encounter with pollen or dust. Over time, patients require stronger doses and develop drug tolerance.
                 </p>
                 <p>
-                  Classical constitutional homeopathy alters the patient&apos;s hyper-reactive allergic diathesis (the constitutional predisposition). By evaluating the precise modalities — whether symptoms worsen in cold air, damp weather, early mornings, or during emotional stress — {CLINIC_CONFIG.doctorName} identifies the deep-acting constitutional simillimum. This progressively desensitizes the mast cells, reducing attack frequency and intensity until allergies permanently resolve.
+                  Classical constitutional homoeopathy alters the patient&apos;s hyper-reactive allergic diathesis (the constitutional predisposition). By evaluating the precise modalities — whether symptoms worsen in cold air, damp weather, early mornings, or during emotional stress — {CLINIC_CONFIG.doctorName} identifies the deep-acting constitutional simillimum. This progressively desensitizes the mast cells, reducing attack frequency and intensity until allergies permanently resolve.
                 </p>
               </>
             ),
@@ -88,7 +88,7 @@ export default function HomeopathyConsultationAllergyConcernsPage() {
             icon: <Heart className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <p>
-                Unlike conventional antihistamines that cause daytime lethargy, mental cloudiness, or dry mouth, homeopathic remedies do not impair driving, study concentration, or cognitive sharpness. Children take sweet lactose globule pills happily without battles, helping them avoid frequent school absenteeism caused by asthma attacks or relentless morning sneezing.
+                Unlike conventional antihistamines that cause daytime lethargy, mental cloudiness, or dry mouth, homoeopathic remedies do not impair driving, study concentration, or cognitive sharpness. Children take sweet lactose globule pills happily without battles, helping them avoid frequent school absenteeism caused by asthma attacks or relentless morning sneezing.
               </p>
             ),
           },
@@ -96,14 +96,14 @@ export default function HomeopathyConsultationAllergyConcernsPage() {
         faqs={[
           {
             question: "Can I stop my emergency asthma inhaler immediately?",
-            answer: "No. You should never stop prescribed emergency bronchodilator inhalers abruptly. As your homeopathic constitutional treatment progresses over 4 to 8 weeks, your airway reactivity decreases naturally. You will find yourself needing the inhaler less and less, allowing your primary physician to gradually reduce maintenance doses safely.",
+            answer: "No. You should never stop prescribed emergency bronchodilator inhalers abruptly. As your homoeopathic constitutional treatment progresses over 4 to 8 weeks, your airway reactivity decreases naturally. You will find yourself needing the inhaler less and less, allowing your primary physician to gradually reduce maintenance doses safely.",
           },
           {
-            question: "How quickly does homeopathy reduce acute sneezing bouts?",
-            answer: "While deep constitutional desensitization takes a few weeks to months to permanently reprogram immune reactions, acute homeopathic remedies can provide relief from violent sneezing fits and nasal obstruction within hours without drowsiness.",
+            question: "How quickly does homoeopathy reduce acute sneezing bouts?",
+            answer: "While deep constitutional desensitization takes a few weeks to months to permanently reprogram immune reactions, acute homoeopathic remedies can provide relief from violent sneezing fits and nasal obstruction within hours without drowsiness.",
           },
           {
-            question: "Is homeopathy effective for dust allergy and house mites?",
+            question: "Is homoeopathy effective for dust allergy and house mites?",
             answer: "Yes, extremely effective. Dust allergy is one of the most common reasons patients consult Dr. M. Allensha. Constitutional remedies eliminate the hypersensitivity so you no longer trigger a sneezing attack when cleaning, dusting, or changing bedsheets.",
           },
         ]}

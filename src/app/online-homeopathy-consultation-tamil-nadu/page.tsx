@@ -5,14 +5,14 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { MapPin, Video, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Online Homeopathy Consultation in Tamil Nadu | Allen Sha Homeopathy",
-  description: `Book online homeopathy consultation across Tamil Nadu with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist. Serving Salem, Chennai, Coimbatore, Madurai, Trichy & all Tamil Nadu. Doorstep medicine delivery.`,
+  title: "Online Homoeopathy Consultation in Tamil Nadu | Allen Sha Homoeopathy",
+  description: `Book online homoeopathy consultation across Tamil Nadu with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist. Serving Salem, Chennai, Coimbatore, Madurai, Trichy & all Tamil Nadu. Doorstep medicine delivery.`,
   keywords: [
-    "online homeopathy consultation Tamil Nadu",
-    "homeopathy doctor Tamil Nadu online",
-    "best homeopathic doctor Tamil Nadu",
-    "homeopathy video consultation Tamil Nadu",
-    "Tamil Nadu homeopathy treatment online",
+    "online homoeopathy consultation Tamil Nadu",
+    "homoeopathy doctor Tamil Nadu online",
+    "best homoeopathic doctor Tamil Nadu",
+    "homoeopathy video consultation Tamil Nadu",
+    "Tamil Nadu homoeopathy treatment online",
   ],
   alternates: { canonical: "/online-homeopathy-consultation-tamil-nadu/" },
 };
@@ -22,10 +22,10 @@ export default function OnlineConsultationTamilNaduPage() {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     name: CLINIC_CONFIG.clinicName,
-    description: "Online homeopathy consultation across Tamil Nadu",
-    url: `${CLINIC_CONFIG.siteUrl}/online-homeopathy-consultation-tamil-nadu/`,
+    description: "Online homoeopathy consultation across Tamil Nadu",
+    url: `${CLINIC_CONFIG.siteUrl}/online-homoeopathy-consultation-tamil-nadu/`,
     telephone: CLINIC_CONFIG.phoneClean,
-    medicalSpecialty: "Homeopathic",
+    medicalSpecialty: "Homoeopathic",
     areaServed: {
       "@type": "State",
       name: "Tamil Nadu",
@@ -40,19 +40,19 @@ export default function OnlineConsultationTamilNaduPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHeader
-        title="Online Homeopathy Consultation in Tamil Nadu"
+        title="Online Homoeopathy Consultation in Tamil Nadu"
         breadcrumbLabel="Consultation — Tamil Nadu"
         backgroundImage="/images/hero-consultation.jpg"
       />
       <SeoPageContent
-        h1="Online Homeopathy Consultation in Tamil Nadu"
+        h1="Online Homoeopathy Consultation in Tamil Nadu"
         intro={`No matter where you are in Tamil Nadu — Salem, Chennai, Coimbatore, Madurai, Trichy, Tirunelveli, Erode, Vellore, or any district — you can consult with ${CLINIC_CONFIG.doctorName}, BHMS, MD(Hom), Gold Medalist, through our 100% online consultation service. Medicines delivered to your doorstep.`}
         highlights={[
           "Serving all 38 districts of Tamil Nadu online",
           `Led by ${CLINIC_CONFIG.doctorName}, Gold Medalist — ${CLINIC_CONFIG.experienceYears}+ years experience`,
           "Video & phone consultations — Mon to Sat, 3 PM – 9 PM",
           "Medicines dispatched via speed post / courier across Tamil Nadu",
-          "Constitutional homeopathy — personalized for each patient",
+          "Constitutional homoeopathy — personalized for each patient",
           `${CLINIC_CONFIG.stats.patientsTreated.toLocaleString()}+ patients treated state-wide`,
         ]}
         sections={[
@@ -62,7 +62,7 @@ export default function OnlineConsultationTamilNaduPage() {
             content: (
               <>
                 <p className="mb-3">
-                  Our online consultation service brings expert homeopathic care to every corner of Tamil Nadu. Patients from the following cities and districts regularly consult with us:
+                  Our online consultation service brings expert homoeopathic care to every corner of Tamil Nadu. Patients from the following cities and districts regularly consult with us:
                 </p>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                   {[
@@ -93,7 +93,7 @@ export default function OnlineConsultationTamilNaduPage() {
             icon: <ShieldCheck className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <ul className="space-y-2">
-                <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#C98B3E] mt-2 shrink-0" />Tamil Nadu Homeopathy Medical Council registered (Reg. No: {CLINIC_CONFIG.registrationNo})</li>
+                <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#C98B3E] mt-2 shrink-0" />Tamil Nadu Homoeopathy Medical Council registered (Reg. No: {CLINIC_CONFIG.registrationNo})</li>
                 <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#C98B3E] mt-2 shrink-0" />No language barrier — consultations in Tamil and English</li>
                 <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#C98B3E] mt-2 shrink-0" />Genuine constitutional approach — no generic prescriptions</li>
                 <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#C98B3E] mt-2 shrink-0" />Fast medicine delivery across Tamil Nadu (2–4 days)</li>
@@ -103,7 +103,7 @@ export default function OnlineConsultationTamilNaduPage() {
         ]}
         faqs={[
           {
-            question: "Is online homeopathy consultation available throughout Tamil Nadu?",
+            question: "Is online homoeopathy consultation available throughout Tamil Nadu?",
             answer: "Yes. Our 100% online service covers all 38 districts of Tamil Nadu. You can consult from any city, town, or village via video or phone call.",
           },
           {
@@ -112,9 +112,9 @@ export default function OnlineConsultationTamilNaduPage() {
           },
         ]}
         relatedLinks={[
-          { label: "Consultation in Salem", href: "/online-homeopathy-consultation-salem/", description: "Online homeopathy from Salem" },
-          { label: "Consultation in Attur", href: "/online-homeopathy-consultation-attur/", description: "Online homeopathy from Attur" },
-          { label: "Consultation in Namakkal", href: "/homeopathy-consultation-namakkal/", description: "Online homeopathy from Namakkal" },
+          { label: "Consultation in Salem", href: "/online-homeopathy-consultation-salem/", description: "Online homoeopathy from Salem" },
+          { label: "Consultation in Attur", href: "/online-homeopathy-consultation-attur/", description: "Online homoeopathy from Attur" },
+          { label: "Consultation in Namakkal", href: "/homeopathy-consultation-namakkal/", description: "Online homoeopathy from Namakkal" },
           { label: "Book an Appointment", href: "/book-online-homeopathy-appointment/", description: "Schedule your consultation" },
         ]}
       />

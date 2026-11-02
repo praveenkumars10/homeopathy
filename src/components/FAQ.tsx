@@ -31,7 +31,7 @@ export function FAQ({ compactTop = false }: { compactTop?: boolean } = {}) {
           </h2>
 
           <p className="text-[#5C6659] text-base sm:text-lg leading-relaxed">
-            Transparent answers about classical homeopathy, timelines, safety, and consultations.
+            Transparent answers about classical homoeopathy, timelines, safety, and consultations.
           </p>
 
           <SectionDivider variant="botanical" className="my-2" />

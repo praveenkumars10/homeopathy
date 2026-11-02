@@ -5,14 +5,14 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { IndianRupee, CheckCircle2, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Online Homeopathy Consultation Fees | Allen Sha Homeopathy",
-  description: `Online homeopathy consultation fees at ${CLINIC_CONFIG.clinicName}. Transparent pricing for video & phone consultations with ${CLINIC_CONFIG.doctorName}. Includes medicines and doorstep delivery. No hidden charges.`,
+  title: "Online Homoeopathy Consultation Fees | Allen Sha Homoeopathy",
+  description: `Online homoeopathy consultation fees at ${CLINIC_CONFIG.clinicName}. Transparent pricing for video & phone consultations with ${CLINIC_CONFIG.doctorName}. Includes medicines and doorstep delivery. No hidden charges.`,
   keywords: [
-    "homeopathy consultation fees",
-    "online homeopathy consultation cost",
-    "homeopathy doctor fees",
-    "homeopathic treatment cost",
-    "Allen Sha Homeopathy fees",
+    "homoeopathy consultation fees",
+    "online homoeopathy consultation cost",
+    "homoeopathy doctor fees",
+    "homoeopathic treatment cost",
+    "Allen Sha Homoeopathy fees",
   ],
   alternates: { canonical: "/homeopathy-consultation-fees/" },
 };
@@ -21,12 +21,12 @@ export default function ConsultationFeesPage() {
   return (
     <>
       <PageHeader
-        title="Online Homeopathy Consultation Fees"
+        title="Online Homoeopathy Consultation Fees"
         breadcrumbLabel="Consultation Fees"
         backgroundImage="/images/banner_treatments.jpg"
       />
       <SeoPageContent
-        h1="Online Homeopathy Consultation Fees"
+        h1="Online Homoeopathy Consultation Fees"
         intro={`${CLINIC_CONFIG.clinicName} believes in transparent, honest pricing. Below you'll find our consultation fee structure. There are no hidden charges — what you see is what you pay.`}
         highlights={[
           "Transparent fees with no hidden costs",

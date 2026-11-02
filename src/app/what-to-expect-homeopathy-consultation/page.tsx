@@ -5,15 +5,15 @@ import { SeoPageContent } from "@/components/SeoPageContent";
 import { Clock, HelpCircle, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "What to Expect During a Homeopathy Consultation | Comprehensive Patient Guide",
-  description: `New to homeopathy? Learn what happens during a classical constitutional consultation with ${CLINIC_CONFIG.doctorName}. Discover case taking steps, questions asked, duration, and follow-ups.`,
+  title: "What to Expect During a Homoeopathy Consultation | Comprehensive Patient Guide",
+  description: `New to homoeopathy? Learn what happens during a classical constitutional consultation with ${CLINIC_CONFIG.doctorName}. Discover case taking steps, questions asked, duration, and follow-ups.`,
   keywords: [
-    "what to expect homeopathy consultation",
-    "homeopathic case taking process",
-    "homeopathy appointment questions",
-    "first homeopathy consultation",
-    "what happens in homeopathy appointment",
-    "homeopathic doctor case assessment",
+    "what to expect homoeopathy consultation",
+    "homoeopathic case taking process",
+    "homoeopathy appointment questions",
+    "first homoeopathy consultation",
+    "what happens in homoeopathy appointment",
+    "homoeopathic doctor case assessment",
   ],
   alternates: { canonical: "/what-to-expect-homeopathy-consultation/" },
 };
@@ -22,12 +22,12 @@ export default function WhatToExpectHomeopathyConsultationPage() {
   return (
     <>
       <PageHeader
-        title="What to Expect During a Homeopathy Consultation"
+        title="What to Expect During a Homoeopathy Consultation"
         breadcrumbLabel="What to Expect"
         backgroundImage="/images/banner_doctor.jpg"
       />
       <SeoPageContent
-        h1="What to Expect During a Homeopathy Consultation"
+        h1="What to Expect During a Homoeopathy Consultation"
         intro={`If you have only ever experienced 3-minute conventional doctor visits where prescriptions are written before you finish describing your pain, your first consultation with ${CLINIC_CONFIG.doctorName} will be a refreshing, transformative experience. Learn exactly what takes place during our in-depth 45–60 minute session.`}
         highlights={[
           "Unrushed 45 to 60-minute one-on-one session with Dr. M. Allensha",
@@ -39,7 +39,7 @@ export default function WhatToExpectHomeopathyConsultationPage() {
         ]}
         sections={[
           {
-            heading: "The 4 Main Stages of Your Homeopathic Consultation",
+            heading: "The 4 Main Stages of Your Homoeopathic Consultation",
             icon: <Clock className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <div className="space-y-4">
@@ -57,7 +57,7 @@ export default function WhatToExpectHomeopathyConsultationPage() {
                     Stage 2: Physical Generals & Bodily Functions (10–15 Mins)
                   </h4>
                   <p className="text-sm text-[#5C6659]">
-                    In classical homeopathy, your whole body works as one integrated unit. We examine your appetite, specific food cravings or aversions, thirst patterns, digestion, bowel habits, sweat distribution, sleep architecture, and how your body reacts to weather, heat, and cold.
+                    In classical homoeopathy, your whole body works as one integrated unit. We examine your appetite, specific food cravings or aversions, thirst patterns, digestion, bowel habits, sweat distribution, sleep architecture, and how your body reacts to weather, heat, and cold.
                   </p>
                 </div>
 
@@ -82,12 +82,12 @@ export default function WhatToExpectHomeopathyConsultationPage() {
             ),
           },
           {
-            heading: "Why Do Homeopaths Ask Such Detailed Questions?",
+            heading: "Why Do Homoeopaths Ask Such Detailed Questions?",
             icon: <HelpCircle className="w-5 h-5 text-[#C98B3E]" />,
             content: (
               <>
                 <p className="mb-3">
-                  In conventional medicine, ten patients with headaches all receive paracetamol or NSAIDs. In homeopathy, ten patients with headaches may receive ten completely different medicines.
+                  In conventional medicine, ten patients with headaches all receive paracetamol or NSAIDs. In homoeopathy, ten patients with headaches may receive ten completely different medicines.
                 </p>
                 <p>
                   One person may have a right-sided headache pounding with sun exposure that is relieved by pressure (Belladonna or Sanguinaria). Another person may have a left-sided headache after mental grief and weepiness, relieved by fresh air (Pulsatilla or Ignatia). The unique, individual peculiarities of your illness are what lead the physician to your exact curative remedy.
