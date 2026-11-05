@@ -11,8 +11,6 @@ interface Particle {
   alpha: number;
   decay: number;
   size: number;
-  flicker: boolean;
-  trail: { x: number; y: number }[];
 }
 
 interface Rocket {
@@ -22,7 +20,6 @@ interface Rocket {
   vx: number;
   vy: number;
   color: string;
-  trail: { x: number; y: number }[];
   palette: string[];
 }
 
@@ -48,32 +45,62 @@ export function InteractiveCrackersOverlay() {
     const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
-    let animId: number;
+    let animId: number | null = null;
     let isRunning = true;
-    let lastAutoLaunch = Date.now();
+    let isScrolling = false;
+    let scrollTimer: ReturnType<typeof setTimeout> | null = null;
+    let isDocumentVisible = !document.hidden;
+
+    // Detect mobile for particle scaling
+    const isMobile = window.innerWidth < 768;
+    const MAX_PARTICLES = isMobile ? 40 : 70;
+    const PARTICLES_PER_BURST = isMobile ? 18 : 34;
 
     const particles: Particle[] = [];
     const rockets: Rocket[] = [];
 
+    // Canvas sizing: Mobile gets 1.0 DPR for max GPU efficiency, Desktop capped at 1.25
     const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = window.innerWidth * dpr;
-      canvas.height = window.innerHeight * dpr;
-      ctx.scale(dpr, dpr);
+      const dpr = isMobile ? 1.0 : Math.min(window.devicePixelRatio || 1, 1.25);
+      canvas.width = Math.floor(window.innerWidth * dpr);
+      canvas.height = Math.floor(window.innerHeight * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
     resize();
-    window.addEventListener("resize", resize);
+    window.addEventListener("resize", resize, { passive: true });
 
-    const burstAt = (x: number, y: number, palette?: string[], count = 65) => {
+    // Scroll throttle: pause new launches during rapid scrolling for locked 60/120 FPS
+    const handleScroll = () => {
+      isScrolling = true;
+      if (scrollTimer) clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        isScrolling = false;
+      }, 250);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    // Visibility change: suspend RAF when tab is hidden
+    const handleVisibility = () => {
+      isDocumentVisible = !document.hidden;
+      if (isDocumentVisible && !animId) {
+        animId = requestAnimationFrame(loop);
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+
+    // Burst creation — zero expensive shadowBlur, lightweight clean arcs
+    const burstAt = (x: number, y: number, palette?: string[], customCount?: number) => {
+      if (particles.length > MAX_PARTICLES) return;
+
       const colors = palette || FESTIVE_PALETTES[Math.floor(Math.random() * FESTIVE_PALETTES.length)];
-      const baseSpeed = 2.4 + Math.random() * 3.6;
+      const count = customCount || PARTICLES_PER_BURST;
+      const baseSpeed = isMobile ? 2.2 + Math.random() * 2.2 : 2.5 + Math.random() * 3.0;
 
-      // Main explosion ring & chrysanthemum sparks
       for (let i = 0; i < count; i++) {
-        const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.45;
+        const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.4;
         const speed = baseSpeed * (0.35 + Math.random() * 0.85);
-        const color = colors[Math.floor(Math.random() * colors.length)];
+        const color = colors[i % colors.length];
 
         particles.push({
           x,
@@ -82,42 +109,24 @@ export function InteractiveCrackersOverlay() {
           vy: Math.sin(angle) * speed,
           color,
           alpha: 1,
-          decay: 0.012 + Math.random() * 0.016,
-          size: 1.8 + Math.random() * 2.2,
-          flicker: Math.random() > 0.4,
-          trail: [],
-        });
-      }
-
-      // Crackling gold sparklers / phuljhadi sparks
-      const sparkCount = 20;
-      for (let j = 0; j < sparkCount; j++) {
-        const angle = Math.random() * Math.PI * 2;
-        const speed = Math.random() * (baseSpeed * 1.3);
-        particles.push({
-          x,
-          y,
-          vx: Math.cos(angle) * speed,
-          vy: Math.sin(angle) * speed,
-          color: "#FFFBEB",
-          alpha: 1,
-          decay: 0.02 + Math.random() * 0.03,
-          size: 1.2,
-          flicker: true,
-          trail: [],
+          decay: isMobile ? 0.02 + Math.random() * 0.015 : 0.014 + Math.random() * 0.014,
+          size: isMobile ? 1.6 + Math.random() * 1.4 : 1.8 + Math.random() * 1.8,
         });
       }
     };
 
     const launchRocket = (startX?: number, targetX?: number, targetY?: number) => {
+      if (isScrolling || !isDocumentVisible) return;
+      if (rockets.length >= (isMobile ? 1 : 2)) return;
+
       const w = window.innerWidth;
       const h = window.innerHeight;
-      const x = startX ?? w * 0.1 + Math.random() * (w * 0.8);
-      const endX = targetX ?? x + (Math.random() - 0.5) * (w * 0.2);
-      const endY = targetY ?? h * 0.12 + Math.random() * (h * 0.38);
+      const x = startX ?? w * 0.15 + Math.random() * (w * 0.7);
+      const endX = targetX ?? x + (Math.random() - 0.5) * (w * 0.15);
+      const endY = targetY ?? h * 0.15 + Math.random() * (h * 0.35);
       const dy = endY - h;
       const dx = endX - x;
-      const steps = 38 + Math.random() * 14;
+      const steps = isMobile ? 32 : 38;
       const palette = FESTIVE_PALETTES[Math.floor(Math.random() * FESTIVE_PALETTES.length)];
 
       rockets.push({
@@ -127,91 +136,110 @@ export function InteractiveCrackersOverlay() {
         vx: dx / steps,
         vy: dy / steps,
         color: palette[0],
-        trail: [],
         palette,
       });
+
+      // Ensure animation loop is running
+      if (!animId) {
+        animId = requestAnimationFrame(loop);
+      }
     };
 
-    // Auto-launch initial burst
-    setTimeout(() => launchRocket(), 300);
-    setTimeout(() => launchRocket(), 800);
-    setTimeout(() => launchRocket(), 1400);
-
-    // Event listener for user click (or trigger from floating button)
-    const handleCanvasClick = (e: MouseEvent) => {
-      const x = e.clientX;
-      const y = e.clientY;
-      burstAt(x, y, undefined, 75);
-      launchRocket(x + (Math.random() - 0.5) * 80, x, Math.max(80, y - 100));
+    // User click / tap to burst crackers
+    const handleCanvasClick = (e: MouseEvent | TouchEvent) => {
+      let clientX = 0;
+      let clientY = 0;
+      if ("touches" in e && e.touches.length > 0) {
+        clientX = e.touches[0].clientX;
+        clientY = e.touches[0].clientY;
+      } else if ("clientX" in e) {
+        clientX = (e as MouseEvent).clientX;
+        clientY = (e as MouseEvent).clientY;
+      }
+      burstAt(clientX, clientY, undefined, isMobile ? 22 : 40);
+      if (!animId) {
+        animId = requestAnimationFrame(loop);
+      }
     };
-    canvas.addEventListener("click", handleCanvasClick);
 
-    const loop = () => {
+    canvas.addEventListener("click", handleCanvasClick, { passive: true });
+    canvas.addEventListener("touchstart", handleCanvasClick, { passive: true });
+
+    // Gentle recurring auto-rocket timer (spaced out every 5.5s to 7.5s, avoids CPU overload)
+    let autoLaunchTimeout: ReturnType<typeof setTimeout> | null = null;
+    const scheduleNextRocket = (delayMs: number) => {
       if (!isRunning) return;
+      autoLaunchTimeout = setTimeout(() => {
+        if (!isRunning) return;
+        if (!isScrolling && isDocumentVisible && document.visibilityState === "visible") {
+          launchRocket();
+        }
+        // Next launch in 5.5 - 7.5 seconds
+        scheduleNextRocket(5500 + Math.random() * 2000);
+      }, delayMs);
+    };
+
+    // Delay first rocket so it doesn't fight with the intro splash screen
+    scheduleNextRocket(4200);
+
+    // Optimized Animation Loop
+    const loop = () => {
+      if (!isRunning || !isDocumentVisible) {
+        animId = null;
+        return;
+      }
 
       const w = window.innerWidth;
       const h = window.innerHeight;
 
+      // Fast clear
       ctx.clearRect(0, 0, w, h);
 
-      // AUTOMATIC CRACKERS: Launch a new rocket automatically every 1.6 to 2.2 seconds!
-      const now = Date.now();
-      if (now - lastAutoLaunch > 1750 + Math.random() * 700) {
-        launchRocket();
-        // Occasional double rocket burst
-        if (Math.random() > 0.4) {
-          setTimeout(() => launchRocket(), 280);
-        }
-        lastAutoLaunch = now;
+      // If nothing on screen, sleep RAF to preserve 100% CPU/battery
+      if (rockets.length === 0 && particles.length === 0) {
+        animId = null;
+        return;
       }
 
-      // 1. Update & draw rockets
+      // 1. Update & render rockets
       for (let i = rockets.length - 1; i >= 0; i--) {
         const r = rockets[i];
-        r.trail.push({ x: r.x, y: r.y });
-        if (r.trail.length > 7) r.trail.shift();
+        const prevX = r.x;
+        const prevY = r.y;
 
         r.x += r.vx;
         r.y += r.vy;
 
-        // Draw trail
+        // Lightweight motion streak (zero array allocation)
         ctx.beginPath();
-        for (let j = 0; j < r.trail.length; j++) {
-          const pt = r.trail[j];
-          ctx.strokeStyle = `rgba(255, 215, 0, ${(j / r.trail.length) * 0.75})`;
-          ctx.lineWidth = 2.5;
-          if (j === 0) ctx.moveTo(pt.x, pt.y);
-          else ctx.lineTo(pt.x, pt.y);
-        }
+        ctx.moveTo(prevX, prevY);
+        ctx.lineTo(r.x, r.y);
+        ctx.strokeStyle = "rgba(255, 215, 0, 0.75)";
+        ctx.lineWidth = 2;
         ctx.stroke();
 
-        // Draw glowing rocket head
+        // Rocket head spark
         ctx.beginPath();
-        ctx.arc(r.x, r.y, 2.5, 0, Math.PI * 2);
+        ctx.arc(r.x, r.y, 2, 0, Math.PI * 2);
         ctx.fillStyle = "#FFFFFF";
-        ctx.shadowColor = r.color;
-        ctx.shadowBlur = 8;
         ctx.fill();
-        ctx.shadowBlur = 0;
 
-        // When rocket reaches target height -> BURST!
+        // Apex reached -> burst!
         if (r.y <= r.targetY || r.vy >= 0) {
           burstAt(r.x, r.y, r.palette);
           rockets.splice(i, 1);
         }
       }
 
-      // 2. Update & draw burst particles
+      // 2. Update & render burst particles (High-speed 2D batching, zero shadowBlur)
       for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i];
-        p.trail.push({ x: p.x, y: p.y });
-        if (p.trail.length > 5) p.trail.shift();
 
         p.x += p.vx;
         p.y += p.vy;
-        p.vy += 0.052; // gentle realistic gravity
-        p.vx *= 0.982; // air drag
-        p.vy *= 0.982;
+        p.vy += 0.055; // gentle gravity
+        p.vx *= 0.98;  // air resistance
+        p.vy *= 0.98;
         p.alpha -= p.decay;
 
         if (p.alpha <= 0) {
@@ -219,41 +247,28 @@ export function InteractiveCrackersOverlay() {
           continue;
         }
 
-        const flickerAlpha = p.flicker && Math.random() > 0.4 ? p.alpha * 0.4 : p.alpha;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
-        ctx.globalAlpha = Math.max(0, flickerAlpha);
-        ctx.shadowColor = p.color;
-        ctx.shadowBlur = 6;
+        ctx.globalAlpha = Math.max(0, p.alpha);
         ctx.fill();
-
-        // Trailing sparks
-        if (p.trail.length > 1) {
-          ctx.beginPath();
-          ctx.moveTo(p.trail[0].x, p.trail[0].y);
-          for (let t = 1; t < p.trail.length; t++) {
-            ctx.lineTo(p.trail[t].x, p.trail[t].y);
-          }
-          ctx.strokeStyle = p.color;
-          ctx.lineWidth = p.size * 0.6;
-          ctx.stroke();
-        }
       }
 
       ctx.globalAlpha = 1;
-      ctx.shadowBlur = 0;
 
       animId = requestAnimationFrame(loop);
     };
 
-    animId = requestAnimationFrame(loop);
-
     return () => {
       isRunning = false;
-      cancelAnimationFrame(animId);
+      if (animId) cancelAnimationFrame(animId);
+      if (scrollTimer) clearTimeout(scrollTimer);
+      if (autoLaunchTimeout) clearTimeout(autoLaunchTimeout);
       window.removeEventListener("resize", resize);
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("visibilitychange", handleVisibility);
       canvas.removeEventListener("click", handleCanvasClick);
+      canvas.removeEventListener("touchstart", handleCanvasClick);
     };
   }, []);
 

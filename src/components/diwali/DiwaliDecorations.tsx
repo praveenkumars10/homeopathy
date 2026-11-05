@@ -125,7 +125,7 @@ export function DiwaliDecorations() {
   return (
     <>
       {/* 1. Fixed Top Festive Toran (Stays visible across all pages and on scroll) */}
-      <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none select-none">
+      <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none select-none" style={{ transform: "translateZ(0)" }}>
         <FestiveToran className="h-6 sm:h-7" />
       </div>
 

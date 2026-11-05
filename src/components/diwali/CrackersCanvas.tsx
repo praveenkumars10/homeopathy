@@ -18,8 +18,6 @@ interface Particle {
   alpha: number;
   decay: number;
   size: number;
-  flicker: boolean;
-  trail: { x: number; y: number }[];
 }
 
 interface Rocket {
@@ -29,7 +27,6 @@ interface Rocket {
   vx: number;
   vy: number;
   color: string;
-  trail: { x: number; y: number }[];
   burstColors: string[];
 }
 
@@ -49,7 +46,7 @@ const DIWALI_COLOR_PALETTES = [
 export function CrackersCanvas({
   className = "w-full h-full",
   autoLaunch = true,
-  launchInterval = 1100,
+  launchInterval = 1200,
   interactive = true,
 }: CrackersCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -64,27 +61,33 @@ export function CrackersCanvas({
     let isRunning = true;
     let lastLaunchTime = Date.now();
 
+    const isMobile = window.innerWidth < 768;
+    const PARTICLES_PER_BURST = isMobile ? 22 : 44;
+    const MAX_PARTICLES = isMobile ? 55 : 100;
+
     const particles: Particle[] = [];
     const rockets: Rocket[] = [];
 
     const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = canvas.clientWidth * dpr;
-      canvas.height = canvas.clientHeight * dpr;
-      ctx.scale(dpr, dpr);
+      const dpr = isMobile ? 1.0 : Math.min(window.devicePixelRatio || 1, 1.25);
+      canvas.width = Math.floor(canvas.clientWidth * dpr);
+      canvas.height = Math.floor(canvas.clientHeight * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
     resize();
-    window.addEventListener("resize", resize);
+    window.addEventListener("resize", resize, { passive: true });
 
     const createExplosion = (x: number, y: number, colors: string[]) => {
-      const count = 75 + Math.floor(Math.random() * 55);
-      const baseSpeed = 2.5 + Math.random() * 3.5;
+      if (particles.length > MAX_PARTICLES) return;
+
+      const count = PARTICLES_PER_BURST;
+      const baseSpeed = isMobile ? 2.3 + Math.random() * 2.2 : 2.6 + Math.random() * 3.0;
 
       for (let i = 0; i < count; i++) {
-        const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.4;
+        const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.35;
         const speed = baseSpeed * (0.35 + Math.random() * 0.85);
-        const color = colors[Math.floor(Math.random() * colors.length)];
+        const color = colors[i % colors.length];
 
         particles.push({
           x,
@@ -93,42 +96,21 @@ export function CrackersCanvas({
           vy: Math.sin(angle) * speed,
           color,
           alpha: 1,
-          decay: 0.012 + Math.random() * 0.016,
-          size: 1.8 + Math.random() * 2.2,
-          flicker: Math.random() > 0.4,
-          trail: [],
-        });
-      }
-
-      // Add a golden ring or crackling sparklers (phuljhadi sparks)
-      const sparkles = 25;
-      for (let j = 0; j < sparkles; j++) {
-        const angle = Math.random() * Math.PI * 2;
-        const speed = Math.random() * (baseSpeed * 1.35);
-        particles.push({
-          x,
-          y,
-          vx: Math.cos(angle) * speed,
-          vy: Math.sin(angle) * speed,
-          color: "#FFFBEB",
-          alpha: 1,
-          decay: 0.02 + Math.random() * 0.03,
-          size: 1.2,
-          flicker: true,
-          trail: [],
+          decay: isMobile ? 0.022 + Math.random() * 0.015 : 0.015 + Math.random() * 0.014,
+          size: isMobile ? 1.6 + Math.random() * 1.4 : 1.8 + Math.random() * 1.8,
         });
       }
     };
 
-    const launchRocket = (startX?: number, targetX?: number, targetY?: number) => {
+    const spawnRocket = (startX?: number, targetX?: number, targetY?: number) => {
       const w = canvas.clientWidth;
       const h = canvas.clientHeight;
-      const x = startX ?? w * 0.15 + Math.random() * w * 0.7;
+      const x = startX ?? w * 0.15 + Math.random() * (w * 0.7);
       const endX = targetX ?? x + (Math.random() - 0.5) * (w * 0.2);
-      const endY = targetY ?? h * 0.12 + Math.random() * h * 0.35;
+      const endY = targetY ?? h * 0.15 + Math.random() * (h * 0.35);
       const dy = endY - h;
       const dx = endX - x;
-      const steps = 40 + Math.random() * 15;
+      const steps = isMobile ? 28 : 34;
 
       const palette = DIWALI_COLOR_PALETTES[Math.floor(Math.random() * DIWALI_COLOR_PALETTES.length)];
 
@@ -139,32 +121,34 @@ export function CrackersCanvas({
         vx: dx / steps,
         vy: dy / steps,
         color: palette[0],
-        trail: [],
         burstColors: palette,
       });
     };
 
-    // Launch a couple initially
-    launchRocket();
-    setTimeout(() => launchRocket(), 350);
-    setTimeout(() => launchRocket(), 700);
+    // Initial festive burst
+    spawnRocket();
+    setTimeout(() => spawnRocket(), 450);
 
     const handleClick = (e: MouseEvent | TouchEvent) => {
-      if (!interactive) return;
+      let clientX = 0;
+      let clientY = 0;
+      if ("touches" in e && e.touches.length > 0) {
+        clientX = e.touches[0].clientX;
+        clientY = e.touches[0].clientY;
+      } else if ("clientX" in e) {
+        clientX = (e as MouseEvent).clientX;
+        clientY = (e as MouseEvent).clientY;
+      }
       const rect = canvas.getBoundingClientRect();
-      const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
-      const clientY = "touches" in e ? e.touches[0].clientY : e.clientY;
       const x = clientX - rect.left;
       const y = clientY - rect.top;
-
-      // Burst immediate firecracker at touch/click + launch an extra rocket
-      const palette = DIWALI_COLOR_PALETTES[Math.floor(Math.random() * DIWALI_COLOR_PALETTES.length)];
-      createExplosion(x, y, palette);
-      launchRocket(x + (Math.random() - 0.5) * 100, x, Math.max(50, y - 80));
+      const colors = DIWALI_COLOR_PALETTES[Math.floor(Math.random() * DIWALI_COLOR_PALETTES.length)];
+      createExplosion(x, y, colors);
     };
 
     if (interactive) {
-      canvas.addEventListener("click", handleClick);
+      canvas.addEventListener("click", handleClick, { passive: true });
+      canvas.addEventListener("touchstart", handleClick, { passive: true });
     }
 
     const render = () => {
@@ -173,67 +157,55 @@ export function CrackersCanvas({
       const w = canvas.clientWidth;
       const h = canvas.clientHeight;
 
-      // Semi-transparent clear creates motion trails for crackers
       ctx.clearRect(0, 0, w, h);
 
       // Auto-launch rockets
       const now = Date.now();
       if (autoLaunch && now - lastLaunchTime > launchInterval) {
-        launchRocket();
-        if (Math.random() > 0.45) {
-          // Double rocket launch
-          setTimeout(() => launchRocket(), 200);
+        if (rockets.length < (isMobile ? 2 : 3)) {
+          spawnRocket();
         }
         lastLaunchTime = now;
       }
 
-      // 1. Update & draw rockets
+      // 1. Update & draw rockets (Zero shadowBlur)
       for (let i = rockets.length - 1; i >= 0; i--) {
         const r = rockets[i];
-        r.trail.push({ x: r.x, y: r.y });
-        if (r.trail.length > 7) r.trail.shift();
+        const prevX = r.x;
+        const prevY = r.y;
 
         r.x += r.vx;
         r.y += r.vy;
 
-        // Draw rocket trail
+        // Motion trail
         ctx.beginPath();
-        for (let j = 0; j < r.trail.length; j++) {
-          const pt = r.trail[j];
-          ctx.strokeStyle = `rgba(255, 215, 0, ${(j / r.trail.length) * 0.7})`;
-          ctx.lineWidth = 2.5;
-          if (j === 0) ctx.moveTo(pt.x, pt.y);
-          else ctx.lineTo(pt.x, pt.y);
-        }
+        ctx.moveTo(prevX, prevY);
+        ctx.lineTo(r.x, r.y);
+        ctx.strokeStyle = "rgba(255, 215, 0, 0.75)";
+        ctx.lineWidth = 2;
         ctx.stroke();
 
-        // Draw rocket head
+        // Rocket head
         ctx.beginPath();
-        ctx.arc(r.x, r.y, 2.5, 0, Math.PI * 2);
+        ctx.arc(r.x, r.y, 2, 0, Math.PI * 2);
         ctx.fillStyle = "#FFF";
-        ctx.shadowColor = r.color;
-        ctx.shadowBlur = 8;
         ctx.fill();
-        ctx.shadowBlur = 0;
 
-        // Has rocket reached apex or target?
         if (r.y <= r.targetY || r.vy >= 0) {
           createExplosion(r.x, r.y, r.burstColors);
           rockets.splice(i, 1);
         }
       }
 
-      // 2. Update & draw explosion particles
+      // 2. Update & draw explosion particles (Zero shadowBlur)
       for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i];
-        p.trail.push({ x: p.x, y: p.y });
-        if (p.trail.length > 5) p.trail.shift();
 
         p.x += p.vx;
         p.y += p.vy;
-        p.vy += 0.055; // gentle gravity
-        p.vx *= 0.982; // air drag
-        p.vy *= 0.982;
+        p.vy += 0.055;
+        p.vx *= 0.98;
+        p.vy *= 0.98;
         p.alpha -= p.decay;
 
         if (p.alpha <= 0) {
@@ -241,31 +213,14 @@ export function CrackersCanvas({
           continue;
         }
 
-        // Draw particle spark
-        const flickerAlpha = p.flicker && Math.random() > 0.4 ? p.alpha * 0.4 : p.alpha;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
-        ctx.globalAlpha = Math.max(0, flickerAlpha);
-        ctx.shadowColor = p.color;
-        ctx.shadowBlur = 6;
+        ctx.globalAlpha = Math.max(0, p.alpha);
         ctx.fill();
-
-        // Draw subtle trailing spark
-        if (p.trail.length > 1) {
-          ctx.beginPath();
-          ctx.moveTo(p.trail[0].x, p.trail[0].y);
-          for (let t = 1; t < p.trail.length; t++) {
-            ctx.lineTo(p.trail[t].x, p.trail[t].y);
-          }
-          ctx.strokeStyle = p.color;
-          ctx.lineWidth = p.size * 0.6;
-          ctx.stroke();
-        }
       }
 
       ctx.globalAlpha = 1;
-      ctx.shadowBlur = 0;
 
       animationFrameId = requestAnimationFrame(render);
     };
@@ -278,6 +233,7 @@ export function CrackersCanvas({
       window.removeEventListener("resize", resize);
       if (interactive) {
         canvas.removeEventListener("click", handleClick);
+        canvas.removeEventListener("touchstart", handleClick);
       }
     };
   }, [autoLaunch, launchInterval, interactive]);
@@ -290,4 +246,3 @@ export function CrackersCanvas({
     />
   );
 }
-

@@ -21,13 +21,11 @@ export function DiyaIcon({
       style={{ width: size, height: size }}
       aria-label="Diwali Diya Lamp"
     >
-      {/* Radial Aura Glow behind the Diya */}
+      {/* Lightweight GPU-composited Glow behind Diya */}
       {glow && (
         <div
-          className={`absolute inset-0 rounded-full bg-amber-400/25 blur-md pointer-events-none ${
-            animated ? "animate-pulse" : ""
-          }`}
-          style={{ transform: "scale(1.4)" }}
+          className="absolute inset-0 rounded-full bg-amber-400/20 blur-sm pointer-events-none"
+          style={{ transform: "scale(1.2)" }}
         />
       )}
 
@@ -35,7 +33,7 @@ export function DiyaIcon({
         viewBox="0 0 100 90"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full drop-shadow-sm overflow-visible"
+        className="w-full h-full overflow-visible drop-shadow-xs"
       >
         <defs>
           {/* Flame Gradients */}
@@ -73,54 +71,36 @@ export function DiyaIcon({
             <stop offset="50%" stopColor="#B45309" />
             <stop offset="100%" stopColor="#78350F" />
           </linearGradient>
-
-          {/* Flame Glow Filter */}
-          <filter id="flameBlur" x="20" y="-10" width="60" height="65" filterUnits="userSpaceOnUse">
-            <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
-            <feMerge>
-              <feMergeNode in="coloredBlur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
         </defs>
 
-        {/* Ambient Flame Aura */}
-        <ellipse
+        {/* Soft Ambient Warmth Halo */}
+        <circle
           cx="50"
           cy="26"
-          rx="18"
-          ry="24"
+          r="16"
           fill="#F59E0B"
-          opacity="0.35"
-          filter="url(#flameBlur)"
-          className={animated ? "animate-ping opacity-25" : ""}
-          style={{ animationDuration: "2.4s" }}
+          opacity="0.18"
         />
 
-        {/* Flickering Outer Flame */}
+        {/* Hardware-accelerated Flickering Flame */}
         <g className={animated ? "diya-flame-anim" : ""} style={{ transformOrigin: "50px 45px" }}>
+          {/* Outer Vivid Flame */}
           <path
             d="M50 4 C43 17, 34 26, 36 36 C38 43, 44 47, 50 47 C56 47, 62 43, 64 36 C66 26, 57 17, 50 4 Z"
             fill="url(#diyaFlameOuter)"
-            filter="url(#flameBlur)"
           />
 
           {/* Inner Core Bright White-Yellow Flame */}
-          <path
-            d="M50 16 C46 24, 40 30, 42 38 C43 42, 47 44, 50 44 C53 44, 57 42, 58 38 C60 30, 54 24, 50 16 Z"
-            fill="url(#diyaCoreFlame)"
-            opacity="0.95"
-          />
           <path
             d="M50 18 C47 25, 43 31, 44 38 C45 42, 48 44, 50 44 C52 44, 55 42, 56 38 C57 31, 53 25, 50 18 Z"
             fill="url(#diyaFlameCore)"
           />
 
-          {/* Tiny spark apex */}
-          <circle cx="50" cy="12" r="2.5" fill="#FFFFFF" opacity="0.9" />
+          {/* Bright Apex Spark */}
+          <circle cx="50" cy="12" r="2.2" fill="#FFFFFF" opacity="0.9" />
         </g>
 
-        {/* Cotton Wick tip */}
+        {/* Cotton Wick Tip */}
         <ellipse cx="50" cy="46" rx="3.5" ry="2" fill="#1C1917" />
         <path d="M49 46 Q50 43 50 41" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" />
 
@@ -160,4 +140,3 @@ export function DiyaIcon({
     </div>
   );
 }
-
