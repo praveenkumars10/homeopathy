@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { DiyaIcon } from "./DiyaIcon";
 import { CrackersCanvas } from "./CrackersCanvas";
-import { Sparkles, ArrowRight, HeartHandshake } from "lucide-react";
+import { ArrowRight, HeartHandshake } from "lucide-react";
 import { CLINIC_CONFIG } from "@/lib/constants";
 
 interface DiwaliIntroSplashProps {
@@ -53,7 +53,7 @@ export function DiwaliIntroSplash({
           initial={false}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.35, ease: "easeOut" } }}
-          className="fixed inset-0 z-[99999] flex flex-col items-center justify-end sm:justify-center overflow-hidden bg-gradient-to-b from-[#061511] via-[#0d221c] to-[#143229] text-[#FAF7F0] select-none pb-4 sm:pb-0"
+          className="fixed inset-0 z-[99999] flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#061511] via-[#0d221c] to-[#143229] text-[#FAF7F0] select-none p-4 sm:p-6"
         >
           {/* 1. Fullscreen Interactive Fireworks / Crackers Canvas */}
           <div className="absolute inset-0 pointer-events-auto">
@@ -61,30 +61,17 @@ export function DiwaliIntroSplash({
           </div>
 
           {/* 2. Soft Ambient Radial Glow */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(245,158,11,0.18)_0%,rgba(13,34,28,0)_65%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(245,158,11,0.18)_0%,rgba(13,34,28,0)_65%)] pointer-events-none" />
 
-          {/* 3. Mobile Open Sky Notice (Tells user they can tap sky to burst crackers) */}
-          <div className="sm:hidden relative z-10 mb-auto mt-3 px-4 py-1.5 rounded-full bg-black/40 border border-amber-400/30 text-amber-300 text-[11px] font-medium flex items-center gap-1.5 shadow-md pointer-events-none">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            <span>Tap anywhere to burst crackers 🎆</span>
-          </div>
-
-          {/* 4. Sleek Center Card: Clear, Compact, Never Blocks the Fireworks */}
-          <div className="relative z-10 w-full max-w-xl mx-auto px-4 sm:px-6 pointer-events-auto">
+          {/* 3. Sleek Centered Card: Balanced in Vertical Center on Mobile & Desktop */}
+          <div className="relative z-10 w-full max-w-lg mx-auto pointer-events-auto">
             <div className="rounded-2xl sm:rounded-3xl bg-[#0e2720]/95 border border-amber-400/40 p-5 sm:p-7 shadow-[0_12px_40px_rgba(0,0,0,0.7),0_0_24px_rgba(245,158,11,0.2)] text-center">
               
-              {/* Auspicious Banner */}
-              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-0.5 sm:py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-2 sm:mb-3 shadow-xs">
-                <Sparkles className="w-3 h-3 text-amber-300" />
-                <span>शुभ दिवाली • Happy Diwali • Festival of Lights</span>
-                <Sparkles className="w-3 h-3 text-amber-300" />
-              </div>
-
               {/* Glowing Center Diya with Symmetric Flanking Diyas */}
               <div className="flex items-center justify-center gap-4 sm:gap-8 my-1 sm:my-2">
                 <DiyaIcon size={32} className="hidden sm:inline-flex opacity-85 transform -rotate-6" />
                 <div className="p-1 sm:p-2 rounded-full bg-gradient-to-t from-amber-500/20 to-transparent">
-                  <DiyaIcon size={56} className="sm:w-16 sm:h-16" />
+                  <DiyaIcon size={60} className="sm:w-16 sm:h-16" />
                 </div>
                 <DiyaIcon size={32} className="hidden sm:inline-flex opacity-85 transform rotate-6" />
               </div>
@@ -94,7 +81,7 @@ export function DiwaliIntroSplash({
                 Happy Diwali
               </h1>
 
-              <p className="text-xs sm:text-sm text-[#E8F0EB]/90 font-serif font-medium leading-relaxed max-w-lg mx-auto mb-3 sm:mb-4">
+              <p className="text-xs sm:text-sm text-[#E8F0EB]/90 font-serif font-medium leading-relaxed max-w-md mx-auto mb-3 sm:mb-4">
                 May the divine light of Diwali illuminate your home with radiant health, inner peace, vitality, and lasting joy.
               </p>
 
@@ -111,8 +98,13 @@ export function DiwaliIntroSplash({
                 </div>
               </div>
 
+              {/* Interactive Hint */}
+              <div className="mt-3 text-[11px] text-amber-300/80 tracking-wide font-medium flex items-center justify-center gap-1.5">
+                <span>✨ Tap anywhere to burst crackers 🎆</span>
+              </div>
+
               {/* Progress Bar & Skip/Enter Button */}
-              <div className="mt-3 sm:mt-4 space-y-2">
+              <div className="mt-3 space-y-2">
                 {/* Golden Progress Bar */}
                 <div className="w-full bg-white/10 rounded-full h-1.5 overflow-hidden">
                   <div
