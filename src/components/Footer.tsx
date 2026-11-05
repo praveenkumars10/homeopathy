@@ -5,6 +5,8 @@ import Image from "next/image";
 import { CLINIC_CONFIG, TREATMENTS } from "@/lib/constants";
 import { assetUrl } from "@/lib/assets";
 import { ClinicBrandLogo } from "./icons/TreatmentIcons";
+import { FestiveToran } from "./diwali/DiwaliDecorations";
+import { DiyaIcon } from "./diwali/DiyaIcon";
 import {
   Phone,
   MapPin,
@@ -58,9 +60,50 @@ export function Footer() {
   )}`;
 
   return (
-    <footer className="bg-[#17382F] text-[#FAF7F0] pt-16 pb-24 md:pb-16 border-t border-[#1F4B3F]">
+    <footer className="bg-[#17382F] text-[#FAF7F0] pt-0 pb-24 md:pb-16 border-t border-[#1F4B3F] relative overflow-hidden">
+      {/* Top Diwali Toran Garland */}
+      <FestiveToran className="h-7 sm:h-9 drop-shadow-md mb-8" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
+        {/* Festive Diwali Greetings Banner */}
+        <div className="mb-12 relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#122e26] via-[#1d493d] to-[#122e26] border border-amber-400/35 p-6 sm:p-8 shadow-2xl">
+          {/* Ambient golden glows */}
+          <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-amber-400/10 blur-2xl pointer-events-none" />
+          <div className="absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-amber-500/10 blur-2xl pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <DiyaIcon size={46} className="shrink-0 drop-shadow-[0_0_14px_rgba(251,191,36,0.6)]" />
+              <div>
+                <div className="flex items-center justify-center md:justify-start gap-2 mb-1">
+                  <span className="px-2.5 py-0.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-[11px] font-semibold uppercase tracking-wider">
+                    Festive Greetings
+                  </span>
+                  <span className="text-amber-400 text-xs">🪔 Happy Diwali 🪔</span>
+                </div>
+                <h3 className="font-serif font-bold text-xl sm:text-2xl text-amber-100 tracking-tight">
+                  Warm Diwali Wishes from Allen Sha Homoeopathy
+                </h3>
+                <p className="text-sm text-[#E8F0EB]/85 mt-1 max-w-xl">
+                  May the divine lights of Diwali illuminate your home with radiant health, peace, harmony and lasting holistic wellness.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 shrink-0">
+              <DiyaIcon size={38} className="hidden lg:inline-flex drop-shadow-[0_0_10px_rgba(251,191,36,0.5)]" />
+              <div className="text-center md:text-right">
+                <span className="text-xs text-amber-300 font-semibold block">
+                  Natural &amp; Holistic Healing
+                </span>
+                <span className="text-[11px] text-[#E8F0EB]/75">
+                  Dr. M. Mohamed Shahid &amp; Team
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-white/10">
           
@@ -298,6 +341,11 @@ export function Footer() {
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#E8F0EB]/65">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
             <span>&copy; {CLINIC_CONFIG.year} {CLINIC_CONFIG.clinicName}.</span>
+            <span className="hidden sm:inline text-white/30">•</span>
+            <span className="inline-flex items-center gap-1.5 text-amber-300/90 text-xs font-medium">
+              <DiyaIcon size={14} glow={false} />
+              <span>Happy Diwali Wishes</span>
+            </span>
             <span className="hidden sm:inline text-white/30">•</span>
             <a
               href="https://www.iinfovision.com"

@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
 import { Calendar, MessageCircle, Star, ShieldCheck, Sparkles } from "lucide-react";
 import { AnimatedCounter } from "./ui/AnimatedCounter";
+import { DiyaIcon } from "./diwali/DiyaIcon";
 
 export function Hero() {
   const whatsappUrl = `https://wa.me/${CLINIC_CONFIG.whatsappNumber}?text=${encodeURIComponent(
@@ -30,6 +31,15 @@ export function Hero() {
             variants={fadeInUp}
             className="lg:col-span-7 space-y-6 sm:space-y-7"
           >
+            {/* Festive Diwali Greeting Badge (Health & Prosperity) */}
+            <div className="flex flex-wrap items-center gap-2.5">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500/15 via-amber-400/25 to-amber-500/15 border border-amber-500/40 text-[#92400E] text-xs font-semibold tracking-wide shadow-sm">
+                <DiyaIcon size={18} />
+                <span>Happy Diwali • Wishing You Radiant Health &amp; Harmony</span>
+                <DiyaIcon size={18} />
+              </div>
+            </div>
+
             {/* Top Credibility Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8F0EB] border border-[#1F4B3F]/15 text-[#1F4B3F] text-xs font-semibold tracking-wide">
               <Sparkles className="w-3.5 h-3.5 text-[#C98B3E]" />
