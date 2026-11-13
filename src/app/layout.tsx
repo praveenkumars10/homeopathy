@@ -6,9 +6,6 @@ import { CLINIC_CONFIG } from "@/lib/constants";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { DiwaliIntroSplash } from "@/components/diwali/DiwaliIntroSplash";
-import { DiwaliDecorations } from "@/components/diwali/DiwaliDecorations";
-import { InteractiveCrackersOverlay } from "@/components/diwali/InteractiveCrackersOverlay";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -171,9 +168,6 @@ export default function RootLayout({
             </Script>
           </>
         )}
-        <DiwaliIntroSplash />
-        <InteractiveCrackersOverlay />
-        <DiwaliDecorations />
         <Header />
         <main className="flex-grow">
           {children}

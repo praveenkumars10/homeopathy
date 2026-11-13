@@ -95,31 +95,3 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Diwali Diya Flame & Festive Keyframe Animations — 100% GPU Accelerated (No Paint Recalculations) */
-@keyframes flameFlicker {
-  0%, 100% {
-    transform: scale(1) rotate(0deg);
-    opacity: 0.96;
-  }
-  25% {
-    transform: scale(1.04, 0.96) rotate(-1deg);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(0.96, 1.03) rotate(0.8deg);
-    opacity: 0.92;
-  }
-  75% {
-    transform: scale(1.02, 0.98) rotate(-0.5deg);
-    opacity: 0.98;
-  }
-}
-
-.diya-flame-anim {
-  animation: flameFlicker 2s ease-in-out infinite alternate;
-  transform-origin: 50% 60%;
-  will-change: transform, opacity;
-  transform: translateZ(0);
-}
-
-

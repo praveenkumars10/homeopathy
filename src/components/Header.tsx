@@ -7,7 +7,6 @@ import { ClinicBrandLogo } from "./icons/TreatmentIcons";
 import { Phone, Menu, X, Calendar, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { drawerSlideRight } from "@/lib/animations";
-import { DiyaIcon } from "./diwali/DiyaIcon";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,10 +55,6 @@ export function Header() {
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               100% Online Consultations Only • Base: Salem
             </span>
-            <span className="hidden md:inline-flex items-center gap-1 text-xs text-amber-200/95 font-medium">
-              <DiyaIcon size={14} glow={false} />
-              <span>Happy Diwali</span>
-            </span>
           </div>
           <div className="flex items-center space-x-4">
             <span className="text-[#C98B3E] font-medium text-xs">
@@ -92,7 +87,6 @@ export function Header() {
                 Homoeopathy Consultant
               </span>
             </div>
-            <DiyaIcon size={24} className="inline-flex ml-0.5" />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -110,11 +104,6 @@ export function Header() {
 
           {/* Desktop Right Action: Phone + CTA */}
           <div className="hidden lg:flex items-center gap-2.5">
-            {/* Festive Diwali Badge in Sticky Navbar */}
-            <div className="hidden xl:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-900 text-xs font-semibold shadow-xs">
-              <DiyaIcon size={16} glow={false} />
-              <span>Happy Diwali</span>
-            </div>
             <a
               href={`tel:${CLINIC_CONFIG.phoneClean}`}
               className="flex items-center gap-1.5 text-xs font-semibold text-[#1F4B3F] bg-[#1F4B3F]/8 hover:bg-[#1F4B3F]/12 px-3 py-1.5 rounded-full transition-colors whitespace-nowrap"
